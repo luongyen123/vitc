@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+ <style type="text/css">
+.snow-container{position:fixed;width:100%;max-width:100%;z-index:99999;pointer-events:none;overflow:hidden;top:0;height:100%}
+.snow{display:block;position:absolute;z-index:2;top:0;right:0;bottom:0;left:0;pointer-events:none;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);-webkit-animation:snow linear infinite;animation:snow linear infinite}
+.snow.foreground{background-image:url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");-webkit-animation-duration:15s;animation-duration:10s}
+.snow.foreground.layered{-webkit-animation-delay:7.5s;animation-delay:7.5s}
+.snow.middleground{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);-webkit-animation-duration:20s;animation-duration:15s}
+.snow.middleground.layered{-webkit-animation-delay:10s;animation-delay:10s}
+.snow.background{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);-webkit-animation-duration:25s;animation-duration:20s}
+.snow.background.layered{-webkit-animation-delay:12.5s;animation-delay:12.5s}
+@-webkit-keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+@keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+</style><div class='snow-container'>
+<div class='snow foreground'></div>
+<div class='snow foreground layered'></div>
+<div class='snow middleground'></div>
+<div class='snow middleground layered'></div>
+<div class='snow background'></div>
+<div class='snow background layered'></div>
+</div>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>STUDENT-VNUA | Chia Sẻ Tài Liệu Học Tập</title>
+   <style> 
+   
+   #i02 {
+       color: aqua;
+       font-size: 50%;
+   }
+   #ul01
+   {
+       color: bisque;
+       background-color: black;
+   }
+   /*==Reset CSS==*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+/*==Style cơ bản cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+/*==Style cho menu===*/
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  float: left;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+}
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  overflow: hidden;
+  width: 100%;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+/*==Dropdown Menu==*/
+.sub-menu li {
+  display: none;
+}
+#menu li {
+ position: relative;
+}
+.sub-menu {
+ display: none;
+ position: absolute;
+}
+#menu li:hover .sub-menu {
+ display: block;
+}
+.sub-menu li {
+ margin-left: 0 !important;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+       text-align: center;
+ /*==Reset CSS==*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*==Style cơ bản cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/*==Style cho menu===*/
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+
+/*==Dropdown Menu==*/
+.sub-menu {
+  display: none;
+  position: absolute;
+}
+#menu li {
+  position: relative;
+}
+#menu li:hover .sub-menu {
+  display: block;
+}
+.sub-menu li {
+  margin-left: 0 !important;
+}
+
+/*==Menu cấp 3==*/
+.sub-menu > ul {
+  display: none !important;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+  
+ </style>
+
+   
+
+</head>
+<body style="background-color: gainsboro;color: blue">
+  
+    <center style="color:aliceblue;background-color: rgb(94, 99, 99);border: 2px solid rgb(216, 89, 75);padding: 10px; font-size: 30px;">
+       <h1 style="color:rgb(214, 181, 233);font-size:40px;">STUDENT-VNUA</h1>
+     <script type="text/javascript">
+        farbbibliothek = new Array();
+        farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+        farbbibliothek[1] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+     
+        
+        farben = farbbibliothek[0];
+        function farbschrift()
+        {
+        for(var i=0 ; i<Buchstabe.length; i++)
+        {
+        document.all["a"+i].style.color=farben[i];
+        }
+        farbverlauf();
+        }
+        function string2array(text)
+        {
+        Buchstabe = new Array();
+        while(farben.length<text.length)
+        {
+        farben = farben.concat(farben);
+        }
+        k=0;
+        while(k<=text.length)
+        {
+        Buchstabe[k] = text.charAt(k);
+        k++;
+        }
+        }
+        function divserzeugen()
+        {
+        for(var i=0 ; i<Buchstabe.length; i++)
+        {
+        document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "<\/span>");
+        }
+        farbschrift();
+        }
+        var a=1;
+        function farbverlauf()
+        {
+        for(var i=0 ; i<farben.length; i++)
+        {
+        farben[i-1]=farben[i];
+        }
+        farben[farben.length-1]=farben[-1];
+        
+        setTimeout("farbschrift()",30);
+        }
+        //
+        var farbsatz=1;
+        function farbtauscher()
+        {
+        farben = farbbibliothek[farbsatz];
+        while(farben.length<text.length)
+        {
+        farben = farben.concat(farben);
+        }
+        farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+        }
+        setInterval("farbtauscher()",5000);
+        
+      
+        text= " Student.vnua.edu.vn "; //h
+        string2array(text);
+        divserzeugen();
+        //document.write(text);
+
+       
+       </script> 
+       </center>
+        
+  
+   
+<div id="menu">
+    <ul id="ul01">
+        <li><a href="#">Trang Chủ</a></li>
+       
+            
+        <li><a href="#">Giáo Trình</a>
+            <ul class="sub-menu">
+              <table>
+                <tr>
+                  <td>  <li><a href="#">BV Thực Vật</a></li></td>
+                  <td>  <li><a href="#">Chăn Nuôi</a> </li></td>
+                  <td>  <li><a href="#">KH Cây Trồng</a></li></td>
+                  <td>  <li><a href="#">KH Đất </a></li></td>
+                  <td>  <li><a href="#">KDNN</a></li></td>
+                 
+                </tr>
+                <tr>
+                  <td> <li><a href="#">Kinh Tế NN</a></li></td>
+                  <td>  <li><a href="#">NN CNC</a></li></td>
+                  <td>  <li><a href="#">Nuôi Trồng TS</a></li></td>
+                  <td>  <li><a href="#">PT Nông Thôn </a></li></td>
+                  <td>  <li><a href="#">Thú Y</a></li></td>
+                  
+                </tr>
+                <tr>
+                  <td> <li><a href="#">CN Sinh Học </a></li></td>
+                  <td>  <li><a href="#">CNTT</a>
+                        <div class="sub-menu">
+                          <ul>
+                              <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlRWtpQjlWN3Rld0E">Đại số tuyến tính</a></li>
+                          </ul>
+                          </div>
+                  
+                  </li></td>
+                  <td>  <li><a href="#">CNTP</a></li></td>
+                  <td>  <li><a href="#">CNSTH </a></li></td>
+                  <td>  <li><a href="#">CN&KD-TP </a></li></td>
+                </tr>
+                <tr>
+                    <td> <li><a href="#">CNKT Cơ-Điện</a></li></td>
+                    <td>  <li><a href="#">CNKT Ô Tô</a></li></td>
+                    <td>  <li><a href="#">KT Cơ Khí</a></li></td>
+                    <td>  <li><a href="#">KT CSHT </a></li></td>
+                    <td>  <li><a href="#">KT Điện-Đ.Tử</a></li></td>
+              </tr>
+              <tr>
+                      <td> <li><a href="#">KTTN Nước</a></li></td>
+                      <td>  <li><a href="#">Kinh Tế</a></li></td>
+                      <td>  <li><a href="#">KT Đầu Tư</a></li></td>
+                      <td>  <li><a href="#">Kế Toán </a></li></td>
+                      <td>  <li><a href="#">QTKD</a></li></td>
+               </tr>
+               <tr>
+                     <td> <li><a href="#">Ngôn Ngữ Anh</a></li></td>
+                     <td>  <li><a href="#">Xã Hội Học</a></li></td>
+                     <td>  <li><a href="#">KH Môi Trường</a></li></td>
+                     <td>  <li><a href="#">QL Đất Đai </a></li></td>
+                     <td>  <li><a href="#">CNTT POHE</a></li></td>
+               </tr>
+                      
+                      
+                          
+                    </table>
+                </ul> </li>
+                 
+                      <li><a href="#">Khoa</a>
+                         <ul class="sub-menu">
+                    <table>
+            <tr>
+                   <td>  <li><a href="#">BV Thực Vật</a></li></td>
+                        <td>  <li><a href="#">Chăn Nuôi</a></li></td>
+                        <td>  <li><a href="#">KH Cây Trồng</a></li></td>
+                        <td>  <li><a href="#">KH Đất </a></li></td>
+                        <td>  <li><a href="#">KDNN</a></li></td>
+                                   
+             </tr>
+              <tr>
+                         <td> <li><a href="#">Kinh Tế NN</a></li></td>
+                         <td>  <li><a href="#">NN CNC</a></li></td>
+                         <td>  <li><a href="#">Nuôi Trồng TS</a></li></td>
+                         <td>  <li><a href="#">PT Nông Thôn </a></li></td>
+                         <td>  <li><a href="#">Thú Y</a></li></td>
+                                    
+                  </tr>
+                  <tr>
+                     <td> <li><a href="#">CN Sinh Học </a></li></td>
+                     <td>  <li><a href="#">CNTT</a></li></td>
+                     <td>  <li><a href="#">CNTP</a></li></td>
+                     <td>  <li><a href="#">CNSTH </a></li></td>
+                     <td>  <li><a href="#">CN&KD-TP </a></li></td>
+                  </tr>
+                  <tr>
+                    <td> <li><a href="#">CNKT Cơ-Điện</a></li></td>
+                    <td>  <li><a href="#">CNKT Ô Tô</a></li></td>
+                    <td>  <li><a href="#">KT Cơ Khí</a></li></td>
+                    <td>  <li><a href="#">KT CSHT </a></li></td>
+                    <td>  <li><a href="#">KT Điện-Đ.Tử</a></li></td>
+              </tr>     
+                <tr>
+                        <td> <li><a href="#">KTTN Nước</a></li></td>
+                        <td>  <li><a href="#">Kinh Tế</a></li></td>
+                        <td>  <li><a href="#">KT Đầu Tư</a></li></td>
+                        <td>  <li><a href="#">Kế Toán </a></li></td>
+                        <td>  <li><a href="#">QTKD</a></li></td>
+                </tr>
+                <tr>
+                        <td> <li><a href="#">Ngôn Ngữ Anh</a></li></td>
+                        <td>  <li><a href="#">Xã Hội Học</a></li></td>
+                        <td>  <li><a href="#">KH Môi Trường</a></li></td>
+                        <td>  <li><a href="#">QL Đất Đai </a></li></td>
+                        <td>  <li><a href="#">CNTT POHE</a></li></td>
+               </tr>
+                                        
+                                        
+                                            
+        </table>
+                           </ul> </li>
+                           <li><a href="#">CLB VNUA</a>
+                           <ul class="sub-menu">
+      <table>
+            <tr>
+                     <td>  <li><a href="#">Cờ Vua</a></li></td>
+                     <td>  <li><a href="#">Sky-Book</a></li></td>
+                     <td>  <li><a href="#">Karate</a></li></td>
+                     <td>  <li><a href="#">Khởi Nghiệp </a></li></td>
+                     <td>  <li><a href="#">Dance Fly High</a></li></td>
+                                             
+           </tr>
+                  
+          <tr>
+                    <td>  <li><a href="#">Tiếng Anh</a></li></td>
+                    <td>  <li><a href="#">True Action</a></li></td>
+                    <td>  <li><a href="#">Kinh Doanh</a></li></td>
+                    <td>  <li><a href="#">Bóng Rổ </a></li></td>
+                    <td>  <li><a href="#">VoViNam</a></li></td>
+                                               
+             </tr>
+             <tr>
+                   <td>  <li><a href="#">VT Võ Đạo</a></li></td>
+                   <td>  <li><a href="#">TNVĐ Hiến Máu</a></li></td>
+                   <td>  <li><a href="#">Kết Nối</a></li></td>
+                   <td>  <li><a href="#">TNTT HSV </a></li></td>
+                   <td>  <li><a href="#">Âm Nhạc </a></li></td>
+                                                 
+          </tr><tr>
+                   <td>  <li><a href="#">Thiết Kế</a></li></td>
+                   <td>  <li><a href="#">Rap</a></li></td>
+                   <td>  <li><a href="#">Guitar</a></li></td>
+                   <td>  <li><a href="#">Hài Kịch </a></li></td>
+                   <td>  <li><a href="#">Bóng Đá</a></li></td>
+                                                   
+           </tr>
+                                             
+                   </table></ul>
+            
+        <li><a href="#">Thủ Thuật</a>
+            <ul class="sub-menu">
+                    <li><a href="#">Máy Tính</a></li>
+                    <li><a href="#">Lý </a></li>
+                    <li><a href="#">Hóa</a></li>
+                    <li><a href="#">Sinh </a></li>
+                    <li><a href="#">Anh</a></li></ul></li>
+        <li><a href="#">Phần Mềm</a>
+            <ul class="sub-menu">
+                    <li><a href="#">Toán</a></li>
+                    <li><a href="#">Lý </a></li>
+                    <li><a href="#">Hóa</a></li>
+                    <li><a href="#">Sinh </a></li>
+                    <li><a href="#">Anh</a></li></ul></li>
+        <li><a href="#">Thư Viện</a></li>
+        <li><a href="file:///C:/Users/ASUS/AppData/Local/Temp/Rar$EXa6244.34283/index.html">Game Vui</a></li>
+       <li>
+         </li> </ul>
+        
+       
+<br>
+      <marquee behavior="alternate" loop="infinite"><img src="http://quangninhwap.com/images/8_2.gif" /></marquee>
+
+      <h3>Tài Liệu</h3>
+    </div>
+    </body
+
+</html>
