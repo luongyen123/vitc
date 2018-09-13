@@ -1,0 +1,11 @@
+.bocuc1 {
+          background: #A06D21;
+          width: 800px;
+          height: 400px;
+          margin: auto;
+          padding: 10px;
+          background-image: url(vt1.jpg);
+          background-repeat: no-repeat;
+          background-position: 170px 70px;
+          background-size: 500px;
+        }
