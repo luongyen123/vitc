@@ -1,0 +1,22 @@
+.to {
+      width: 900px;
+      height: 450px;
+      background-image: url(hong2.jpg);
+      margin: auto;
+      
+    }
+
+.bocuc1 {
+          background:#339999;
+          width: 800px;
+          height: 100px;
+          margin: auto;
+          padding: 10px
+        }
+#bocuc2 {
+          
+          width: 800px;
+          height: 100px;
+          margin: auto;
+          padding: 10px
+        }
