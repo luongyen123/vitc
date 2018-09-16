@@ -1,0 +1,18 @@
+#khung {
+         background-color: #87CEEB;
+         width: 400px;
+         height: 300px;
+         margin: auto;
+
+       }
+
+.bang {
+        border-collapse: collapse;
+         padding-left: 55px
+
+
+      }
+td,th {
+       border: 1px solid black ;
+
+      }
