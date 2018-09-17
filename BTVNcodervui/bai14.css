@@ -1,0 +1,25 @@
+#bocuc1 {
+          background-color: blue;
+          width: 1000px;
+          height: 80px;
+          margin: auto;
+          color: #B0C4DE;
+          border: 0.5px solid #666666;
+        }
+#bocuc2 {
+          background-color: #CD5C5C;
+          width: 250px;
+          height: 400px;
+          margin-left: 175px;
+          border: 4px solid #666666;
+          float: left;
+          list-style-type:square;
+        }
+#bocuc3 {
+          background-color: #aad4ff;
+          width:715px;
+          height: 380px;
+          float: left; 
+          border: 4px solid #666666;
+          padding: 10px;
+        }
