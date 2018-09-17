@@ -1,0 +1,18 @@
+#khung13 {
+           background-color: #DAA520;
+           width: 600px;
+           height: 400px;
+           margin: auto;
+         }
+.bang13 {
+        background-color: #00BFFF;
+        width: 450px ; 
+        height:50px;
+        margin: auto;
+        border: 2px solid black;
+        border-collapse: collapse;
+      }    
+th,td {
+        border: 1px solid black;
+        
+      }   
