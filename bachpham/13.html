@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 12</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+  
+    .bachpham {
+      padding: 3px;
+      border-color: red;
+      border: 3px solid red;
+      width: 250px;
+      float: center;
+      text-align: left;
+      margin-left: 55px;
+    }
+     .b1 {
+      width: 360px;
+      color:  #8968CD;
+      background-color:  #CDCDB4;
+      border: 1px solid #FFE1FF;
+      border-collapse: collapse;
+      padding: 1px;
+      text-align: left;
+      border-spacing: 5px;
+     
+      margin-left: 0 auto;
+    }
+
+  	
+  </style>
+   <link rel="stylesheet" href="12.css" />
+</head>
+<body>
+ <div id="tiebach">
+ 	 <h1 style="text-align: center;">Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
+ 	<div>
+ 		<div id="menu">
+ 		<table>
+ 			<form>
+ 				<tr class="bach">
+ 					<td class="bach">
+ 						Họ Và Tên
+ 					</td>
+ 					<td class="bach">
+ 						<input type="text" name="hoten">
+ 					</td>
+ 				</tr>
+ 				<tr class="bach">
+ 					<td class="bach">Địa chỉ</td>
+ 					<td class="bach">
+ 						<input type="text" name="diachi">
+ 					</td>
+ 				</tr>
+ 				<tr class="bach">
+ 					<td class="bach">Điện Thoại</td>
+ 					<td class="bach"><input type="number" name="dienthoai"></td>
+ 				</tr>
+ 				<tr class="bach">
+ 					<td class="bach">Khách Việt Nam</td>
+ 					<td class="bach"><input type="radio" name="phai" value="#"></td>
+ 				</tr>
+ 				<tr class="bach">
+ 					<td class="bach">Chọn Tour</td>
+ 					<td class="bach"><select name="01">
+            <optgroup label="Miền Bắc">
+<option value="hn">Hà Nội - Hạ Long - SaPa</option>
+
+<option value="22">Hà Nội - Chùa Hương - Ninh Bình</option>
+<option value="23">Hà Nội - Cát Bà - Tuần Châu</option>
+
+            </optgroup>
+            <optgroup label="Miền Trung">
+<option value="24">Huế - Bạch Mã - Đà Nẵng</option>
+<option value="25">Nha Trang - Đà Lạt</option>
+<option value="26">Buân Mê Thuật - Gia Lai - Kontum</option>
+            </optgroup>
+              <optgroup label="Miền Nam">
+<option value="27">TP.HCM- Cần Thơ - Cà Mau</option>
+<option value="28">TP.HCM - Mỹ Tho</option>
+
+            </optgroup>
+<tr class="hihi">
+          <td class="bach">Phương Tiện</td>
+          <td class="bach"><input type="radio" name="phai" value="#">Máy Bay<input type="radio" name="phai">Xe Ô tô </td>
+        </tr>
+
+
+ 					</select></td>
+ 				</tr></form></table>
+
+        <tr class="b1">
+          <td class="b1">
+          <div class="b1">
+            <div class="bachpham" style="color: blue">
+             
+             Số Lượng Đoàn Khách
+             <div  >
+               Người lớn<input type="text" name="so">Trẻ em<input type="text" name="112">
+
+             </div></div>
+          </div>
+        </td>
+        </tr>
+        <form><table>
+
+ 				<tr class="bach">
+ 					<td class="bach">Ghi Chú Thêm</td>
+ 					<td class="bach">
+ 						<select multiple="SHIFT" name="kieu" size="4">
+ 							<option value="110">Có 2 trẻ em dưới 6 tuổi</option>
+ 							<option value="111">Có 2 người ăn chay</option>
+ 							
+ 						</select>
+ 					</td>
+ 				</tr>
+ 				<tr class="bach">
+ 					<td class="bach">Số người dự đoán tham gia</td>
+ 					<td class="bach"> <input type="number" name="songuoiddtg"></td>
+ 				</tr></form></table>
+ 			</div>
+ 			<div style="margin-left: 0 auto;text-align: center;" class="hi">
+ 				<tr ><td>
+          <button  onclick="bp()">Gửi Đi</button></td></tr>
+          
+
+    <p id="demo" style="color: red"></p>
+
+    <script>
+        function bp(){
+        
+            var str = "Bạn Đã Đăng Ký Thành Công:" ;
+            document.getElementById("demo").innerHTML = str;
+        }
+    </script>
+ 			
+ 		
+ 	</div></div>
+ </div>
+</body>
+</html>
