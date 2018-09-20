@@ -1,0 +1,70 @@
+#bocuc1 {
+          background-color: #ffffaa;
+          width: 100%;
+          height: 80px;
+          font-size: 50px;
+
+        }
+
+ /*RESET CHO CSS */
+* {
+	margin: 0;   
+	padding: 0;
+}
+
+/* CHỌN MÀU CHO ITEM */
+#bocuc2 {
+          color: #e5e5e5;  
+     }
+
+
+#bocuc2 ul {
+	list-style-type: none; /* XÓA DẤU CHẤM ĐẦU */
+	background:#00bf00; /* MÀU NỀN CHO BẢNG MENU */
+	text-align: center; /* CHO MENU RA GIỮA */
+}
+#bocuc2 ul li {
+	color: #f1f1f1;
+    display: inline-table; /* cho danh sách menu nằm ngang */
+    width: 300px; /* Chiều rộng cho item */
+    height: 70px; /* Chiều cao cho item */
+    line-height: 70px; /* căn cho item ra chính giữa khung nền, chú ý bằng height */
+} 
+#bocuc2 ul li a {
+	color: #f1f1f1; /* Màu chữ cho item */
+	text-decoration: none; /* biến mất gạch chân dưới item */
+	display: block; /* Tạo màu nền bao bọc item */
+	font-size: 18px; /* kích thước chữ cho item*/
+}
+
+/* tạo hiệu ứng khi di chuột vào item */
+#bocuc2 ul li a:hover {
+    background-color: #f1f1f1; /* màu nền khi di chuột vào*/
+    color: black; /* chuyển màu chữ khi di chuột vào*/
+}
+#bocuc3 {
+	background-color: #ffffff;
+	width: 20%;
+	height: 500px;
+	float: left;
+	padding-left: 15px;
+
+}
+#bocuc3 ul {
+	list-style-type: none;
+}
+#bocuc4 {
+	background-color: #cccccc;
+	height: 500px;
+}
+#bocuc3 ul li a {
+    color: black;
+    text-decoration: none; /* biến mất gạch chân dưới item */
+	display: block; /* Tạo màu nền bao bọc item */
+	font-size: 20px; /* kích thước chữ cho item*/
+
+}
+#bocuc3 ul li a:hover {
+	background-color:#7f7f7f;
+	color: ;
+}
