@@ -5,58 +5,8 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">
-  	h1 {
-  		color: #0c0;
-
-  	}
-  	.hihi{
-  		color: #06f ;
-  		background-color: #c1ffc1;
-  		border: 2px solid #3cf;
-  		border-collapse: collapse;
-  		padding: 10px;
-  		text-align: left;
-  		border-spacing: 5px;
-
-  	}
-  	body{
-  		float: center;
-      color: blue;
-      
-  		
-  	}
-  	form{
-  		color: #03f;
-
-  	}
-  	#menu {
-  		margin-left: 485px;
-
-  	}
-    .hi{
-      color: #06f;
-      background-color: #c1ffc1;
-      border: 2px solid #3cf;
-      border-collapse: collapse;
-      padding: 1px;
-      text-align: left;
-      border-spacing: 5px;
-      width: 383px;
-      margin-left: 485px;
-    }
-    .ki {
-      width: 385px;
-      color: #06f class="hihi";
-      background-color: #c1ffc1;
-      border: 2px solid #3cf;
-      border-collapse: collapse;
-      padding: 1px;
-      text-align: left;
-      border-spacing: 5px;
-     
-      margin-left: 0 auto;
-    }
-    .kien1 {
+  
+    .bachpham {
       padding: 3px;
       border-color: red;
       border: 3px solid red;
@@ -65,41 +15,55 @@
       text-align: left;
       margin-left: 55px;
     }
+     .b1 {
+      width: 360px;
+      color:  #8968CD;
+      background-color:  #CDCDB4;
+      border: 1px solid #FFE1FF;
+      border-collapse: collapse;
+      padding: 1px;
+      text-align: left;
+      border-spacing: 5px;
+     
+      margin-left: 0 auto;
+    }
+
   	
   </style>
+   <link rel="stylesheet" href="12.css" />
 </head>
 <body>
- <div id="than">
+ <div id="tiebach">
  	 <h1 style="text-align: center;">Phiếu đăng ký tham gia chương trình khuyến mãi</h1>
  	<div>
  		<div id="menu">
  		<table>
  			<form>
- 				<tr class="hihi">
- 					<td class="hihi">
+ 				<tr class="bach">
+ 					<td class="bach">
  						Họ Và Tên
  					</td>
- 					<td class="hihi">
+ 					<td class="bach">
  						<input type="text" name="hoten">
  					</td>
  				</tr>
- 				<tr class="hihi">
- 					<td class="hihi">Địa chỉ</td>
- 					<td class="hihi">
+ 				<tr class="bach">
+ 					<td class="bach">Địa chỉ</td>
+ 					<td class="bach">
  						<input type="text" name="diachi">
  					</td>
  				</tr>
- 				<tr class="hihi">
- 					<td class="hihi">Điện Thoại</td>
- 					<td class="hihi"><input type="number" name="dienthoai"></td>
+ 				<tr class="bach">
+ 					<td class="bach">Điện Thoại</td>
+ 					<td class="bach"><input type="number" name="dienthoai"></td>
  				</tr>
- 				<tr class="hihi">
- 					<td class="hihi">Khách Việt Nam</td>
- 					<td class="hihi"><input type="radio" name="phai" value="#"></td>
+ 				<tr class="bach">
+ 					<td class="bach">Khách Việt Nam</td>
+ 					<td class="bach"><input type="radio" name="phai" value="#"></td>
  				</tr>
- 				<tr class="hihi">
- 					<td class="hihi">Chọn Tour</td>
- 					<td class="hihi"><select name="01">
+ 				<tr class="bach">
+ 					<td class="bach">Chọn Tour</td>
+ 					<td class="bach"><select name="01">
             <optgroup label="Miền Bắc">
 <option value="hn">Hà Nội - Hạ Long - SaPa</option>
 
@@ -118,18 +82,18 @@
 
             </optgroup>
 <tr class="hihi">
-          <td class="hihi">Phương Tiện</td>
-          <td class="hihi"><input type="radio" name="phai" value="#">Máy Bay<input type="radio" name="phai">Xe Ô tô </td>
+          <td class="bach">Phương Tiện</td>
+          <td class="bach"><input type="radio" name="phai" value="#">Máy Bay<input type="radio" name="phai">Xe Ô tô </td>
         </tr>
 
 
  					</select></td>
  				</tr></form></table>
 
-        <tr class="ki">
-          <td class="ki">
-          <div class="ki">
-            <div class="kien1" style="color: blue">
+        <tr class="b1">
+          <td class="b1">
+          <div class="b1">
+            <div class="bachpham" style="color: blue">
              
              Số Lượng Đoàn Khách
              <div  >
@@ -141,9 +105,9 @@
         </tr>
         <form><table>
 
- 				<tr class="hihi">
- 					<td class="hihi">Ghi Chú Thêm</td>
- 					<td class="hihi">
+ 				<tr class="bach">
+ 					<td class="bach">Ghi Chú Thêm</td>
+ 					<td class="bach">
  						<select multiple="SHIFT" name="kieu" size="4">
  							<option value="110">Có 2 trẻ em dưới 6 tuổi</option>
  							<option value="111">Có 2 người ăn chay</option>
@@ -151,24 +115,22 @@
  						</select>
  					</td>
  				</tr>
- 				<tr class="hihi">
- 					<td class="hihi">Số người dự đoán tham gia</td>
- 					<td class="hihi"> <input type="number" name="songuoiddtg"></td>
+ 				<tr class="bach">
+ 					<td class="bach">Số người dự đoán tham gia</td>
+ 					<td class="bach"> <input type="number" name="songuoiddtg"></td>
  				</tr></form></table>
  			</div>
  			<div style="margin-left: 0 auto;text-align: center;" class="hi">
  				<tr ><td>
-          <button  onclick="kiene()">Gửi Đi</button></td></tr>
+          <button  onclick="bp()">Gửi Đi</button></td></tr>
           
 
     <p id="demo" style="color: red"></p>
 
     <script>
-        function kiene(){
-            var name = "";
-            
-           
-            var str = "Bạn Đã Đăng Ký Thành Công:" + name ;
+        function bp(){
+        
+            var str = "Bạn Đã Đăng Ký Thành Công:" ;
             document.getElementById("demo").innerHTML = str;
         }
     </script>

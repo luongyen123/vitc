@@ -1,0 +1,29 @@
+h1 {
+  		color: #1C86EE;
+      text-align: center;
+
+  	}
+  	.bach{
+  		color: #8968CD;
+  		background-color: #CDCDB4;
+  		border: 1px solid #FFE1FF;
+  		border-collapse: collapse;
+  		padding: 5px;
+  		text-align: left;
+  		border-spacing: 5px;
+
+  	}
+  	body{
+  		float: center;
+  		
+  	}
+  	form{
+  		color: #8968CD;
+
+  	}
+  
+  	
+   
+      #menu {
+      margin-left: 485px;
+}
