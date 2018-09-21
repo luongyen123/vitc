@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+	  margin: 0;
+	  padding: 0;
+	}
+	#menu ul {
+	  background: #1F568B;
+	  list-style-type: none;
+	  text-align: center;
+	}
+	#menu li {
+	  color: #f1f1f1;
+	  display: inline-block;/*li thanh nam ngang*/
+	  width: 120px;
+	  height: 40px;
+	  line-height: 40px;/*độ cao chữ*/
+	  margin-left: -5px;
+	}
+	#menu a {
+	  text-decoration: none;/*bỏ gạch ngang của thẻ a*/
+	  color: #fff;
+	  display: block;/*hiển thị thành dạng khối*/
+	}
+	#menu a:hover {
+	  background: #F1F1F1;
+	  color: #333;
+	}
+	.sub-menu {
+	  display: none;/*Ẩn class sub-menu*/
+	  position: absolute;/*class sub-menu có vị trí là tuyệt đối so với cha*/
+	}
+	#menu li {
+	  position: relative;/*Hiển thị vị trí tương đối*/
+	}
+	#menu li:hover .sub-menu {
+	  display: block;/*hien thi sub-menu*/
+	}
+	</style>
+</head>
+<body>
+<div id="menu">
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Diễn đàn</a></li>
+    <li><a href="#">Tin tức</a>
+      <ul class="sub-menu">
+        <li><a href="#">WordPress</a></li>
+        <li><a href="#">SEO</a></li>
+        <li><a href="#">Hosting</a>
+        </li>
+      </ul>
+    </li>
+<li><a href="#">Hỏi đáp</a></li>
+<li><a href="#">Liên hệ</a></li
+</body>
+</html>
