@@ -1,0 +1,98 @@
+#dautrang { 												
+	background-color: #415e9b;
+	color: white;
+	height: 100px;
+	margin-top: -23px;
+	width: 100%;
+}
+#dautrang h1{
+	margin-left: 100px;
+	text-align: center;
+	float: left;
+	margin-top: 30px;
+}
+#dangnhap{
+	float: right;
+	margin-top: 43px;
+
+
+}
+#kien1{
+	float: left;
+	
+}
+#kien2{
+	float: right;
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 200px;
+	margin-top: 0 auto;
+
+
+	
+}
+#kien3{
+	
+	text-align: center;
+	margin-right: 0 auto;
+	margin-top: 0 auto;
+	margin-right: 0px;
+	margin-left: 270px;
+
+
+	
+}
+#kien4{
+	text-align: center;
+	margin-top: -15px;
+	margin-right: 120px;
+
+}
+#kien3 input {
+	color: white;
+	background-color: blue;
+}
+#dngd {
+	float: left;
+	margin-left: 100px;
+	text-align: left;
+	height: 500px;
+	width: 45%;
+}
+#dangky{
+	
+	margin-left: 100px;
+	height: 500px;
+	width: 75%
+}
+#cuoitrang{
+	float: center;
+	text-align: left;
+	color: #ddd;
+	background-color: white;
+
+}
+#dongy{
+	text-align: left;
+	color: #bbb;
+}
+a{
+	color: #365899;
+    text-decoration: none;
+}
+a:hover {
+ text-decoration:inherit; 
+ link{text-decoration: none}
+body{
+	font-family: Arial;
+}
+#ho{
+	border-radius: 50px;
+}
+#ten {
+	border-radius: 100px;
+}
+.fb_logo {
+    margin-top: 17px;
+}
+
