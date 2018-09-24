@@ -1,0 +1,29 @@
+#phan1{
+	background-color: #3e5c9a;
+	width: 50%;
+	height: 100px;
+	float: left;
+	color: #ffffff;
+	text-align: center;
+	font-size: 25px;
+}
+#phan2{
+	background-color: #3e5c9a;
+	height: 100px;
+	color: #ffffff;
+}
+#phan3{
+	background-color: #e6e9f2;
+	width: 50%;
+	height: 800px;
+	float: left;
+	color: #0e385f;
+	text-align: center;
+	font-size: 15px;
+}
+#phan4{
+	background-color: #e6e9f2;
+    height: 800px;
+    color: #0e385f;
+    font-size: 20px;
+}
