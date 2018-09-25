@@ -1,0 +1,121 @@
+.header {
+	background-color:#3b5998;
+	width: 60%;
+	height: 100px;
+	float: left;
+}
+#facebook { 
+	color: white;       /* màu chữ fb*/
+	font-size: 50px;   /* kích thước chữ fb*/
+	padding-top: 30px; /* chỉnh chữ fb từ trên xuống*/
+	padding-left: 200px; /* chỉnh chữ facebook từ trái sang*/
+}
+.thongtin {
+    background-color: #3b5998; /* màu nền*/
+    width: 40%; /* chiều rộng div phần bố cục và mk*/
+    height: 100px; /* chiều cao bố cục div phần tk và mk*/
+    float: left; /* căn chỉnh lên cùng hàng vs phần header*/
+    padding-top:auto;
+}
+#email {
+	color: white; /*màu chữ email và sđt*/
+	width: 200px;
+	height: 100px;
+	float: left;
+	margin-top: 30px; /* căn chỉnh ô nhập tài khoản vào giữa*/
+}
+#pass {
+	color: white; /* màu chữ mk*/
+	margin-top: 30px; /*căn chỉnh ô nhập mk vào giữa*/
+}
+#dangnhap {
+	background:#4267b2; /* màu nền khung đăng nhập*/
+	color: white; /* màu chữ trong khung đăng nhập*/
+}
+#bocuc3 {
+	background-color: #e1e4ef;
+	width:  60%;
+	height: 570px;
+	float: left;
+	background-image: url(anhfb.png); /* thẻ ảnh và đường dẫn ảnh */
+	background-repeat: no-repeat; /* chỉnh hình nền còn lại 1 ảnh duy nhất*/
+	background-position: 150px 120px; /*căn chỉnh hình nền từ trái sang và từ trên xuống*/
+	background-size: 537px 195px;
+
+}
+h2 {
+	padding-left:160px; /* căn chỉnh văn bản thụt lề*/
+	color: #0e385f;
+	padding-top: 20px; /*căn chỉnh văn bản từ trên xuống ở bố cục 3*/
+}
+#bocuc4 {
+	background-color: #e1e4ef; /*màu nền bố cục 4*/
+	width:  40%;
+	height: 570px;
+	float: left; /*xếp bố cục thành 1 hàng ngang từ trái sang*/
+	color: black; 	/* màu chữ nd ở bố cục 4*/
+	font-size: 30px; /* kích thước chữ nd ở bố cục 4*/
+}
+.name {
+	height: 33px; /*chiều rộng và cao khung tên*/
+	width: 171px;
+	border-radius: 10px;
+}
+.sdt {
+	width: 350px; /*chiều rộng và cao khung thay đổi mật khẩu + sdt và email*/
+	height: 35px;
+	border-radius: 10px;
+}
+.option {
+	width: 60px; /*chiều rộng và cao khung ngày và năm*/
+	height: 30px;
+}
+select {
+	height: 30px; /*chiều cao của khung tháng*/
+}
+#why {
+	color: blue;   /*màu và kích thước chữ câu hỏi cạnh ngày sinh*/
+	font-size: 15px;
+}
+.sex {
+	font-size: 20px; /*kích thướ chữ phần giới tính*/
+}
+.thu {
+	font-size: 15px; /*kích thước chữ và màu chữ của phần mô tả*/
+	color: #877777;
+}
+#sign {
+	width: 200px; /*chiều rộng khung đăng nhập*/
+	height: 40px; /*chiều cao khung đăng nhập*/
+	background:#61a04e; /*màu nền khung đăng ký*/
+	color: white;  /*màu chữ đăng kí*/
+	font-size: 25px; /*kích thước chữ đăng kí*/
+	border-radius: 10px; /*bo tròn viền cho khung*/
+}
+.end {
+	color: #666666;
+	font-size: 17px;
+}
+#bocuc5 {
+	background-color: #ffffff;
+	width: 100%;
+	height: 150px;
+	float:left;
+}
+span {
+    padding:5px; /*khoảng cách chữ*/
+}
+#span {
+	padding-left:250px; /*cách lề từ trái sang*/
+	color: #365899;
+	font-size: 15px;
+}
+.span2 {
+	padding-left:250px;
+	color: #365899;
+	font-size: 15px;
+
+}
+.footer {
+	width: 820px;
+}
