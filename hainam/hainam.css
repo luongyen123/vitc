@@ -1,0 +1,101 @@
+.phan1 {
+	background-color:#405d9b;
+	width: 59%;
+	height: 100px;
+	float: left;
+}
+#facebook { 
+	color: black;      
+	font-size: 40px;   
+	padding-top: 30px; 
+	padding-left: 200px; }
+.form {
+    background-color: #3b5998; 
+    width: 40%; 
+    height: 100px; 
+    float: left;
+    padding-top:auto;
+}
+#email {
+	color: white; 
+	width: 200px;
+	height: 900px;
+	float: left;
+	margin-top: 20px; 
+}
+#pass {
+	color: white; 
+	margin-top: 20px;
+}
+#dangnhap {
+	background:#4267b2; 
+	color: white; 
+}
+#phan2 {
+	background-color: #e9ebee;
+	width:  60%;
+	height: 570px;
+	float: left;
+	background-image: url(GwFs3_KxNjS.png); 
+	background-repeat: no-repeat; 
+	background-position: 150px 120px; 
+	background-size: 537px 195px;
+
+}
+h2 {
+	padding-left:160px; 
+	color: #0e385f;
+	padding-top: 20px; 
+}
+#phan3 {
+	background-color: #e9ebee;
+	width:  30%;
+	height: 470px;
+	float: left; 
+	color: black; 	
+	font-size: 20px; 
+}
+.name {
+	height: 33px; 
+	width: 171px;
+	border-radius: 10px;
+}
+.sdt {
+	width: 350px; 
+	height: 35px;
+	border-radius: 10px;
+}
+.option {
+	width: 60px; 
+	height: 30px;
+}
+select {
+	height: 30px; /
+}
+#why {
+	color: blue;  
+	font-size: 15px;
+}
+.sex {
+	font-size: 20px; 
+}
+.thu {
+	font-size: 15px; 
+	color: #877777;
+}
+#sign {
+	width: 200px; 
+	height: 40px; 
+	background:#61a04e; 
+	color: white; 
+	font-size: 25px; 
+	border-radius: 10px; 
+}
+.end {
+	color: #666666;
+	font-size: 17px;
+
+}
+.footer {
+	width: 820px;
+}
