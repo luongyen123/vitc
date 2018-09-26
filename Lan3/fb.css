@@ -1,0 +1,43 @@
+ #tieude{
+    background-color: rgb(34, 36, 185);
+    height: 100px;
+    width: 100%;
+}
+#trai{
+    height: 100px;
+    width: 50%;
+    float: left;
+}
+#phai{
+    height: 100px;
+    width: 50%;
+    float: right;
+} 
+#phu1{
+    height: 100px;
+    width:25%;
+    float: left;
+}
+#phu2{
+    height: 100px;
+    width:25%; 
+    float: left; 
+    margin-left: 15px;
+}
+#cuoi{
+ 
+    height: 500px;
+    width:100%; 
+}
+#duoi1{
+
+    height: 500px;
+    width:50%; 
+    float: left;
+}
+#duoi2{
+    height: 500px;
+  
+}
+
+ 
