@@ -1,13 +1,22 @@
 #trencung {
 color: black;
-width: 100%;
+width: 50%;
 height: 60px;
 background-color: white;
-background: url(unnamed.jpg);
+float: left;
 }
+/*#trencung2 {
+color: black;
+width: 50%;
+height: 30px;
+background-color: white;
+float: right;
+text-align: right;	
+padding-top: 30px;
+}*/
 #thanhngang {
 color: black;
-width: 10%px;
+width: 100%px;
 height: 30px;
 background-color: #5f5f5f;
 margin-bottom: 10px;
@@ -26,17 +35,17 @@ width: 60%;
 float: left;
 }
 #thanphai{
-	height: 650px;
-	color: black;
-	background-color: #ffffff;
-	float: right;
-	width: 30%;	
+height: 650px;
+color: black;
+background-color: #ffffff;
+float: right;
+width: 30%;
 }
 a:hover{
-	background-color: red;
+background-color: red;
 }
 #phancon{
-	height: 100px;
-	color: red;
-	background-color: green;
+height: 100px;
+color: red;
+background-color: green;
 }

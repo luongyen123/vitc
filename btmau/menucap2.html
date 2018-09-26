@@ -39,13 +39,28 @@
 	#menu li:hover .sub-menu {
 	  display: block;/*hien thi sub-menu*/
 	}
+     {
+	  display: none;
+	  position: absolute;
+	}
+	#menu li {
+	  position: relative;
+	}
+	#menu li:hover .sub-menu {
+	  display: block
+
 	</style>
 </head>
 <body>
 <div id="menu">
   <ul>
     <li><a href="#">Trang chủ</a></li>
-    <li><a href="#">Diễn đàn</a></li>
+    <li><a href="#">Diễn đàn</a>
+       <ul class="p1">
+       	<li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a>
+        </li>
     <li><a href="#">Tin tức</a>
       <ul class="sub-menu">
         <li><a href="#">WordPress</a></li>

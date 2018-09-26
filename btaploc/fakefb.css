@@ -1,0 +1,59 @@
+#facebook{
+width: 56%;
+height: 100px;
+background-color: #3b5998;
+float: left;
+text-align: center;
+}
+#dangnhap{
+width: 44%;
+height: 100px;
+background-color: #3b5998;
+color: white;
+float: right;}
+#thanphai{
+width: 44%;
+height: 600px;
+float: right;
+background: url(hinh-nen-sinh-thai-xinh-xan-trong-photoshop-2.jpg);
+text-align: 40px;
+}
+#div{
+background: rgb(95, 156, 76);
+width: auto;
+height: auto;
+color: white;
+}
+#thangiua{
+width: 56%;
+height: 600px;
+float: left;
+background: url(hinh-nen-sinh-thai-xinh-xan-trong-photoshop-2.jpg);
+float-color: right;
+text-align: center;
+}
+#cuoitrang{
+
+text-align: center;
+color: #ddd;
+background-color: white;
+}
+#check{
+background: #4267b2;
+color: white;
+}
+h5{
+	color: white;
+}
+#dn1{
+	float: left;
+	margin-top: 3%;
+	
+}
+#dn2{
+float: right;
+	text-align: left;
+	margin-left: 1%;
+	margin-right: 45%;
+	margin-top: 3%;
+}
