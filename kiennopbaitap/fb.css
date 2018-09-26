@@ -1,9 +1,17 @@
 #dautrang { 												
-	background-color: #415e9b;
+	background-color:#3b5997;
 	color: white;
-	height: 100px;
-	margin-top: -23px;
-	width: 100%;
+	height: 96px;
+	margin-top: -21px;
+	width: 110%;
+	margin-left: -10px;
+
+}
+#fb{
+	float: left; 
+ margin-top: 28px;
+ margin-left: 168px;						
+	
 }
 #dautrang h1{
 	margin-left: 100px;
@@ -13,20 +21,39 @@
 }
 #dangnhap{
 	float: right;
-	margin-top: 43px;
-
+	margin-top: 38px;
+	font-size: 13px;
 
 }
+.dangnhap1{
+	background-color: #4267b2;
+	color: white;
+	border: 1px solid #29487d;
+	height: 21px;
+	margin-left: 10px;
+}
+.matkhau{
+	border: 1px solid black;
+	height: 18px;
+	width: 150px;
+}
+
+
 #kien1{
 	float: left;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	width: 150px;
+
 	
 }
 #kien2{
 	float: right;
 	text-align: left;
 	margin-left: 20px;
-	margin-right: 200px;
-	margin-top: 0 auto;
+	margin-right: 280px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 
 
 	
@@ -42,10 +69,11 @@
 
 	
 }
-#kien4{
+.lion{
 	text-align: center;
 	margin-top: -15px;
-	margin-right: 120px;
+	margin-right: 271px;
+
 
 }
 #kien3 input {
@@ -54,22 +82,29 @@
 }
 #dngd {
 	float: left;
-	margin-left: 100px;
+	margin-left: 175px;
 	text-align: left;
 	height: 500px;
 	width: 45%;
+	font-size: 23px;
+	color: #0e385f;
+	margin-top: -32px;
+	font-style: inherit;
 }
 #dangky{
 	
-	margin-left: 100px;
+	margin-left: 0 auto;
 	height: 500px;
-	width: 75%
+	margin-top: 25px;
+	margin-bottom: 20px;
+	
 }
 #cuoitrang{
 	float: center;
 	text-align: left;
 	color: #ddd;
 	background-color: white;
+			te
 
 }
 #dongy{
@@ -77,7 +112,7 @@
 	color: #bbb;
 }
 a{
-	color: #365899;
+	color:#365899;
     text-decoration: none;
 }
 a:hover {
@@ -86,13 +121,15 @@ a:hover {
 body{
 	font-family: Arial;
 }
-#ho{
-	border-radius: 50px;
-}
-#ten {
-	border-radius: 100px;
-}
-.fb_logo {
-    margin-top: 17px;
-}
 
+#ngaysinh {
+	font-size: 14px;
+
+}
+#dongy a{
+	color:#365899;
+}
+.dk:focus	{
+	background-color: #66cd00;
+	color: red;
+}
