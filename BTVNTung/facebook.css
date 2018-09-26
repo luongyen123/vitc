@@ -1,0 +1,127 @@
+#top1{
+	background-color: #3c5a98;
+	width: 55%;
+	height: 83px;
+    float: left;
+    padding-left: 
+}
+.top2 {
+	background-color: #3c5a98;
+	width: 45%;
+	height: 83px;
+	color: #fff;
+	float: left;
+	font-family: Helvetica ;
+	font-size: 12px;
+}
+#top21 {
+	padding-top: 17px;
+	padding-left: 17px;
+	padding-right: 18px;
+	float: left;
+}
+#top22 {
+	padding-top: 17px;
+	padding-bottom: 9px;
+}
+.top2 a {
+	text-decoration-line: none;
+	color: #83b4d8;
+    padding-left: 207px;
+}
+.left {
+	width: 537px;
+	height: 600px;
+	background-color: #f6f7fa;
+	padding-left: 155px;
+    float: left;
+}
+#left1 {
+	width: 450px;
+	font-family: Helvetica;
+	color: #0e385f;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    word-spacing: -1px;/*khoảng cách chữ*/
+    padding-top: 40px;
+}
+#left2 {
+	width: 537px;
+    direction: ltr;/*dòng này và dòng dưới xem xét bỏ*/
+    line-height: 1.34;
+}
+#right {
+	background-color: #f6f7fa;
+	float: left;
+    font-family: Helvetica ;
+    width: 595px;
+    height: 600px;
+
+}
+#right1 {
+	    padding-left: 35px;
+     padding-top: 25px;}
+#right2 {    padding-left: 35px;
+
+}
+#right2 input {border-radius: 5px;
+	font-size: 18px;
+	border: 1px solid #bdc7d8;
+	border-color: #bdc7d8; 
+	padding: 8px 10px;
+}
+#right2 select {
+	    border: 1px solid #bdc7d8;
+    padding: 2px;
+	font-size: 13px;
+    height: 30px;
+    padding: 5px;
+}
+#right2 a {
+	color: #365899;
+    text-decoration: none;
+	font-size: 11px;
+    max-width: 150px;/*dòng dài tối đa*/
+    display: inline-block;
+    vertical-align: middle;/*cùng dòng với ngày tháng*/
+}
+#right3 input{
+    font-size: 19px;
+    line-height: 126%;
+    font-weight: bold;
+    min-width: 194px;
+    padding: 6px 20px;
+    border: 1px solid;
+    border-radius: 5px;/*bo viền*/
+    background-color: #69a74e;
+    border-color: #3b6e22;
+    color: #fff;
+}
+#duoi {
+	height: 200px;
+	padding-left: 140px;
+	width: 980px;
+    display: inline-block;
+    padding-top: 15px;
+    font-size: 12px;
+    font-family: Helvetica;
+    }
+#duoi a {
+	text-decoration: none;
+    color: #365899;
+	padding-left: 5px;
+	padding-bottom: 20px;
+	display: inline-block;
+}
+#duoi li {
+	display: inline-block;
+	padding-left: 8px;
+}
+#duoi p {
+	display: inline-block;
+		padding-left: 55px;
+
+}
+	/*style="width: 377px;border-radius: 5px;padding: 8px 10px; font-size: 18px;
+	border-color: #bdc7d8; border: 1px solid #bdc7d8;"*/
