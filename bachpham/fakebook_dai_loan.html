@@ -20,6 +20,7 @@
         }
 
 .logo{
+	        margin-left:100px;
             font-size:55px;
             text-align:left;
             padding-top:30px;
@@ -35,7 +36,7 @@
 #gmail
 {
 	float: right;
-	margin-right: 350px;
+	margin-right: 650px;
 	margin-top: -60px;
 	margin-bottom: 0px;
 	width: center;
@@ -46,7 +47,7 @@
 {
 	float: right;
 	text-align: left;
-	margin-right: 80px;
+	margin-right: 370px;
 	margin-top: -60px;
 	margin-bottom: 0px;
 }
@@ -56,17 +57,51 @@
 	text-align: left;
 	height: 500px;
 	width: 45%;
-	font-size: 23px;
+	font-size: 10px;
 	color: #0e385f;
 	margin-top: -32px;
 	font-style: inherit;
 }
-#dangky{
+#dangkyTQ{
 	
-	margin-right: 20;
+	margin-left:-180px;
 	height: 500px;
 	margin-top: 25px;
 	margin-bottom: 20px;
+	
+}
+#dongy{
+	text-align: left;
+	color: #bbb;
+}a{
+	color:#365899;
+    text-decoration: none;
+}
+a:hover {
+ text-decoration:inherit; 
+ link{text-decoration: none}
+body{
+	font-family: Arial;
+}
+
+#ngaythang {
+	font-size: 14px;
+
+}
+#dongy a{
+	color:#365899;
+}
+.dk:focus	{
+	background-color: #66cd00;
+	color: red;
+}
+
+#cuoitrang{
+	float: center;
+	text-align: left;
+	color: #ddd;
+	background-color: white;
+		}
 
        </style>
 </head>
@@ -74,7 +109,8 @@
 <div id="container">
 	<div id="header">
 	 <div class="logo">Fakebook</div>
-	    <div id="gmail">
+	    <form action="#">
+	    	<div id="gmail">
 		 <i>Email hoặc điện thoại</i><br>
 	<input type="text" class="matkhau"  name="Email">
 		</div>
@@ -83,19 +119,83 @@
 		<input type="password" class="matkhau"  name="matkhau"> 
 		<input type="submit" class="dangnhap1" value="Đăng nhập">
 		<div class="lion"><a style="color: red" href="#">Quên tài khoản?</a></div>
+	</form>
 </div>
-
-	<div style="background-color:#dce0ec">
-		<div id="phong">
+<div id="phong">
 			<div>
-
 			<br>
 			<br>
-				<p align="center"><h3>Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn nhanh hơn</h3></p><br>
+				<p align="center"><h1>Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn nhanh hơn</h1></p><br>
 				<img src="http://www.freepascal.org/pic/logo.gif"width="500px" height="350px">
 			</div>
 		</div>
 	</div>
+		<div id="dangkyTQ">
+			
+			<b style="font-size: 40px;color: #333333">Đăng ký</b>
+			<div style="font-size: 21px; margin-top: 10px;">
+			Luôn miễn phí<br>
 			</div>
+			<div>
+				<form action="#">
+					<div id="ho">
+						<input type="text" style="border-radius: 5px;height: 35px; width: 200px; border: 1px solid #bdc7d8; font-size: 15px; margin-top: 15px; margin-right: 5px;"  name="ho" placeholder=" Họ">	<input type="text" class="otron" style="border-radius: 5px;height: 35px; width: 200px; border: 1px solid #bdc7d8; font-size: 15px;" name="ten" placeholder=" Tên">
+					</div>
+					<div id="email">
+						<input type="text" style="border-radius: 5px;height: 35px; width: 410px; border: 1px solid #bdc7d8; font-size: 15px; margin-top: 10px;" class="otron" name="email" placeholder=" Số di động hoặc email">
+					</div>
+					<div id="pass">
+						<input type="password" style="border-radius: 5px;height: 35px; width: 410px; border: 1px solid #bdc7d8; font-size: 15px; margin-top: 10px; margin-bottom: 15px;" class="otron" name="pass" placeholder=" Mật khẩu mới">
+					</div>
+					<div id="ngaythang">
+						
+						<div  style="height: 60px;"><div style="margin-bottom: 8px;font-size: 20px;">Ngày sinh</div>
+						<div ><span  data-type="selectors" data-name="birthday_wrapper" ><span><select aria-label="Ngày" name="birthday_day" style="height: 27px; font-size: 12px;" id="day" title="Ngày" >
+							<option value="0">Ngày</option>
+							<option value="1">1</option>
+							
+						</select><select aria-label="Tháng" name="birthday_month"  title="Tháng" style="height: 27px;font-size: 12px;">
+							<option value="1">Tháng 1</option>
+						</select>
+						<select aria-label="Năm" style="height: 27px; font-size: 12px;margin-left: -4px;" name="birthday_year"  title="Năm" >
+							<option value="0">Năm</option>
+						</select></span></span>
+						<a style="font-size: 12px; margin-left: 3px; color: #365899 " href="#" title="Nhấp chuột để biết thêm thông tin" role="button">Tại sao tôi cần cung cấp ngày sinh của mình?</a>
+					</div></div>
+					</div>
+					<div id="sex" style="font-size: 21px; margin-top: 10px; margin-bottom: 10px;">
+						<input type="radio" name="sex" value="nu">Nữ<input type="radio" name="sex" value="nam">Nam
+						
+					</div>
+					<div id="dongy" style="color: #777777; font-size: 12px;">
+						Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a style="color: #365899;" href="#">Điều khoản</a>,<a style="color: #365899" href="#">Chính<br> sách dữ liệu</a> và <a style="color: #365899" href="#">Chính sách cookie</a> của chúng tôi. Bạn có thể<br> nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ<br> lúc nào.
+					</div>
+					<button type="submit" style="border-radius: 5px;height: 40px; width: 200px; font-size: 20px; margin-top: 20px; margin-right: 5px; margin-bottom: 20px; background-color: #5b9147;border: 1px solid #2c5115; color: white;" class="dk"><b>Đăng ký</b></button>
+					<div id="taotrang" style="color: #666666">
+						<a href="#" style="color: #365899;text-align: right;margin-left: 774px;">Tạo Trang</a> dành cho người nổi tiếng, nhãn hiệu hoặc doanh nghiệp.
+						
+					</div>
+				</form>
+			</div>
+		</div></div></div>
+		<br>
+		<div id="cuoitrang">
+			<div style="color: #666666; margin-left: 180px;font-size: 13px; width: 1000px;">
+				Tiếng Việt <a  style="margin-right: 10px;margin-left: 10px;" href="#">English (UK)</a><a style="margin-right: 10px;" href="#">中文(台灣)</a><a style="margin-right: 10px;" href="#">한국어</a><a href="#">日本語</a><a style="margin-right: 10px;" href="#">Français (France)</a>
+				<a style="margin-right: 10px;" href="#">ภาษาไทย</a><a style="margin-right: 10px;" href="#">Español</a><a style="margin-right: 10px;" href="#">Português (Brasil)</a><a style="margin-right: 10px;" href="#">Deutsch</a><a style="margin-right: 10px;" href="#">Italiano
+</a><a style="margin-right: 10px;border: 1px solid #ccd0d5; border-radius: 1px; font-size: 23px;" role="button"  rel="dialog" ajaxify="/settings/language/language/?uri=https%3A%2F%2Fit-it.facebook.com%2F&amp;source=www_list_selector_more" href="#" title="Hiển thị thêm ngôn ngữ" tabindex="0">+</a>
+<hr>					
+				<div class="dm">
+				<a href="#" style="margin-right: 10px;">Đăng ký</a><a style="margin-right: 10px;" href="#">Đăng nhập</a><a style="margin-right: 10px;" href="#">Messenger</a><a style="margin-right: 10px;" href="#">Facebook</a> 
+				<a style="margin-right: 10px;" href="#">Lite</a><a style="margin-right: 10px;" href="#">Di động</a><a style="margin-right: 10px;" href="#">Tìm bạn bè</a><a style="margin-right: 10px;" href="#">Danh bạ</a><a style="margin-right: 10px;" href="#">Trang</a><a style="margin-right: 10px;" href="#">Video</a>
+				<a style="margin-right: 10px;" href="#">Interests</a><a style="margin-right: 10px;" href="#">Địa điểm</a><a style="margin-right: 10px;" href="#"> Trò chơi</a><a style="margin-right: 10px;" href="#">Vị trí</a><a style="margin-right: 10px;" style="margin-right: 10px;" href="#">Marketplace</a><a style="margin-right: 10px;" href="#">Nhóm</a><a style="margin-right: 10px;" href="#">Instagram</a>
+				<a style="margin-right: 10px;" href="#">Địa phương</a><a style="margin-right: 10px;" href="#">Giới thiệu</a><a style="margin-right: 10px;" href="#">Tạo quảng cáo</a><a style="margin-right: 10px;" href="#">Tạo Trang</a><a style="margin-right: 10px;" href="#">Nhà phát triển</a><a style="margin-right: 10px;" href="#">Tuyển dụng</a><a style="margin-right: 10px;" href="#">Quyền riêng tư</a><a style="margin-right: 10px;" href="#">Cookie</a><a style="margin-right: 10px;" href="#">Lựa chọn quảng cáo</a><a style="margin-right: 10px;" href="#">Điều khoản</a><a style="margin-right: 10px;" href="#">Trợ giúp</a><a style="margin-right: 10px;" href="#">Cài đặt</a>
+			</div></div>
+			<br>
+				<div style="color: #bec3c9; margin-left: 180px;font-size: 13px;">Facebook © 2018</div>
+
+		</div>
+
+	</div>
 </body>
 </html>

@@ -15,8 +15,9 @@ float: right;}
 width: 44%;
 height: 600px;
 float: right;
-background: url(hinh-nen-sinh-thai-xinh-xan-trong-photoshop-2.jpg);
+background: linear-gradient(#fff,#d3d8e8);
 text-align: 40px;
+
 }
 #div{
 background: rgb(95, 156, 76);
@@ -28,15 +29,17 @@ color: white;
 width: 56%;
 height: 600px;
 float: left;
-background: url(hinh-nen-sinh-thai-xinh-xan-trong-photoshop-2.jpg);
+background: linear-gradient(#fff,#d3d8e8);
 float-color: right;
 text-align: center;
 }
 #cuoitrang{
-
-text-align: center;
+margin-left: 500px;
 color: #ddd;
 background-color: white;
+display: inline-block;
+direction: 10px;
+line-height: 1.34;
 }
 #check{
 background: #4267b2;
@@ -56,4 +59,12 @@ float: right;
 	margin-left: 1%;
 	margin-right: 45%;
 	margin-top: 3%;
+} 
+ghi chú lệnh{
+	border-radius: 2px; <làm tròn viên ô vuông trong bảng>
+	padding-top: 8px; <làm to ô vuông trong bảng
+background: linear-gradient(#maubđ,#maukt)-angle là quay tròn
+}
+img{
+	opacity: 0.5; [làm mờ ảnh]
 }

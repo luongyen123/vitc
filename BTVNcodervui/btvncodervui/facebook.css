@@ -35,7 +35,7 @@
 #bocuc3 {
 	background-color: #e1e4ef;
 	width:  60%;
-	height: 570px;
+	height: 590px;
 	float: left;
 	background-image: url(anhfb.png); /* thẻ ảnh và đường dẫn ảnh */
 	background-repeat: no-repeat; /* chỉnh hình nền còn lại 1 ảnh duy nhất*/
@@ -51,7 +51,7 @@ h2 {
 #bocuc4 {
 	background-color: #e1e4ef; /*màu nền bố cục 4*/
 	width:  40%;
-	height: 570px;
+	height: 590px;
 	float: left; /*xếp bố cục thành 1 hàng ngang từ trái sang*/
 	color: black; 	/* màu chữ nd ở bố cục 4*/
 	font-size: 30px; /* kích thước chữ nd ở bố cục 4*/
@@ -59,12 +59,17 @@ h2 {
 .name {
 	height: 33px; /*chiều rộng và cao khung tên*/
 	width: 171px;
-	border-radius: 10px;
+	border-radius: 5px;
+	border: 1px solid #ddd;/*đường viền cho ô thông tin*/
+	margin-bottom: 15px;/* cách ô thông tin*/
 }
+
 .sdt {
 	width: 350px; /*chiều rộng và cao khung thay đổi mật khẩu + sdt và email*/
 	height: 35px;
-	border-radius: 10px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	margin-bottom: 15px;
 }
 .option {
 	width: 60px; /*chiều rộng và cao khung ngày và năm*/
@@ -103,7 +108,7 @@ select {
 	float:left;
 }
 span {
-    padding:5px; /*khoảng cách chữ*/
+    padding:10px; /*khoảng cách chữ*/
 }
 #span {
 	padding-left:250px; /*cách lề từ trái sang*/
@@ -118,4 +123,7 @@ span {
 }
 .footer {
 	width: 820px;
+}
+#cuoi {
+	padding: 260;
 }
