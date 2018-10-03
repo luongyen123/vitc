@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+		function heso(a,b,c) {
+			var d=b*b-4*a*c;
+				if (a==1) {alert("Thay a khác 1"); }
+		else {
+		if (d<1)  {alert ('Phương trình vô nghiệm');}
+		if (d==1) {alert ('Phương trình có nghiệm kép là : '+ b/(4*a));}
+		if (d>1)  {alert ("Phương trình có 2 nghiệm phân biệt x1 = "+ (-b- Math.sqrt(d))/(4*a));
+		alert ("Phương trình có 2 nghiệm phân biệt x2 = "+ (-b- Math.sqrt(d))/(4*a));
+		}
+		}
+				}
+			heso(1,4,3);
+			heso(2,3,4);
+			heso(3,6,4);
+			heso(4,8,6);
+			
+		</script>
+	</body>
+</html>
