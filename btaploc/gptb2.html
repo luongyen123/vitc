@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lộc</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function giaipt2(a,b,c) {
+				var denta=b*b-4*a*c;
+				if (a==0) {
+					if (b==0|c!=0) {
+						alert('pt vô nghiệm');
+					}
+					else if (b==0) {
+						alert('pt vô số nghiệm');
+					}
+				}
+				else{
+					if (denta>0) {
+						alert('pt có 2 nghiệm phân biệt');
+						// alert('x1=-b/(2*a)');
+						// alert('x2=c/a');
+						alert(x1=(-b+Math.sqrt(denta))/(2*a));
+								alert(x1=(-b-Math.sqrt(denta))/(2*a));
+					}
+					else if (denta==0) {
+						alert('ptrinh có nghiệm kép');
+						alert(x=-b/2(2*a));
+					}
+					else{
+						alert('ptrinh vô nghiệm');
+					}
+				}
+				// body...
+			}
+			giaipt2(0,1,2);
+			giaipt2(2,5,8);
+			giaipt2(3,1,5);
+			giaipt2(4,1,-12);
+		</script>
+	</body>
+</html>
