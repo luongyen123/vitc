@@ -1,11 +1,11 @@
 #phan1{
 	background-color: #3e5c9a;
-	width: 50%;
+	width: 60%;
 	height: 100px;
 	float: left;
 	color: black;
-	text-align: center;
-	font-size: 30px;
+	text-align: black;
+	font-size: 25px;
 }
 #phan2{
 	background-color: #3e5c9a;
@@ -14,7 +14,7 @@
 }
 #phan3{
 	background-color: #e6e9f2;
-	width: 55%;
+	width: 50%;
 	height: 600px;
 	float: left;
 	color: #0e385f;
@@ -23,23 +23,24 @@
 }
 #phan4{
 	background-color: #e6e9f2;
-    height: 650px;
+    height: 600px;
     color: #0e385f;
-    font-size: 30px;
+    font-size: 20px;
 }
 .name{
-	width: 180px;
-	height: 40px;
-	margin-bottom: 20px;
+	width: 170px;
+	height: 30px;
+	border: 2px solid #ddd;
+	margin-bottom: 10px;
 }
 .sdt{
 	width: 350px;
 	height:30px;
-	border: 3px solid #ddd;
+	border: 2px solid #ddd;
 	margin-bottom: 10px;
 }
 .be{
-   font-size: 20px;
+   font-size: 15px;
    color: #877777;
 }
 #sign{
@@ -54,7 +55,7 @@
 	width: 100%;
 	height: 200px;
 }
-#span{
+span{
    padding: 15px;
-   color: blue;
+   color: #365899;
 }
