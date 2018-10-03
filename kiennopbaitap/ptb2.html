@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Giai phuong trinh bac 2</title>
+<script language="JavaScript">//ax^2+bx+c=0
+function giai(a,b,c){
+var a,b,c,delta;
+delta=(b*b-4*a*c)
+	if(delta ==0){
+ 		alert("phuong trinh co nghiem kep");
+ 		alert(-b/(2*a)) ;
+
+
+	}
+		else if(delta<0){
+ 			alert("phuong trinh vo nghiem");
+	} 
+		else{
+ 			alert("phuong trinh co hai nghiem");
+ 			alert((-b-Math.sqrt(delta))/(2*a));
+ 			alert((-b+Math.sqrt(delta))/(2*a));
+ 
+	}
+	}
+giai(2,3,4)
+giai(1,-8,16)
+giai(2,3,1)
+</script>
+</head>
+<body>
+
+</body>
+</html>

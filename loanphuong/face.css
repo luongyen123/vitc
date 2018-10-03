@@ -1,29 +1,45 @@
-#dau1{
+#dau{
 	background-color: #415e9b;
-	width: 50%;
-	height: 80px;
+	width: auto;
+	height: 90px;
 	color: white;
-    text-align: center;
-    font-size: 20px;
+    font-size: 15px;
+}
+#dau1{
 	float: left;
+	height: 90px;
+	width: 50%;
+	text-align: center;
 }
 #dau2{
-	background-color: #415e9b;
-	color: white;
-	height: 80px;
+	float: right;
+	height: 90px;
+	width: 50%;
 }
-#dau3{
+#dau21{
+	height: 90px;
+	width: 25%;
+	float: left;
+}
+#dau22{
+	height: 90px;
+	width: 25%;
+	float: left;
+	margin-left: 15px;
+}
+#giua{
+	height: 500px;
+	width: 100%;
+}
+#giua1{
 	background-color: #DEF0FA;
+	color: blue;
+	height: 500px;
+	width: 50%;
+	float: left;
+}
+#giua2{
 	width: 50%;
 	height: 500px;
     float: left;
-    text-align: center;
-    font-size: 20px;
-    color: blue;
-}
-#dau4{
-	background-color: #DEF0FA;
-	height: 500PX;
-	font-size: 30px;
-	color: blue;
 }
