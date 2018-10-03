@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		function phuong_trinh_bac_hai(a,b,c)
+		{
+			var m=b*b-4*a*c;
+      if (a==0)   	{alert("nhap a khac 0");
+       }
+      else{
+       if( m>0)    {alert("phuong trinh co hai nghien phan biet x1= "+ (-b+Math.sqrt(m))/(2*a));
+                   alert("phuong trinh co hai nghiem phan biet x2="+ (-b-Math.sqrt(m))/(2*a));
+       }
+       if(m<0)    {alert("phuong trinh vo nghiem");
+
+       }
+       if(m==0) { alert("phuong trinh co gnhiem kep là :"+ -b/(2*a));}
+      }
+
+	  }  
+	phuong_trinh_bac_hai(2,4,6);
+    phuong_trinh_bac_hai(3,6,9);
+    phuong_trinh_bac_hai(4,6,8);
+	</script>
+    
+</body>
+</html>
