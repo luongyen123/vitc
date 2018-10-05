@@ -61,7 +61,7 @@ h2 {
 	width: 171px;
 	border-radius: 5px;
 	border: 1px solid #ddd;/*đường viền cho ô thông tin*/
-	margin-bottom: 15px;/* cách ô thông tin*/
+	margin-bottom: 15px;/* khoảng cách ở phía dưới ô thông tin*/
 }
 
 .sdt {
