@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"/>
+   
+</head>
+
+<body>
+<div>
+    <h1 style="color: red;"> Bài 2</h1>
+    <u style="color: blue;">In ra các số chẵn từ 1->100
+</u><br><hr><br>
+</div>
+    <script type="text/javascript">
+       
+        for(var i=0;i<=100;i+=2){
+            document.write(i+"     ,")
+           
+        }
+        
+    
+    </script>
+<hr>
+<div><h1 style="color: red;">Bài 1</h1>
+<i style="color: blue;"> xep loai hoc tap dua vào cac trương hop sau <br>
+        Nếu 25<=điểm < 30 xep loai A <br>
+        Neu  20<= diem < 25 xep lọa B <br>
+        Neu 15<= diem < 20 xep loai C <br>
+        Neu 10<= diem< 15 xep loai D <br>
+        neu 5<= diem< 10 xep loai E <br>
+        Neu 0<= diem< 5 là F</i><br><hr>
+        </div>
+
+   
+    <script type="text/javascript">
+        function xeploai(a)
+{
+        var a
+        var write="  xếp loại "
+        if (0<=a && a<5) {
+           document.write("điểm "+a+  write+"F  ;")
+        }
+        else if (5<=a && a<10) {
+            document.write("điểm "+a+  write+"E  ;")
+            }
+       else if (10<=a && a<15) {
+           document.write("điểm "+a+  write+"D  ;")
+                     }
+       else if (15<=a && a<20) {
+           document.write("điểm "+a+  write+"C  ;")
+                             }
+       else if (20<=a && a<25) {
+            document.write("điểm "+a+  write+"B  ;")
+                                     }
+       else if (25<=a && a<30) {
+           document.write("điểm "+a+  write+"A  ;")
+                                       }
+ }
+ xeploai(2);
+ xeploai(7);
+ xeploai(29);
+ xeploai(17);
+ xeploai(21);
+
+    </script>
+    
+
+
+
+</body>
+
+</html>
