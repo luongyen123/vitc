@@ -5,31 +5,47 @@
 </head>
 <body>
 <script type="text/javascript">
-	var x=5; /*khai báo biến*/
-	var x=6;
-	// alert(x+5); cho hiển thị thông báo lên màn hình*/
-	// console.log(5+6)
+// 	var x=5; /*khai báo biến*/
+// 	var x=6;
+// 	// alert(x+5); cho hiển thị thông báo lên màn hình*/
+// 	// console.log(5+6)
 	
-// 	function nghiemphuongtrinh(x){
-// var a=5;
-// var b=5;
-// alert(x=b/a);
+// // 	function nghiemphuongtrinh(x){
+// // var a=5;
+// // var b=5;
+// // alert(x=b/a);
+// // 	}
+// // 	nghiemphuongtrinh(5,5);
+// function dungsai(a,b){
+	
+// 	if (a<b) {
+// 		alert("a bé ơn nha");
+// 	} else {
+// 		if(a==b)
+// 		{
+// 		alert("ơ đm a bằng b");
+// 		}
+// 		else{
+// 			alert('a lon hon b');
+// 		}
 // 	}
-// 	nghiemphuongtrinh(5,5);
-function dungsai(a,b){
-	
-	if (a<b) {
-		alert("a bé ơn nha");
-	} else {
-		if(a==b)
-		{
-		alert("ơ đm a bằng b");
-		}
-		else{
-			alert('a lon hon b');
-		}
-	}
-} dungsai(5,6);
+// } dungsai(5,6);
+function giaithua(n){
+	var giaithua=1;
+	var tong=0;
+for(var i=1;i<=n;i++){
+	tong+=i/(2*i);
+	giaithua*=i;
+}
+alert(giaithua);
+alert(tong);
+}
+giaithua(4);
+
+
+
+
+
 </script>
 </body>
 </html>
