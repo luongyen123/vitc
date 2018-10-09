@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nhóm 3</title>
+<body>
+		<form method="get" action="">
+		Nhập số: <input type="text" id="songuyento" value=" "/>
+		<input type="button" value="Click" onclick="snt()">
+		</form>
+		<br>2<br>3<br>5<br>
+		<div id="ok"></div>
+		<script type="text/javascript">
+		function snt(){
+		var songuyento = document.getElementById("songuyento").value;
+		songuyento = parseInt(songuyento);
+		var html = '';
+		for (i = 2; i <= songuyento; i++){
+		if (i / i ==1 && i/1 == i && i%i == 0&& i % 2 != 0 && i % 3 !=0 && i % 5 !=0) {
+						html += i + ' <br/>';
+									}
+		}
+		document.getElementById("ok").innerHTML = html;
+		}
+		</script>
+</body>
+</html>
