@@ -1,0 +1,773 @@
+<!DOCTYPE html:5>
+<html lang="en"><head>
+
+
+        <style type="text/css">
+       .snow-container{position:fixed;width:100%;max-width:100%;z-index:99999;pointer-events:none;overflow:hidden;top:0;height:100%}
+       .snow{display:block;position:absolute;z-index:2;top:0;right:0;bottom:0;left:0;pointer-events:none;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);-webkit-animation:snow linear infinite;animation:snow linear infinite}
+       .snow.foreground{background-image:url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");-webkit-animation-duration:15s;animation-duration:10s}
+       .snow.foreground.layered{-webkit-animation-delay:7.5s;animation-delay:7.5s}
+       .snow.middleground{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);-webkit-animation-duration:20s;animation-duration:15s}
+       .snow.middleground.layered{-webkit-animation-delay:10s;animation-delay:10s}
+       .snow.background{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);-webkit-animation-duration:25s;animation-duration:20s}
+       .snow.background.layered{-webkit-animation-delay:12.5s;animation-delay:12.5s}
+       @-webkit-keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+       @keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+       </style>
+      <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <meta http-equiv="X-UA-Compatible" content="ie=edge">
+           <title>STUDENT-VNUA | Chia Sẻ Tài Liệu Học Tập</title>
+          <style> 
+          
+          #i02 {
+              color: aqua;
+              font-size: 50%;
+          }
+          #ul01
+          {
+              color: bisque;
+              background-color: black;
+          }
+          /*==Reset CSS==*/
+* {
+         margin: 0 auto;
+         padding: 0;
+       }
+       
+       /*==Style cơ bản cho website==*/
+ body {
+         font-family: sans-serif;
+         color: #333;
+       }
+       
+       /*==Style cho menu===*/
+#menu ul {
+         background: #1F568B;
+         list-style-type: none;
+         text-align: center;
+       }
+#menu li {
+         color: #f1f1f1;
+         display: inline-block;
+         width: 120px;
+         height: 40px;
+         line-height: 40px;
+         margin-left: -5px;
+      
+       }
+#menu a {
+         text-decoration: none;
+         color: #fff;
+         display: block;
+       }
+#menu a:hover {
+         background: #F1F1F1;
+         color: #333;
+       }
+       
+       /*==Dropdown Menu==*/
+ .sub-menu {
+         display: none;
+         position: absolute;
+       }
+ #menu li {
+         position: relative;
+       }
+       #menu li:hover 
+ .sub-menu {
+         display: block;
+       }
+.sub-menu li {
+         margin-left: 0 auto !important;
+       }
+       
+       /*==Menu cấp 3==*/
+ .sub-menu > ul {
+         display: none !important;
+       }
+       table, th, td {
+           border: 1px solid black;
+           border-collapse: collapse;
+       }
+       th, td {
+           padding: 15px;
+           text-align: center;
+       }
+
+#center{
+  height: 1000px;
+  padding: 1em;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+#center h3{
+ 
+ color: teal; 
+ text-align: center;
+
+}
+#giaotrinh
+{
+  background-color: #eee;
+  color: #8b658b;
+  float: left;
+  margin-left: -40px;
+  width: 195px;
+  height: 900px;
+  padding: 1em;
+}
+#forum
+{
+  background-color: #eee;
+  color: #936;
+  float: right;
+  margin-right: -15px;
+  width: 200px;
+  height: 900px;
+  padding: 1em;
+}
+#thongbao {
+  background-color: #eee;
+  content: #936;
+  width: 240px;
+  height: 900px;
+  padding: 1em;
+  float: left;
+  margin-left: 1px;
+
+}
+#baiviet{
+  background-color: #eee;
+  color: #936;
+  margin-left: 461px;
+  width: 606px;
+  height: 900px;
+  padding: 1em;
+  float: center;
+ 
+}
+#cuoitrang
+{
+  background-color: #444;
+  color: #bbb;
+  margin: 0 auto;
+
+}
+#cuoitrang a
+{
+  color: white;
+  float: right;
+  margin-right: 0 auto;
+}
+#nav {
+    border:3px solid #3e4547;
+    box-shadow:2px 2px 8px #000000;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    float: left;
+}
+#nav, #nav ul {
+    list-style:none;
+    padding:0;
+    width:200px;
+}
+#nav ul {
+    position:relative;
+    z-index:-1;
+}
+#nav li {
+    position:relative;
+    z-index:100;
+}
+#nav ul li {
+    margin-top:-23px;
+    -moz-transition:  0.4s linear 0.4s;
+    -ms-transition: 0.4s linear 0.4s;
+    -o-transition: 0.4s linear 0.4s;
+    -webkit-transition: 0.4s linear 0.4s;
+    transition: 0.4s linear 0.4s;
+}
+
+#nav li a {
+    background-color:#d4d5d8;
+    color:#000;
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    line-height:28px;
+    outline:0;
+    padding-left:15px;
+    text-decoration:none;
+}
+#nav li a.sub {
+
+    background:#d4d5d8 url("../images/down.gif") no-repeat;
+    
+}
+#nav li a + img {
+    cursor:pointer;
+    display:none;
+    height:28px;
+    left:0;
+    position:absolute;
+    top:0;
+    width:200px;
+}
+
+#nav li a img {
+    border-width:0px;
+    height:2999px;
+    line-height:28px;
+    margin-right:8px;
+    vertical-align:middle;
+    width:24px;
+
+}
+#nav li a:hover {
+    background-color:#bcbdc1;
+}
+#nav ul li a {
+
+    background-color:#eee;
+    border-bottom:1px solid #ccc;
+    color:#000;
+    font-size:11px;
+    line-height:22px;
+}
+#nav ul li a:hover {
+    background-color:#ddd;
+    color:#444;
+}
+#nav ul li a img {
+    background: url("../images/bulb.png") no-repeat;
+    border-width:0px;
+    height:16px;
+    line-height:22px;
+    margin-right:5px;
+    vertical-align:middle;
+    width:16px;
+}
+#nav ul li:nth-child(odd) a img {
+    background:url("../images/bulb2.png") no-repeat;
+}
+#nav a.sub:focus {
+    background:#bcbdc1;
+    outline:0;
+}
+#nav a:focus ~ ul li {
+    margin-top:0;
+    -moz-transition:  0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    -webkit-transition: 0.4s linear;
+    transition: 0.4s linear;
+}
+#nav a:focus + img, 
+#nav a:active + img {
+    display:block;
+}
+#nav a.sub:active {
+    background:#bcbdc1;
+    outline:0;
+}
+#nav a:active ~ ul li {
+    margin-top:0;
+}
+#nav ul:hover li {
+    margin-top:0;
+}
+            </style>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+             <link href="css/font-awesome.min.css" rel="stylesheet"/>
+             <link rel="stylesheet" type="text/css" href="book.component.css">
+        </head>
+
+    <!-- ĐẦU TRANG WEB-->    
+     <body style="background-color: gainsboro;color: blue"><div class="snow-container">
+       <div class="snow foreground"></div>
+       <div class="snow foreground layered"></div>
+       <div class="snow middleground"></div>
+       <div class="snow middleground layered"></div>
+       <div class="snow background"></div>
+       <div class="snow background layered"></div>
+       </div>
+         
+  
+           <center style="color:aliceblue;background-color: rgb(94, 99, 99);border: 2px solid rgb(216, 89, 75);padding: 10px; font-size: 30px;">
+              <h1 style="color:rgb(214, 181, 233);font-size:40px;">STUDENT-VNUA</h1>
+            <script type="text/javascript">
+               farbbibliothek = new Array();
+               farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+               farbbibliothek[1] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+            
+               
+               farben = farbbibliothek[0];
+               function farbschrift()
+               {
+               for(var i=0 ; i<Buchstabe.length; i++)
+               {
+               document.all["a"+i].style.color=farben[i];
+               }
+               farbverlauf();
+               }
+               function string2array(text)
+               {
+               Buchstabe = new Array();
+               while(farben.length<text.length)
+               {
+               farben = farben.concat(farben);
+               }
+               k=0;
+               while(k<=text.length)
+               {
+               Buchstabe[k] = text.charAt(k);
+               k++;
+               }
+               }
+               function divserzeugen()
+               {
+               for(var i=0 ; i<Buchstabe.length; i++)
+               {
+               document.write("<span id='a"+i+"' class='a"+i+"'>"+Buchstabe[i] + "<\/span>");
+               }
+               farbschrift();
+               }
+               var a=1;
+               function farbverlauf()
+               {
+               for(var i=0 ; i<farben.length; i++)
+               {
+               farben[i-1]=farben[i];
+               }
+               farben[farben.length-1]=farben[-1];
+               
+               setTimeout("farbschrift()",30);
+               }
+               //
+               var farbsatz=1;
+               function farbtauscher()
+               {
+               farben = farbbibliothek[farbsatz];
+               while(farben.length<text.length)
+               {
+               farben = farben.concat(farben);
+               }
+               farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001));
+               }
+               setInterval("farbtauscher()",5000);
+               
+             
+               text= " Student.vnua.edu.vn "; //h
+               string2array(text);
+               divserzeugen();
+               //document.write(text);
+       
+               </script> </center>
+  <!-- MENU TRANG WEB-->
+ <div id="menu">
+           <ul id="ul01">
+               <li><a href="file:///E:/MyFilmTV/myfilmtv/MyFilmTV/VNUA/menugt.html">Trang Chủ</a></li>
+           
+                             <li><a href="#">Khoa</a>
+                                <ul class="sub-menu">
+                    <table>
+                 <tr>
+                               <td>  <li><a href="#">BV Thực Vật</a></li></td>
+                               <td>  <li><a href="http://channuoi.vnua.edu.vn/en/">Chăn Nuôi</a></li></td>
+                               <td>  <li><a href="#">KH Cây Trồng</a></li></td>
+                               <td>  <li><a href="#">KH Đất </a></li></td>
+                               <td>  <li><a href="#">KDNN</a></li></td>
+                                          
+                    </tr>
+                     <tr>
+                                <td>  <li><a href="#">Kinh Tế NN</a></li></td>
+                                <td>  <li><a href="#">NN CNC</a></li></td>
+                                <td>  <li><a href="#">Nuôi Trồng TS</a></li></td>
+                                <td>  <li><a href="#">PT Nông Thôn </a></li></td>
+                                <td>  <li><a href="#">Thú Y</a></li></td>
+                                           
+                         </tr>
+                         <tr>
+                                <td>  <li><a href="#">CN Sinh Học </a></li></td>
+                                <td>  <li><a href="#">CNTT</a></li></td>
+                                <td>  <li><a href="#">CNTP</a></li></td>
+                                <td>  <li><a href="#">CNSTH </a></li></td>
+                                <td>  <li><a href="#">CN&amp;KD-TP </a></li></td>
+                         </tr>
+                         <tr>
+                                <td> <li><a href="#">CNKT Cơ-Điện</a></li></td>
+                                <td>  <li><a href="#">CNKT Ô Tô</a></li></td>
+                                <td>  <li><a href="#">KT Cơ Khí</a></li></td>
+                                <td>  <li><a href="#">KT CSHT </a></li></td>
+                                <td>  <li><a href="#">KT Điện-Đ.Tử</a></li></td>
+                     </tr>     
+                     <tr>
+                               <td> <li><a href="#">KTTN Nước</a></li></td>
+                               <td>  <li><a href="#">Kinh Tế</a></li></td>
+                               <td>  <li><a href="#">KT Đầu Tư</a></li></td>
+                               <td>  <li><a href="#">Kế Toán </a></li></td>
+                               <td>  <li><a href="#">QTKD</a></li></td>
+                       </tr>
+                       <tr>
+                               <td> <li><a href="#">Ngôn Ngữ Anh</a></li></td>
+                               <td>  <li><a href="#">Xã Hội Học</a></li></td>
+                               <td>  <li><a href="#">KH Môi Trường</a></li></td>
+                               <td>  <li><a href="#">QL Đất Đai </a></li></td>
+                               <td>  <li><a href="#">CNTT POHE</a></li></td>
+                      </tr>
+                                               
+                                               
+                                                   
+             </table>
+                        </ul> </li>
+                        <li><a href="#">CLB VNUA</a>
+                        <ul class="sub-menu">
+             <table>
+                   <tr>
+                               <td>  <li><a href="#">Cờ Vua</a></li></td>
+                               <td>  <li><a href="#">Sky-Books</a></li></td>
+                               <td>  <li><a href="#">Karate</a></li></td>
+                               <td>  <li><a href="#">Khởi Nghiệp </a></li></td>
+                               <td>  <li><a href="#">Dance Fly High</a></li></td>
+                                                    
+                  </tr>
+                         
+                 <tr>
+                               <td>  <li><a href="#">Tiếng Anh</a></li></td>
+                               <td>  <li><a href="#">True Action</a></li></td>
+                               <td>  <li><a href="#">Kinh Doanh</a></li></td>
+                               <td>  <li><a href="#">Bóng Rổ </a></li></td>
+                               <td>  <li><a href="#">VoViNam</a></li></td>
+                                                      
+                    </tr>
+                    <tr>
+                          <td>  <li><a href="#">VT Võ Đạo</a></li></td>
+                          <td>  <li><a href="#">TNVĐ Hiến Máu</a></li></td>
+                          <td>  <li><a href="#">Kết Nối</a></li></td>
+                          <td>  <li><a href="#">TNTT HSV </a></li></td>
+                          <td>  <li><a href="#">Tin Học</a></li></td>
+                                                        
+                 </tr><tr>
+                          <td>  <li><a href="#">Thiết Kế</a></li></td>
+                          <td>  <li><a href="#">Rap</a></li></td>
+                          <td>  <li><a href="#">Guitar</a></li></td>
+                          <td>  <li><a href="#">Music</a></li></td>
+                          <td>  <li><a href="#">Bóng Đá</a></li></td>
+
+                                                          
+                  </tr><tr>
+                          <td>  <li><a href="#">Cầu Lông</a></li></td>
+                          <td>  <li><a href="#">TT-Điện Tử</a></li></td>
+                          <td>  <li><a href="#">Hài Kịch</a></li></td>
+                          <td>  <li><a href="#">Tư Vấn-TV </a></li></td>
+                          <td>  <li><a href="#">Môi Trường</a></li></td>
+                                                    
+                          </tbody></table></ul>
+                   
+               </li><li><a href="#">Thủ Thuật</a>
+
+               <li><a href="#">Phần Mềm</a>
+                   <ul class="sub-menu">
+                           <li><a href="#">Toán</a></li>
+                           <li><a href="#">Lý </a></li>
+                           <li><a href="#">Hóa</a></li>
+                           <li><a href="#">Sinh </a></li>
+                           <li><a href="#">Anh</a></li></ul></li>
+               <li><a href="#">Thư Viện</a></li>
+               <li><a href="#">Game Vui</a></li>
+            
+                <li><a href="#">CLB Tin Học</a></li>
+                   </ul>
+               </div>
+              
+             
+<div id="center">     
+        
+       <div id="giaotrinh">
+              <h3 style="color: slateblue">Giáo Trình</h3>
+              <hr>
+           <div class="container">
+            <ul id="nav">
+              <li><a href="#" class="sub" tabindex="1">KT VÀ PT NÔNG THÔN-1</a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlUTdBcUNyUWIyZ28">Chiến lược và kế hoạch PT</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlVmgyaFFycGNleFk">Chính sách nông nghiệp​</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMVcwU1RwYTRBRnc">Địa lý kinh tế</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlUlMxdVBQUlFuSDg">Kinh tế công cộng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlblJrb2tlaHgtSGs">Kinh tế học sản xuất</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlekRKQjV2dWNrVUE">Kinh tế hợp tác</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlSzhLdWE3TDhEbFE">Kinh tế lượng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlSDBIMlR0U3R3OE0">Kinh tế môi trường</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlQV9CU1YyUnJCTnM">Kinh tế tài nguyên</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tldjVjY3lVXzRfejA">Kinh tế nguồn nhân lực</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMWl0c2NIUU1YSFE">Kinh tế phát triển</a></li>
+      </ul></li>
+
+        <li><a href="#" class="sub" tabindex="1">KT VÀ PT NÔNG THÔN-2</a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlNDlBUmNSdkdkazg">Kinh tế quốc tế</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlTVZMZU9Ca2w5SFU">Kinh tế vi mô</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlWmlhLTlFZENuc00">Kinh tế vĩ mô</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlNF9NbzRsUUFndXM">Kỹ năng lãnh đạo & ra quyết định</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlY0doNWZkeTRGVUE">Kỹ năng quản lí và làm việc nhóm</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlR0pURFNaR28yRTA">Lý thuyết phát triển</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlUlVLZEpJMi1RMHM">Luật kinh tế</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMV9OUDB3VENrdHc">Nguyên lí thống kê kinh tế</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMmtwUTN3V0RMcjQ">Phát triển cộng đồng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbElud0NFWUY3dDQ">Phát triển nông thôn</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlZjFjNlFNNlJ5UWc">Toán kinh tế</a></li>
+
+
+                    </ul>
+                </li>
+   <li><a href="#" class="sub" tabindex="1">THÚ Y-1</a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlVkFyblNrMHE0RWc">Bệnh chó, mèo</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlQ25STlU2QjZZVEE">Bệnh rối loạn dinh dưỡng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlZGFDWHZtNUhDeG8">Bệnh lý học thú y 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlVEhoUS1zUXdaUjg">Bệnh lý học thú y 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlRjh2VFlkRHpoUW8">Bệnh nội khoa thú y 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlSGoxczRqSk5PSW8">Bệnh truyền nhiễm thú y 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlSzFuVlBQVG1oZGM">Bệnh truyền nhiễm thú y 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlVUVlQ1hmY3JDQUU">CNSH đại cương</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlUzktaHAzR0YyWm8">Dịch tễ học thú y</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlSXhzRk9TcXd4WTA">Dược liệu thú y</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlTUYwYmp5cHBxYVE">Dược lý học lâm sàng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlb2hzNlVXTFBpR1k">Độc chất học thú y</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlYkljNmVKOFRTN1E">Động vật học</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlNS1GNUJnUkVwTE0">Giải phẫu vật nuôi 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMTdNbnphNVI4SGc">Giải phẫu vật nuôi 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlcmhGYVM2dE5wT0E">Hóa sinh đại cương</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlZ0pRM0tTS1dsZDQ"> Hóa sinh động vật</a></li>
+      </ul></li>
+      <li>  <a href="#" class="sub" tabindex="1">THÚ Y-2</a>
+      <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlVG5WR2UweUVnaHM">Ký sinh trùng thú y 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlWlVSQ1pfclp5NUU">Ký sinh trùng thú y 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlZWxaaWF6Z2I0eFE">Luật thú y</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbzVCc0ZOR2lyUHM">Miễn dịch thú y</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlV1ZQTmhkNjNKc00">Ngoại khoa thú y</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlby1RcmhUUTZUTXc">Sinh lý động vật 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlcWtKaGVKVWE2RGM">Sinh lý động vật 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMENXWkRueHA5YVE">Sinh sản gia súc 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tldFVfd0xyZ2o1SUE">Thức ăn chăn nuôi</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlVmRzbm1rMVo3aDQ">Vệ sinh thú y 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlX1dCSDlYY1BaVHM">Vệ sinh thú y 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlc1pUTjBadldQc1U">Vi sinh vật thú y 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlTUtHaWhJY1RSOE0">Vi sinh vật thú y 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlUzZfcUNfRjQwbTA">Vi sinh vật đại cương</a></li>
+        
+                    </ul>
+                </li>
+                  
+                
+                <li><a href="#" class="sub" tabindex="1"/>CÔNG NGHỆ THÔNG TIN</a>
+                    <ul>
+        <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlRWtpQjlWN3Rld0E">Đại số tuyến tính</a></li>
+        <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlb1BZN0VtQWs1em8">Giải tích</a></li>
+        <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlU19VRHJBWS1BWlk">Toán cao cấp</a></li>
+        <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbTBjQl9PaFBmSkE">Vật lý đại cương</a></li>
+        <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlZldabkhWN1NfS0k">Xác suất thống kê</a> </li>
+        <li><a href="https://drive.google.com/drive/u/0/folders/0By0gtB_ncodkQkJSY3FZZWR2bzA">Đại số tuyến tính 1</a></li>
+                     </ul>
+        </li>
+                <li><a href="#" class="sub" tabindex="1" />CHĂN NUÔI</a>
+                    <ul>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlNmRjMWVCcDB0eGM">Chăn nuôi dê và thỏ</a></li>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlWndFWTZIQ2RZZlE">Chăn nuôi gia cầm</a></li>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlUmZGWEhRSjAyR0U">Di truyền động vật</a></li>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlYVp1MlFVY1dwOFk">Động vật học</a></li>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlYzRfSjZ0MDNPdGM">Giải phẫu vật nuôi 1</a></li>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlV3ZXUTZRVlZOekk">Hóa sinh đại cương</a></li>
+     <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlSm8zTmlQaVFJa2M">Hóa sinh động vật</a></li>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlSFl4clBCMlVzMlU">Ngư loại học</a></li>
+     <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlX3J4NUN5TWRQNDg">Quản lý chất thải vật nuôi</a></li>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tld0UzS0dXUFhpOVk">Sinh sản gia súc 1</a></li>
+     <li> <a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlemlkazNSMFdPNjg">Thức ăn chăn nuôi</a></li>
+                    </ul>
+                </li>
+                 <li><a href="#" class="sub" tabindex="1">CÔNG NGHỆ THỰC PHẨM  </a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlVEl6T1lwWHpHakU">An toàn thực phẩm</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tleTRKM0EyeDdXTU0">Hóa học thực phẩm</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlQ3dnWWZrbENubms">Phương pháp tiếp cận khoa học</a></li>
+<li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlM1FPa253Qno4Mm8">SLHS nông sản sau thu hoạch</a></li>
+  <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlTHVxakxGb1c5WEE">SV hại nông sản sau thu hoạch</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlc3FkcURqNmI3NWM">Vi sinh vật thực phẩm</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlQ1hzUk1JSXJKdk0">Vi sinh vật đại cương</a></li>
+
+                    </ul>
+                </li>
+                 <li><a href="#" class="sub" tabindex="1">CÔNG NGHỆ SINH HỌC </a>
+                    <ul>
+       <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlanJxd0tfYUkxVUE">Công nghệ tế bào động vật</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlcUVVV3FOWG9XWnM">Di truyền học đại cương</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlcFA1UmxnM1diZFk">Động vật học</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlVjByS0NpZ3d5NlU">Hóa sinh đại cương</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlYVFtbmN6cVJrN2s">Kỹ thuật di truyền</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlb1psdTVDYzlHVVU">Nuôi cấy mô và tế bào thực vật</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlN01kNW50bnVhZms">Sinh học đại cương</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbmJ4a0lCV2RmSDg">Sinh học người và động vật</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbGlHQzg3WU9IVlE">Sinh học phát triển động vật</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlNG1Bd3p2ZXlhQkU">Sinh học phân tử 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlU0NVNzZKSWlDNlU">Sinh học phân tử 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlZUlzVWpnbzlucFU">Sinh học tế bào</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlb2xxQ3d5b3RsRFU">Tiến hóa và đa dạng sinh học</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlSXJ4UEljSDJjdms">Vi sinh vật đại cương</a></li>
+                    </ul>
+                </li>
+
+                   <li><a href="#" class="sub" tabindex="1"> CƠ ĐIỆN  </a>
+                    <ul>
+        <li><a href="https://drive.google.com/file/d/0B6Cbd6sLE1tlWmhTdThMOUh5eHc/view">Bài giảng VKT</a></li>
+        <li><a href="https://drive.google.com/file/d/0B6Cbd6sLE1tlVDBLMk9xaXd5b0E/view">Bài giảng </a></li>
+        <li><a href="https://drive.google.com/file/d/0B6Cbd6sLE1tlaW82UWxEczIzUDg/view">Bài tập thực hành</a></li>
+        <li><a href="https://drive.google.com/file/d/0B6Cbd6sLE1tlUmVoeWRyb2V2NmM/view">BV gốc - Đọc BV cơ khí</a></li>
+                    </ul>
+                </li>
+
+                 
+                 <li><a href="#" class="sub" tabindex="1">KẾ TOÁN & QTKD  </a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tldlRiblFoYnNpcUE">Kinh doanh quốc tế</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMnA0eDN5V0RYSFU">Kỹ năng làm việc nhóm</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlT1JUNnlzREJPcms">Luật kinh tế</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlLXRYRGFqQk9YZ0U">Maketing căn bản</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbUdXV1hEUHVSdTQ">Nguyên lý kế toán</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlYkF3R2ROU3JkQlE">Nguyên lý thông kê kinh tế</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tla0xodndpS0QzQkE">Quan hệ công chúng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tleVp4RmQ2Ny15NnM">Quản trị doanh nghiệp</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbEpZcnNOR19mUG8">Tài chính tiền tệ</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlUmxwSVFEeE9zaGc">Tâm lý quản lý</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlb1lkSGlmNEZfX2c">Thị trường giá cả</a></li>
+        
+       </ul>
+                </li>
+                 <li><a href="#" class="sub" tabindex="1">LL CHÍNH TRỊ & XH  </a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlNWR6cEc5WjgyYmc">Đường lối CM của ĐCSVN</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlQjlwVEwyS3Z6SWs">Những NLCB của CN Mác-Lênin 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlR21XbmJhZlJHV3c">Những NLCB của CN Mác-Lênin 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlZHVCODFUZWRnRTg">Tư tưởng Hồ Chí Minh</a></li>
+       
+
+                    </ul>
+                </li>
+                 <li><a href="#" class="sub" tabindex="1">MÔI TRƯỜNG  </a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlenZJa0pOM1pBSXM">Công nghệ môi trường</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbHpPbjdTdTl4MGc">Đa dạng sinh học</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlYVZvdUJXUUpxeDQ">Đánh giá tác động MT</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlRzI3Q3YtcDlURjA">Hệ thống thủy nông</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlQlRacEF2WUlpUms">Kinh tế môi trường</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tldFBDcWNWeW1YLVk">Kinh tế tài nguyên</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlUENEU2RvdEVCUUU">Quản lý môi trường</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlRV9LWUd5TE1wSU0">Quản lý và xử lý chất thải</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlYzljcGYzcTVUaTQ">Quan trắc môi trường﻿</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tldUVfMzFYSTBvS2M">Sinh học đất</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMk1vdHY1ZTJfc1U">Thủy văn</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlcmQycjMtU1pOaU0">Vi sinh vật đại cương</a></li>
+
+
+
+                    </ul>
+                </li>
+                 <li><a href="#" class="sub" tabindex="1">NÔNG HỌC</a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlaDJEREY5MG5VRTA">BM Bệnh cây - Nông dược</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tld3dOb3k4eG1jLTA">BM Canh tác học</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbmlDXzRrUkVBZFU">BM Cây CN và cây thuốc</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tldlhqTVNYaVdac2M">BM Cây lương thực</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlME5GaDhLT1hNQ1E">Cây ăn quả</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlOFNyRXBiS0psM00">Cây rau</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlRFFBWk5wNXNHems">Chọn giống cây CN dài ngày</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tleXdDcmhUOWk1Umc">Chọn giống cây trồng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlRlF3Z19tVl9Pdkk">Côn trùng nông nghiệp</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlbkp4RkJXVnBQWWs">Di truyền thực vật</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlYnNvTGFhOFF2QkU">NL&PP chọn giống cây trồng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlakVCMl9TYm1rNkU">Phân tích phân bón cây trồng</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlU1dQaWhURWhGZ0E">Thuốc bảo vệ thực vật</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlRV9uX3VaOS01ODA">Thực vật học</a></li>
+       
+
+                    </ul>
+                </li>
+                
+                 <li><a href="#" class="sub" tabindex="1">SP VÀ NGOẠI NGỮ </a>
+                    <ul>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlaEhtX044dHFCZTQ">Tiếng Anh 1</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlMkxCTUh6YWxqd1E">Tiếng Anh 2</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B6Cbd6sLE1tlQmVRa200NWdYcGs">Tiếng Anh 3</a></li>
+      
+
+                    </ul>
+                </li> <li><a href="#" class="sub" tabindex="1">THỦY SẢN</a>
+                    <ul>
+        <li><a href="https://drive.google.com/file/d/0B6Cbd6sLE1tldE9tb0RCUDQtS2M/view">Nuôi trồng thủy sản đại cương</a></li>
+       
+                    </ul>
+      
+                </li>
+              </li> <li><a href="#" class="sub" tabindex="1">Đóng Góp Tài Liệu</a>
+                <ul>
+                <li><a href="#">Để giúp web phát triển</a></li>
+                 
+                 <li><a href=" #"> mong m.n cùng đóng góp</a></li> 
+                 <li><a href="#"> tài liệu qua email:</a></li>
+                 <li><a href="#"> Myfilmtv247@OutLook.com</a></li>
+               </li>
+            </ul>
+
+        </div>
+
+       </div>
+       <div id="thongbao">
+         <h3> Thông Báo</h3>
+         <hr>
+         <ul> 
+            <li> <a href="  #">1</a></li>
+            <li>  <a href=" #">2</a></li>
+            <li>  <a href=" #">3</a></li>
+         </ul> 
+       </div>
+
+       <div id="forum">
+              <h3>Forum</h3>
+              <hr>
+       </div>
+       <div id="baiviet">
+              <h3>Bài Viết</h3>
+              <hr>  
+            <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li>  <a href=" #">3</a></li>
+                    <i class="fas fa-star" style="color: #ffff00;"></i>
+<i class="fas fa-star" style="color: #ffff00;"></i>
+<i class="fas fa-star" style="color: #ffff00;"></i>
+<i class="fas fa-star" style="color: #ffff00;"></i>
+<i class="fas fa-star" style="color: #ddd;"></i>
+(11 nhận xét)
+            </ul>
+       </div>
+
+
+</div>
+
+    <div id="cuoitrang">
+       <ins>
+             Copyright ©2018 Học viện Nông nghiệp Việt Nam - Hoàng Kiên 
+       </ins>
+
+      <a href="#">Trang Chủ</a>
+      <p>
+             Web Sinh Viên VNUA
+       <a href="#">Đầu Trang</a>
+      </p>
+    </div>
+         
+
+  
+       </body></html>
