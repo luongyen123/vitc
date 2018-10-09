@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div>
+			<form>
+				<table width="100%" height="300" border="5" cellpadding="5">
+					<tr>
+						<th colspan="2">tìm số nguyên tố nhỏ hơn đã nhập</th>
+					</tr>
+					<tr>
+						<td>
+							nhập một số
+						</td>
+						<td>
+							<input type="text" name="" size="30px">
+						</td>
+						<tr>
+							<td colspan="2" align="center">
+								<input type="button" value="enter" onclick="inM()">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div id="in"></div>
+							</td>
+						</tr>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<script>
+	function kiemtra(m){
+		var M = true;
+		if(m<2){M = false;}
+		else if(m==2){M = true;}
+		else if(m % 2 == 0){M = false;}
+		else {
+			for (var i = 3; i <= Math.sqrt(m); i += 2){
+				if (m % i == 0) {
+					M = false;
+					break;
+				}
+			}
+		}
+		return M;
+	}
+	function inM(){
+		var soNhap = document.getElementById("soNhap").value;
+		soNhap = parseInt(soNhap);
+		var html = '';
+		for (var i = 1; i <= soNhap; i++) {
+			if (ktNguyenTo(i)){
+				html += i + ' ';
+			}
+        }
+        document.getElementById("in").innerHTML = html;
+	}
+	</script>
+	</body>
+</html>
