@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nhóm3</title>
+  </head>
+  <body>
+    <form method="get" action="">
+      Nhập số: <input type="text" id="sochinhphuong" value=" "/>
+      <input type="button" value="In kết quả" onclick="inra()">
+      <br>
+    </form>
+    <div id="dien">
+      
+    </div>
+    <script type="text/javascript">
+    function inra(){
+      var n = 1;
+      // n = parseInt(n);
+      var sochinhphuong = document.getElementById("sochinhphuong").value;
+        sochinhphuong = parseInt(sochinhphuong);
+        var html = "";
+        for (i = 1; i <= sochinhphuong; i++){
+          if (n =1) { 
+          if (n*=(i*i)) {
+             html += n + ' <br/>';
+           
+          }}
+
+        }    document.getElementById("dien").innerHTML = html;
+    }
+  </script>
+  </body>
+</html>
