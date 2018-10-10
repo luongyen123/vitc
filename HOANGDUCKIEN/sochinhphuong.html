@@ -73,25 +73,25 @@
 </div>
 <script>
 	//Coi thu xem no phai la snt khong
-	function ktNguyenTo(snt){
+	function ktNguyenTo(a){
 		var checkSNT = true;
-		if(snt<2){checkSNT = false;}
-		else if(snt==2){checkSNT = true;}
-		else if(snt % 2 == 0){checkSNT = false;}
+		if(a<2){checkSNT = false;}//ko có snt nhỏ hơn 2
+		else if(a==2){checkSNT = true;}//2 là số nguyên tố chẵn duy nhất
+		else if(a % 2 == 0){checkSNT = false;}	// snt chia cho 2 dư 0 ko phải snt
 		else {
-			for (var i = 3; i <= Math.sqrt(snt); i += 2){
-				if (snt % i == 0) {
+			for (var i = 3; i <= Math.sqrt(a); i += 2){ 
+				if (a % i == 0) {
 					checkSNT = false;
 					break;
 				}
 			}
 		}
-		return checkSNT;
+		return checkSNT;// trả về 1 giá trị
 	}
 	//In ra toan bo snt da check
 	function inSNT(){
 		var soNhap = document.getElementById("soNhap").value;
-		soNhap = parseInt(soNhap);
+		soNhap = parseInt(soNhap);//kiểu số nguyên
 		var html = '';
 		for (var i = 1; i <= soNhap; i++) {
 			if (ktNguyenTo(i)){
@@ -103,10 +103,11 @@
 //SỐ CHÍNH PHƯƠNG
 
 	//Coi thu xem no phai la snt khong
-	function ktchinhphuong(scp){
+	function ktchinhphuong(b){
 		var checkSCP = true;
 		
-		 if((Math.sqrt(scp) % 1 == 0)){checkSCP = true;}
+		 if((Math.sqrt(b) % 1 == 0)){checkSCP = true;}//lấy căn bậc 2 của b. r chia cho 1 nếu dư 0 là số chính phương
+		  
 		else {checkSCP = false;}
 		return checkSCP;
 	}
