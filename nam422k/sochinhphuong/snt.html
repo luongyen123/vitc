@@ -1,0 +1,34 @@
+!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form method="get" action="">
+            Nhập số: <input type="number" id="number" value=""/>
+            <input type="button" value="In kết quả" onclick="snt()"/>
+        </form>
+        <div id="demo">
+        </div>
+        <script type="text/javascript">
+        function snt()
+        {
+        var x = document.getElementById("number").value;
+        x=parseInt(x)
+        var tang=0;
+        for(var i=0;i<=x;i++)
+        {
+            tang=0;
+            for(var j=1;j<=i;j++)
+            {
+                 if(i%j==0)
+                tang++;
+            }
+            if(tang==2)
+        alert(i);
+        }
+        }
+        </script>
+    </body>
+</html>
