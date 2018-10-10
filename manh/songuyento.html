@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function snt()
+	{
+		for(var i=0;i<=15;i++)
+		{
+			var dem=0;
+			for(var j=1;j<=i;j++)
+			{
+				if(i%j==0)
+				{
+					dem=dem++;
+				}
+			}
+			if(dem==2)
+				{
+					document.write(i+"<br>");
+				}
+		}	
+	}
+	snt(15);
+</script>
+</body>
+</html>
