@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Nhập số:<input type="text" id="scp">
+	<input type="button" value="in" onclick="kq()">
+	<div id="demo"></div>
+	<script type="text/javascript">
+		function kq(){
+			var n=1;
+			var scp= document.getElementById("scp").value;
+			scp= parseInt(scp);
+			var html="";
+			for (i=1; i<=scp; i++){
+				if(n=1){
+					if(n*=(i*i)){
+						html+= n+ '<br/>';
+					}
+				}
+			}document.getElementById("demo").innerHTML=html;
+		}
+	</script>
+
+</body>
+</html>
