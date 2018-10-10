@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form method="get" action="">
+            Nhập số: <input type="number" id="number" value=""/>
+            <input type="button" value="Kiểm tra" onclick="songuyento()"/>
+        </form>
+        <div id="hungyen">
+        </div>
+        <script type="text/javascript">
+        function songuyento()
+        {
+        var x = document.getElementById("number").value;
+        var tang=0;
+        for(var i=0;i<=x;i++)
+        {
+            tang=0;
+            for(var j=1;j<=i;j++)
+            {
+                 if(i%j==0)
+                tang++;
+            }
+            if(tang==2)
+        alert(i);
+        }
+        }
+        </script>
+    </body>
+</html>
