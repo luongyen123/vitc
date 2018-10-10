@@ -5,51 +5,69 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			function xeploai(n)
+		// 	function xeploai(n)
 				
 			
 				
 
-				{var n;
-					if(n<=5)
-						{
-							alert('điểm F');
-						}
-					else if(n>=5 && n<=10)
-						{
-							alert('điểm E');
-						}
-					else if(n>=10 && n<=15)
-						{
-							alert('điểm D');
-						}
-					else if(n>=15 && n<=20)
-						{
-							alert('điểm C');
-						}
-					else if(n>20 && n<= 25)
-						{
-							alert('điểm B');
-						}
-					else if(n>25 && n<=30)
-						{
-							alert('điểm A');
-						}
-					else 
-						{
-							alert('vô lí');
-						}
-				}
+		// 		{var n;
+		// 			if(n<=5)
+		// 				{
+		// 					alert('điểm F');
+		// 				}
+		// 			else if(n<=10)
+		// 				{
+		// 					alert('điểm E');
+		// 				}
+		// 			else if( n<=15)
+		// 				{
+		// 					alert('điểm D');
+		// 				}
+		// 			else if(n<=20)
+		// 				{
+		// 					alert('điểm C');
+		// 				}
+		// 			else if(n<= 25)
+		// 				{
+		// 					alert('điểm B');
+		// 				}
+		// 			else if(n<=30)
+		// 				{
+		// 					alert('điểm A');
+		// 				}
+		// 			else 
+		// 				{
+		// 					alert('vô lí');
+		// 				}
+		// 		}
 			
-					
-					
+		// xeploai(7);		
+		// xeploai(26);		
+		// xeploai(31);
+		// xeploai(4);
+		// xeploai(14);
+		// xeploai(22);
+		function snt(n)
+	{
+		var dem=0;
+		for(var i=1;i<n;i++)
+		{
+			for(var j=1;j<=i;j++)
+			{
+				if(i%j==0)
+				{	
+					dem++;
+				}
+			}
 		
-		xeploai(4);
-		xeploai(7);
-		xeploai(14);
-		xeploai(22);
-		xeploai(26);
-		xeploai(31);
+				if(dem==2)
+				{
+					alert(i);
+				}	
+		}	
+	}
+		snt(15);
+		
 
 
 		</script>
