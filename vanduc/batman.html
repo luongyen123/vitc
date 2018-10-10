@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <form method="get" action="">
+            Input: <input type="number" id="number" value=""/>
+            <input type="button" value="Print out through" onclick="socp()"/>
+        </form>
+        <div id="test">
+
+        </div>
+ <script type="text/javascript">
+ 	function socp(n) {
+ 	
+ 		var number= document.getElementById('number').value;
+ 		number=parseInt(number);
+ 		for(var i=6;i<=Math.sqrt(number);i++)
+ 			alert(i*i);
+ 		
+ 	}
+ 	
+ 	
+ </script>
+</body>
+</html>
