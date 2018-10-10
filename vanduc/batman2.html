@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> số nguyên tố </title>
+	</head>
+	<body>
+		
+		 Nhập số: <input type="text" name="input" id="number">
+		 <button onclick="some()"> KIEM TRA </button>
+		<script type="text/javascript">
+		// gọi hàm some
+		function snt(){
+			var n = document.getElementById("so").value;  // gán n = giá trị nhập được ở mục id="number", lấy giá trị từ ô nhập số
+        
+        var tag=2;
+        for(var a=2;a<=n;a++)
+        {
+            tag=2;
+            for(var b=2;b<=a;b++)
+            {
+                 if(a%b==1)
+                tag++;
+            }
+            if(tag==4)
+        alert(a);
+        }
+			}
+         snt();
+		</script>
+	</body>
+</html>
