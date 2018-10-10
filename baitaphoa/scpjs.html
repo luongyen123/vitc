@@ -6,27 +6,15 @@
 </head>
 <body>
 	<form>
-    Nhập số: <input type="text" id="sochinhphuong" value=" "/>
+    Nhập số: <input type="text" id="scp" value=" "/>
     <input type="button" value="Click" onclick="ktscp()">
     </form>
-    <div id="ok"></div>
     <script type="text/javascript">
     function ktscp()
     {
-      var n = 1;
-      var sochinhphuong= document.getElementById("sochinhphuong").value;
-        sochinhphuong= parseInt(sochinhphuong);
-        var html = "";
-        for (i = 1; i <= sochinhphuong; i++)
-        {
-          if (n =1) 
-           { 
-          if (n*=(i*i)) 
-           {
-             html += n +  ' <br/>';
-           }
-           }
-        }document.getElementById("ok").innerHTML = html;
+      var scp= document.getElementById('scp').value; 
+        for(var i=1;i<=Math.sqrt(scp);i++)
+            document.write( i*i + '<br>');
     }
   </script>
 	
