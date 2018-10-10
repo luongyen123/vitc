@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>iGame247.xyz</title>
+<style type="text/css">
+	tr, th ,td {
+		border-color: blue;
+	}
+</style>
+</head>
+<body>
+
+<div id="songuyento">
+	<form id="nguyento">
+		<table width="500" height="200" border="1" cellpadding="5" align="center">
+		
+			<tr>
+				<th colspan="2" style="color: red;background-color: #ccc;"> Tìm Số Nguyên Tố Nhỏ Hơn Số Đã Nhập </th>
+			</tr>
+
+			<tr>
+				<td style="background-color: #FAEBD7"> Nhập một số </td>
+				<td style="background-color: #FFFFCC"> <input id="soNhap" type="text" size="35px" style="border-radius: 3px; border-color: blue;background-color: #CCFFFF">
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" align="center" style="background-color: #90EE90">
+					<input type="button" id="login" value="Xử lý" onclick="inSNT()" style="border-radius: 1px; background-color: #CD8500;color: white;" />
+				</td>
+			</tr>
+			
+			<tr style="background-color: #EED2EE">
+				<td colspan="2" align="center">
+					<div id="show"></div>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</div> <br>
+<div id="sochinhphuong">
+	<form id="chinhphuong">
+		<table width="500" height="200" border="1" cellpadding="5" align="center">
+		
+			<tr>
+				<th colspan="2" style="color: red; background: #ccc;"> Tìm Số Chính Phương Nhỏ Hơn Số Đã Nhập </th>
+			</tr>
+
+			<tr>
+				<td style="background-color: #008080;color: white;"> Nhập một số </td>
+				<td style="background-color: #EED8AE"> <input id="soNhap1" type="text" size="35px" style="border-radius: 3px; border-color: red; background-color: #FFCCFF">
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" align="center" style="background-color: #EED2EE">
+					<input type="button" id="login1" value="Xử lý" onclick="inSCP()"
+					style="border-radius: 1px; background-color: #CD8500;color: white;"/>
+				</td>
+			</tr>
+			
+			<tr style="background-color: #9A32CD;color: white;">
+				<td colspan="2" align="center">
+					<div id="showscp"></div>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+ 
+</div>
+<script>
+	//Coi thu xem no phai la snt khong
+	function ktNguyenTo(a){
+		var checkSNT = true;
+		if(a<2){checkSNT = false;}//ko có snt nhỏ hơn 2
+		else if(a==2){checkSNT = true;}//2 là số nguyên tố chẵn duy nhất
+		else if(a % 2 == 0){checkSNT = false;}	// snt chia cho 2 dư 0 ko phải snt
+		else {
+			for (var i = 3; i <= Math.sqrt(a); i += 2){ 
+				if (a % i == 0) {
+					checkSNT = false;
+					break;
+				}
+			}
+		}
+		return checkSNT;// trả về 1 giá trị
+	}
+	//In ra toan bo snt da check
+	function inSNT(){
+		var soNhap = document.getElementById("soNhap").value;
+		soNhap = parseInt(soNhap);//kiểu số nguyên
+		var html = '';
+		for (var i = 1; i <= soNhap; i++) {
+			if (ktNguyenTo(i)){
+				html += i + ' ';
+			}
+        }
+        document.getElementById("show").innerHTML = html;
+	}
+//SỐ CHÍNH PHƯƠNG
+
+	//Coi thu xem no phai la snt khong
+	function ktchinhphuong(b){
+		var checkSCP = true;
+		
+		 if((Math.sqrt(b) % 1 == 0)){checkSCP = true;}//lấy căn bậc 2 của b. r chia cho 1 nếu dư 0 là số chính phương
+		  
+		else {checkSCP = false;}
+		return checkSCP;
+	}
+	//In ra toan bo scp da check
+	function inSCP(){
+		var soNhap1 = document.getElementById("soNhap1").value;
+		soNhap1 = parseInt(soNhap1);
+		var html = '';
+		for (var i = 1; i <= soNhap1; i++) {
+			if (ktchinhphuong(i)){
+				html += i + ' ';
+			}
+        }
+        document.getElementById("showscp").innerHTML = html;
+	}
+</script>
+
+	
+</body>
+</html>
+

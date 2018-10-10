@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+        <form action="">
+			Nhập: <input type="text" id="number"/>
+			<input type="button" value="Kết quả" />
+		</form>
+		<div id="result">
+		</div>
+		<script type="text/javascript">
+			function xxx() {
+				var number = document.getElementById("number").value;
+				number = parseInt(number);
+				var  i=1;
+				var t=0;
+				for (i++;i<=number;number%i==0) {
+				t++;
+				}
+				
+			    var html=number;
+				if (t==2) {document.getElementById("result").innerHTML = html;}
+
+			}
+		</script>
+</body>
+</html>

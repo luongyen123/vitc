@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nhóm3</title>
+	</head>
+	<body>
+		<form method="get" action="">
+			Nhập số: <input type="text" id="songuyento" value=" "/>
+			<input type="button" value="In kết quả" onclick="inra()">
+			<br>1<br>2<br>3<br>5
+		</form>
+		<div id="dien">
+			
+		</div>
+		<script type="text/javascript">
+		function inra(){
+		var songuyento = document.getElementById("songuyento").value;
+		songuyento = parseInt(songuyento);
+		var html = '';
+		for (var i = 2; i <= songuyento; i++){
+					if (i / i ==1 && i % 2 != 0 && i % 3 !=0 && i % 5 !=0) {
+						html += i + ' <br/>';
+									}
+		}
+		document.getElementById("dien").innerHTML = html;
+		}
+		</script>
+	</body>
+</html>

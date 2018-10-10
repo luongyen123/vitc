@@ -1,0 +1,167 @@
+#dautrang{
+	background-color: white; /*màu nền của đầu trang web*/
+	color: #111111;
+}
+
+#dautrang h1{
+	
+	font-family: fontawesome;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 37px;
+    letter-spacing: 3px;
+   
+    display: block;
+    position: absolute;
+    top: -20px;
+
+
+}
+
+
+#dautrang a:hover {
+	background-color: white;
+	color: #00cc00;
+}
+
+
+a {
+	text-decoration: none; /*bỏ gạch chân của thẻ a*/
+
+}       /*==Style cho menu===*/
+#menu ul {
+         background: #5f5f5f;
+         list-style-type: none;
+         text-align: center;
+       }
+#menu li {
+         color: #5f5f5f;
+         display: inline-block;
+         width: 120px;
+         height: 40px;
+         line-height: 40px;
+         margin-left: -5px;
+      
+       }
+#menu a {
+         text-decoration: none;
+         color: white;
+         display: block;
+       }
+#menu a:hover {
+         background: black;
+         color: white;
+       }
+#menudoc{
+	width: 15%;
+	
+	color: black;
+	background-color: #eee;
+	float: left;
+}
+#giua {
+	width: 65%;
+
+	color: black;
+	float: left;
+	margin-left: 20px;
+}
+#right{
+	background-color: white;
+	margin-left: 1150px;
+	height: 500px;
+
+
+}
+.home{
+	text-align: center;
+	float: left;
+	background-color: #4caf50;
+	color: white;
+	height: 70px;
+	width: 120px;
+}
+.next {
+	text-align: center;
+	float: right;
+	background-color: #4caf50;
+	color: white;
+	height: 70px;
+	width: 120px;
+
+}
+.vanban1{
+	background-color: #ddffdd;
+	color: black;
+	margin-top: 70px;
+	font-size: 20px;
+}
+li{
+	list-style: none;
+}
+body {
+	color: black;
+}
+.vidu {
+	background-color: #f1f1f1;
+}
+.viduhtml{
+	background-color: #ffffff;
+}
+.try{
+	text-align: left;
+	float: left;
+	background-color: #4caf50;
+	color: white;	
+	
+}
+.hihi ul {
+         
+         list-style-type: none;
+         text-align: center;
+         display: inline;
+       }
+.hihi li {
+         
+         display: inline-block;
+         
+         line-height: 40px;
+         margin-left: 100px;
+
+      
+       }
+.hihi a {
+         text-decoration: none;
+        
+         display: block;
+       }
+
+ #hihi ul {
+         
+         list-style-type: none;
+         text-align: center;
+         display: inline;
+       }
+#hihi li {
+         
+         display: inline-block;
+         
+         line-height: 40px;
+         margin-left: 50px;
+
+      
+       }
+#hihi a {
+         text-decoration: none;
+        
+         display: block;
+       }
+ a{
+ 	color: black;
+ }
+ a:hover {
+ 	background-color: white;
+ 	color: #00ff33;
+ }

@@ -4,15 +4,27 @@
 	<title></title>
 </head>
 <body>
-	Nhập:<input type="text" id="nguyento">
-	<button onclick='bitch()'>check</button>
-	<script type="text/javascript">
-		function bitch() {
-			var s=document.getElementById('nguyento').value;
-			for (var i = 2; i <=10; i++) {
-					document.write(s%i==0 +'   ');
-				}
-		}
+		 <form method="get" action="">
+            Nhập số: <input type="number" id="ngto" value=""/>
+            <input type="button" value="Check" onclick="nguyento()"/>
+        </form>
+        <script type="text/javascript">
+        function nguyento()
+        {
+        var n = document.getElementById("ngto").value;
+        // var t=0;
+        for(var i=0;i<=n;i++)
+        {
+            t=0;
+            for(var a=1;a<=i;a++)
+            {
+                 if(i%a==0)
+                t++;
+            }
+            if(t==2)
+        document.write(i);
+        }
+        }
 	</script>
 
 </body>

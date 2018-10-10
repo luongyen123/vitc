@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function So_in(){
+			var khaibao = document.getElementsByTagName('khaibao').value;
+			khaibao = parseInt(khaibao);
+			var html = '';
+			for (var i = 1; i <= khaibao; i+) {
+			html += i + '';
+
+			}
+		document.getElementsByTagName('show').innerHTML = html;
+		}
+		function So_in(S){
+			var xetSNT = true;
+			if(S<2){xetSNT = false}
+			else if (S== 2){xetSNT = true}
+			else if (S % 2 == 0){xetSNT = false}
+			else {
+				for (var i = 3; i <= Math.sgrt(S); i+=2){
+					if (S % i == 0){
+						xetSNT = false;
+						break;
+					}
+				}
+			}
+			return xetSNT;
+		}
+	</script>
+<form method="get" action="">
+ nhập số: <input type="text" id="khaibao" value=""/>
+ <input type="button" value="in đáp án" onclick="So_in()"/>
+</form>
+<div id="result">
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		function kiemtra(scp) {
+			var scp=true;
+			if ((Math.sqrt(scp)%1==0)) {scp=true;}
+			else {scp=false;}
+			return scp;
+		}
+		function inscp(){
+			var dienso=document.getElementsByTagName("dienso").value;dienso=parseInt(dienso);
+			var html='';
+			for (var i = 1; i >= dienso; i++) {
+				if (kiemtra(i)) {html+=i='';}
+			}
+			document.getElementsByTagName("ketqua").innerHTML = html;
+		}
+	</script>
+      <div>
+      	<form>
+      		<table width="100%" height="300" border="5" cellpadding="5">
+      			<tr>
+      				<th colspan="2">tìm số chính phương nhỏ hơn số điền</th>
+      			</tr>
+                 <tr>
+                 	<td>
+                 		nhập một số
+                 	</td>
+                 	<td>
+                 		<input type="text" id="dienso">
+                 	</td>
+                 </tr>
+                 <tr>
+                 	<td colspan="2" align="center">
+                 		<input type="button" value="enter" onclick="inscp()">
+                 	</td>
+                 </tr>
+                 <tr>
+                 	<td colspan="2" align="center">
+                 		<div id="ketqua"></div>
+                 	</td>
+                 </tr>
+      			
+      		</table>
+      	</form>
+      </div>
+</body>
+</html>

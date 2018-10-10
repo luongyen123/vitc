@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	Nhập số: <input type="text" id="A">
+	<button onclick="checkscp()"> CHECK SCP </button>
+<script type="text/javascript">
+	function checkscp(){
+		var A= document.getElementById('A').value; // gán A = giá trị nhập được ở mục id="A" hay lấy giá trị ở ô input
+        for(var i=1;i<=Math.sqrt(A);i++) // DK1: gán i=1
+        	                            // DK2: dk i phải nhỏ hơn căn của số nhập vào "nhập số", key của bài toán, điều kiện để giải đc bài toán.
+        	                            // DK3: tăng giá trị
+            document.write('số' + " " + i*i + " " + 'là số chính phương' + '<br>');
+	}
+</script>
+</body>
+</html>
