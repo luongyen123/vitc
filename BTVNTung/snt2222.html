@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		Nhập: <input type="text" id="number" />
+			<button onclick="snt()"> Kết Quả </button>
+		
+		<script type="text/javascript">
+			function snt()
+        {
+        var n = document.getElementById("number").value;
+            n=parseInt(n)
+        var t=0;
+        for(var a=0;a<=n;a++)
+        {
+        	t=0;
+            for(var i=1;i<=a;i++)
+            {
+                if(a%i==0)
+                t++;
+            }
+            if(t==2){
+        document.write(a + "<br>");}
+        }
+			}
+         snt();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+			Nhập : <input type="number" id="number" />
+			<input type="button" value="Kết quả" onclick="scp()"/>
+		
+		<script type="text/javascript">
+			   function scp(n) {
+			
+				var n= document.getElementById('number').value;
+				   n=parseInt(n);
+				for(var i=1;i<=Math.sqrt(n);i++)
+					{document.write(i*i + "<br>");}
+				
+			}
+			
+			
+		</script>
+	</body>
+</html>
