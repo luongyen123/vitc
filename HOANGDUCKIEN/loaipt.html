@@ -9,16 +9,23 @@
 <script type="text/javascript">
 	function tongso(){
 		var tongso= document.getElementById('tongso').value; 
-		var tong=0;
-		var du=0;
-		while(a>o){
-		     du = a%10;
-		     a = a/10;
-		     tong = tong + du;
-		    
-  }
-            document.write("tong");
+		sort(a,a+n);
+	
+	var loai = 0;
+	
+	for(int i = 0; i < n; i++)	{
+		
+		a[loai] = a[i];
+		
+		while(a[i] == a[i+1])
+			i++;
+		
+		loai++;	
 	}
+	n = loai;
+}
+            document.write("tong");
+	
 </script>
 </body>
 </html>
