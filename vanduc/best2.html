@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		 <form method="get" action="">
+            Nhập số: <input type="number" id="snt" value=""/>
+            <input type="button" value="Check" onclick="snt()"/>
+        </form>
+        <script type="text/javascript">
+        function snt'()
+        {
+        var n = document.getElementById("snt").value;
+        // var t=0;
+        for(var i=0;i<=n;i++)
+        {
+            t=0;
+            for(var a=1;a<=i;a++)
+            {
+                 if(i%a==0)
+                t++;
+            }
+            if(t==4)
+        document.write(i);
+        }
+        }
+	</script>
+
+</body>
+</html>

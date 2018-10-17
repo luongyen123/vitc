@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p align="center">Nhập : <input type="number" id="form" value=""/>
+		<button onclick="tamgiacpascal()">Kiểm Tra</button></p>
+		<script type="text/javascript">
+			function tamgiacpascal()
+			{
+				var tall = document.getElementById('form').value;
+				
+				document.write('<table>');
+				for (var i=4; i<=tall ; i++) 
+				{
+					
+					document.write('<tr>');
+				  for (var a=2; a<=i ; a++) 
+				    {
+				    	
+				    	document.write('<td>');
+				  		document.write('1');
+				  		document.write('</td>');
+				  	}
+				  	document.write('</tr>');	
+				}
+				
+				document.write('</table>');
+			}
+		</script>
+	</body>
+</html>
