@@ -6,17 +6,21 @@
 <body>
 	Hệ số<input type="text" id="snt">
 	<input type="button" value="In kết quả" onclick="giatri()">
-	<div id="demo"></div>
 	<script type="text/javascript">
 		function giatri(){
-			var snt= document.getElementById("snt").value;
-			snt= parseInt(snt);
-			var html="";
-			for (var i=1; i<=snt; i++);
-				if(i/i==1 && i%2 !=0 && i%3 !=0 && i%5 !=0){
-					html += i+ '<br/>';
+			var n= document.getElementById("snt").value;
+			n=parseInt(n)
+			var h=0;
+			for (var i=0; i<=n; i++){
+				h=0;
+				for (var j=1;j<=i;j++){
+					if(i%j==0)
+						h++;
 				}
-			document.getElementById("demo").innerHTML= html;	
+				if(h==2)
+					document.write(i,'<br>');
+			}
+			
 		}
 	</script>
 

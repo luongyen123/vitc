@@ -9,17 +9,9 @@
 	<div id="demo"></div>
 	<script type="text/javascript">
 		function kq(){
-			var n=1;
 			var scp= document.getElementById("scp").value;
-			scp= parseInt(scp);
-			var html="";
-			for (i=1; i<=scp; i++){
-				if(n=1){
-					if(n*=(i*i)){
-						html+= n+ '<br/>';
-					}
-				}
-			}document.getElementById("demo").innerHTML=html;
+			for (var i=1; i<=Math.sqrt(scp); i++)	
+			document.write(+""+i*i+""+'-số chính phương'+'<br>');
 		}
 	</script>
 
