@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TÍnh tổng chữ số</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	Nhập: <input type="text" id="number" />
+		<button onclick="stn()"> Kết Quả </button>
+	<script type="text/javascript">
+		function stn()  {
+			var n = document.getElementById("number").value;
+		//	    n = parseInt(n);
+		//	    var s = "n";
+			var a=0;
+			var t=0;
+			for (var i = 0;i <n.length; i++) {
+				a = n[i];
+			    a = parseInt(a);
+			    t =t+a;
+			    if(i==n.length-1)   {alert(t);}            
+			}
+           
+        }
+		stn();
+	</script>
+
+
+</body>
+</html>
