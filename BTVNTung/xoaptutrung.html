@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		Nhập: <input type="text" id="chuoi" />
+		<button onclick="so()"> Kết Quả </button>
+		
+		<script type="text/javascript">
+		function so()
+		{
+		var n = document.getElementById("chuoi").value;
+		//alert (typeof n);
+		  var mang = n.toString();
+		     mang=[mang];
+             mang.sort();
+		    for (var i = 0; i < mang.length; i++) {
+
+		    for (var j = i+1; j < mang.length-1; j++) {
+                  
+		        if (mang[i] == mang[j]) {  delete mang[i];document.write(mang[j]);
+                else {document.write(mang[j]);}
+		        }
+		        //if (mang[i] == mang[j]) {  mang.splice(i,1);document.write(mang[j]);}
+		       // if (j==mang.length-2) { break;}
+		     }
+		 		   //  if (i<mang.length) { document.write(mang[i]);}
+		 		   //if (i==mang.length-1) {alert (mang);}
+		}
+		}
+	so();
+		</script>
+		
+	</body>
+</html>
