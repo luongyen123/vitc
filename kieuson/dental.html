@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	nhập số: <input type="text" name="" id="tg"/>
+	<button onclick="s()">Check</button>
+	<script type="text/javascript">
+		function s()
+			{
+				var t = document.getElementById('tg').value;
+				document.write('<table>');
+				for (var i=0; i<t ; i++) 
+				{
+					  
+				  		document.write('<tr>');
+				     for (a=t-1;a>i;a--)
+				{
+
+					  document.write('<td>');
+				  		document.write(i*2+1);
+				  		document.write('</td>');
+				}
+				  for (var a=1; a<=i*2+1 ; a++) 
+				    {
+				    	document.write('<td>');
+				  		document.write(i*2+1);
+				  		document.write('</td>');
+				  	}
+				  	document.write('</tr>');	
+				}
+				document.write('</table>');
+			}
+	</script>
+
+</body>
+</html>
