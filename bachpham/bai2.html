@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>TÍnh tổng</title>
+</head>
+<body>
+    số tính tổng: <input type="text" id="So" />
+          <button onclick="SKT()"> tổng số </button>
+    <script type="text/javascript">
+        function SKT()  {
+            var n = document.getElementById("So").value;
+            var S=0;var V=0;
+            for (var i=0;i<n.length;i++)
+        {
+            S= n[i];
+            S= parseInt(S);
+            V=V+S;
+                if(i==n.length-1)
+        {alert(V);}            
+    }
+}
+        SKT();
+    </script>
+</body>
+
+</html>
