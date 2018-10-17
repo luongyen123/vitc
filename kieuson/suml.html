@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Nhập:<input type="number" id="tong">
+    <button onclick="z()">Check</button>
+	<script type="text/javascript">
+		function z() {
+			var t=document.getElementById('tong').value;
+			var s=0;
+	      while(t>0){
+			var s=s+t%10;
+			t=parseInt(t/10);
+	       }
+	       document.write(s);
+		}
+
+	</script>
+
+</body>
+</html>

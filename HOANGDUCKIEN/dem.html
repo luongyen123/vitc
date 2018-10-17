@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dếm số phần tử xuất hiện</title>
+</head>
+<body><input type="text" id="nhapso">
+	<button onclick="dem()"> ok </button>
+
+	
+		 
+	<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
+
+function NhapMang( a,n)
+var dem= document.getElementById('nhapso').value;
+{
+	for(int i=0; i<n; i++)
+	{
+		document.write(<<"\nPhan tu thu " << i <<": ");
+		
+	}
+}
+
+function MangNgauNhien( a, n)
+{
+	
+	for( i=0; i<n; i++)
+		a[i]=rand()%100 - rand()%100;
+}
+
+function XuatMang(a,n)
+{
+	for( i=0; i<n; i++)
+		document.write(<< a[i] <<"\t");
+}
+
+function SoLanXuatHienPTuX(int a[], int n, int x)
+{
+	var DemPTuX=0;
+	for(int i=0; i<n; i++)
+		if(a[i]==x)
+			DemPTuX = DemPTuX + 1;
+	document.write(<<"So phan tu "<< x <<" xuat hien trong Mang la: "<<DemPTuX);
+
+}
+
+function main()
+{
+	var a[MAX], n, x;
+	
+	document.write(<<"So luong phan tu thuc: ");
+
+	MangNgauNhien(a,n);
+
+	XuatMang(a,n);
+
+	document.write(<<"So phan tu x can kiem tra: ");
+		
+	SoLanXuatHienPTuX(a,n,x);
+
+	
+}
+		
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="nhapso">
+	<button onclick="tongso()"> ok </button>
+
+	<script type="text/javascript">
+		function main ()
+{	var h=document.getElementById("nhapso").value;
+    var h,i,j;
+    document.write("nhap chieu cao tam giac:");
+    
+    
+    document.write("\n");
+    for(i=1;i<=h&&h<20;i++)
+    {
+       for(j=1;j<=h-i;j++)
+           document.write(" ");/*in ra màn hình khoảng trắng đến vị trí thứ n-i */
+       for(j=1;j<=2*i-1;j++)
+           document.write("*"); /*tiếp tục in ra màn hình * đến vị trí 2*i-1 */
+      document.write("\n"); /* chuyển xuống hàng tiếp theo */ 
+    }
+}
+	</script>
+
+</body>
+</html>
