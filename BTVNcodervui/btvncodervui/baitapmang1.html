@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- tạo ô nhập số liệu -->
+	Nhập số : <input type="number" name="" id="nhapso"/>
+	<button onclick="mang1()"> Kiểm tra </button>
+	<!-- giải bài toán -->
+	<script type="text/javascript">
+		// gọi tên hàm là mang1
+		function mang1(){
+			// rút số liệu từ ô nhập số liệu
+			var a= document.getElementById("nhapso").value;
+			// gọi sum là đáp số. Ta gán sum=0
+			var sum=0;
+			// dùng while và đk để chích xuất từng giá trị ra.
+			while(a>0){			
+               sum=sum+a%10;
+               a=parseInt(a/10);              
+			}
+			document.write(sum);
+		}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p align="center">Nhập vào đây: <input type="number" id="thongtin" value=""/>
+		<button onclick="tamgiac()">Kiểm Tra</button></p>
+		<script type="text/javascript">
+			function tamgiac()
+			{
+				var tall = document.getElementById('thongtin').value;
+				// Tạo bảng trong js phải đặt trong documen, phải có thẻ mở và đóng
+				document.write('<table>');
+				for (var i=0; i<=tall ; i++) 
+				{
+					// In ra chiều cao tam giác
+					document.write('<tr>');
+				  for (var a=1; a<=i ; a++) 
+				    {
+				    	// In ra chiều ngang của tam giác
+				    	document.write('<td>');
+				  		document.write('1');
+				  		document.write('</td>');
+				  	}
+				  	document.write('</tr>');	
+				}
+				// THẺ ĐÓNG CỦA BẢNG
+				document.write('</table>');
+			}
+		</script>
+	</body>
+</html>
