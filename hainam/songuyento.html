@@ -4,20 +4,28 @@
 		<title>Số Nguyên Tố</title>
 	</head>
 	<body>
-		<form method="get" action="">
-			hệ số <input type="text" id="songuyento" value=" "/>
-			<input type="button" value="In kết quả" onclick="in()">
-			<div id="hello">
-				
-			</div>
-			<script type="text/javascript">
-				function giatri {
-					var songuyento=document.getElementById("songuyento").value;
-					songuyento=parseInt(songuyento);
-					var
-					for (var i = 1; i <= songuyento; i++) 
-						
-					document.getElementById('songuyento').innerHTML= html;				}
-			</script>
-		</form>
+		dien: <input type="text" id="number" />
+			<button onclick="snt()"> In </button>
+		
+		<script type="text/javascript">
+			function snt ()
+			{
+				var n=document.getElementById("number").value;
+				n=parseInt(n)
+				var dien=0;
+				for (var i=0; i<=n;i++)
+				{
+					dien=0;
+					for (var j=1;j<=i;j++) 
+					{
+
+					if(i%j==0)
+							dien++;
+					}
+					if(dien==2)
+							alert(i);
+				}
+			}
+		</script>
+	</form>
 </html>
