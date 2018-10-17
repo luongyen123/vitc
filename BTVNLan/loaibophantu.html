@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loaibophantu</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arr =[1,2,3,4,1,2,4,6]
+        var newarr=[];
+        for(x in arr){
+            if(newarr.indexOf(arr[x])<0){
+                newarr.push(arr[x]);
+            }
+        }
+        document.write("Dãy số ban đầu" + arr + "<br/>");
+	    document.write("Dãy số thay đổi " + newarr +"<br/>");
+
+    </script>
+</body>
+</html>

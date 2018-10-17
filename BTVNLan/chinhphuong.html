@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	Nhập số: <input type="number" id="so"/>
+	<input type= "button" value ="click"onclick="scp()"/>
+<script type="text/javascript">
+	function scp(B){
+		var B= document.getElementById('so').value;
+			B=parseInt(B);
+        for(var i=1;i<=Math.sqrt(B);i++) 
+             document.write (i*i  +"<br>");
+	}
+	//so chinh phuong la can bac hai cua no la 1 so nguyen
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tam giac</title>
+
+        <script type="text/javascript">
+            h=prompt("nhapchieucaotamgiac");
+            document.write('<table border="0">');
+            for (i=0;i<h;i++)
+            {
+                document.write('<tr>')
+                for(k=h-1;k>i;k--)
+                {
+                document.write('<td>');
+                document.write('');
+                document.write('</td>');
+            }
+                for(k=1;k<=i*2+1;k++)
+            {
+                document.write('<td>');
+                document.write('1');
+                document.write('</td>');
+            }
+            document.write('</tr>');
+           }
+        document.write('</table>');
+            </script>
+            </head>
+<body>
+</body>
+</html>
