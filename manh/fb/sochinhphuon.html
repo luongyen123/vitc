@@ -6,20 +6,22 @@
 <body>
   <form method="get" action="">
             Nhập số: <input type="number" id="number" value=""/>
-            <input type="button" value="In kết quả" onclick="socp()"/>
+            <input type="button" value="In kết quả" onclick="tong()"/>
         </form>
         <div id="demo">
 
         </div>
  <script type="text/javascript">
- 	function socp(n) {
+ 	function tong(n) {
  	
- 		var number= document.getElementById('number').value;
- 		number=parseInt(number);
- 		for(var i=1;i<=Math.sqrt(number);i++)
- 			alert(i*i);
- 		
+ 		var A= document.getElementById('A').value; // gán A = giá trị nhập được ở mục id="A" hay lấy giá trị ở ô input
+        for(var i=1;i<=Math.sqrt(A);i++) // DK1: gán i=1
+        	                            // DK2: dk i phải nhỏ hơn căn của số nhập vào "nhập số", key của bài toán, điều kiện để giải đc bài toán.
+        	                            // DK3: tăng giá trị
+            document.write('số' + " " + i*i + " " + 'là số chính phương' + '<br>');
+	
  	}
+
  	
  	
  </script>
