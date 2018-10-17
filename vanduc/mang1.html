@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	Nhập số : <input type="number" name="" id="lambogini"/>
+	<button onclick="mang1()"> Check </button>
+	
+	<script type="text/javascript">
+		
+		function mang1(){
+		
+			var a= document.getElementById("lambogini").value;
+		
+			var sum=0;
+			
+			while(a>0){			
+               sum=sum+a%20;
+               a=parseInt(a/20);              
+			}
+			document.write(sum);
+		}
+	
+	</script>
+</body>
+</html>
