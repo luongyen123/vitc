@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+    function tinhtong()
+    {
+    var a= document.getElementById("tinhtong").value;
+    var b=0;
+    while(a>0)
+    {
+      b=b+a%10;
+      a=parseInt(a/10);
+    }
+    document.write(b)
+    }     
+    </script>
+    số vần tính : <input id="tinhtong" type="text" name="nhapso">
+  <button onclick="tinhtong()"> bắt đầu </button>
+  </body>
+</html>
