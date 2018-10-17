@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>nhập vào 1 số tự nhiên 234, tính tổng 2+3+4</title>
+		
+		<meta charset="utf-8">
+	</head>
+	<body>
+		Tổng : <input type="number"name="" id="nhapso">
+		<button onclick="mang()">Kiểm tra</button>
+		<script type="text/javascript">
+			function mang(){
+				var x= document.getElementById("nhapso").value;
+				var sum=0;
+				while(x>0) 
+				{
+				sum=sum+x%10;
+				x=parseInt(x/10);
+		alert(sum);
+			}
+			}
+		</script>
+	</body>
+</html>
