@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title></title>
@@ -14,37 +14,34 @@
 			function tongso() {
 			
 				var n= document.getElementById('number').value;
-				n=parseInt(n);
-				var m;
-				m=parseInt(m);
-				var mang=[];
-				var dem=0;
-				while(n>0)
-				{
-					m=n%10;
-					n=parseInt(n/10);
-					dem++;
-					
-				 mang =[document.write(m + "  ")];
 
-				}
-				for(var i=0;i<mang.length;i++)
-				for(var j=0;j<i;i++)
-					if(mang[i]==mang[j])
-						{mang.splice(i,1);} 
-
-				 document.write(mang);
-				alert(mang);
+				var a =n.split("");
+				
+				
+				
+				for(var i=1;i<a.length;i++)
+				for(var j=0;j<i;j++)
+					if(a[i]==a[j])
+						{
+							for (var k = i; k <a.length; k++) 
+								{
+									a[k] = a[k+1];
+									a.length--;
+									i--;
+								}
+						}
+				for(i=0;i<a.length;i++)
+				 document.write(a);
+				
+				}	
 				
 					
 				
-					
-				
-			}
+			
 		</script>
 	</body>
-</html> -->
-<!DOCTYPE html>
+</html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -66,7 +63,7 @@
 				for(var i=0;i<n;i++)
 
 				{
-					for(var j=0;j<i;j++)
+					for(var j=1;j<i;j++)
 					{
 						if(a[i]==a[j])
 						{
@@ -82,4 +79,4 @@
 	</script>
 				
 </body>
-</html>
+</html> -->

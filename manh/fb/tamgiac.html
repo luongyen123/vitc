@@ -4,34 +4,39 @@
 	<title></title>
 </head>
 <body>
+	
 	<form method="get" action="">
 			Nhập số: <input type="number" id="number" value=""/>
 			<input type="button" value="In kết quả" onclick="tam_giac()"/>
 		</form>
 <script type="text/javascript">
-	function gt()
-	{	var n,gt1;
-		for(var k=1;k<n;k++)
-			gt1=gt*k;
-		return gt1;
-	}
-	function pascal(n,r)
-	{	var n,r;
-		return gt(n)/(gt(n-r)*gt(r));
-	}
+	
+	function gt1(n) {
+		var n;
+		var gt=1;
+		for(var k=1;k<=n;k++)
+			gt=gt*k;
+   	return gt;   
+}   
+	function tohop(n,k){
+		var n;
+		var k;
+	return gt1(n)/(gt1(k)*gt1(n-k));
+}
 	function tam_giac()
 	{
 		var n= document.getElementById('number').value;
 		n=parseInt(n);
 		for(i=1;i<=n;i++)
-		{
-				for(j=0;j<=j;j++)
-				{document.write(pascal(i,j));}
+		{document.write("  ")
+				for(j=0;j<=i;j++)
+				{document.write(tohop(i,j)+" ");}
 				document.write('<br>');
 				
 		}
-		return 0;
-	}		
+		
+	 }	
+
 	
 </script>
 </body>

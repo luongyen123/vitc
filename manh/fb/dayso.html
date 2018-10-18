@@ -4,31 +4,36 @@
 	<title></title>
 </head>
 <body>
+
+	<form method="get" action="">
+			Nhập số: <input type="number" id="number" value=""/>
+			<input type="button" value="In kết quả" onclick="tongso()"/>
+		</form>
 	
 	<script type="text/javascript">
-	
-				var a=[];
+		function tongso(){
+			var n= document.getElementById('number').value;
+
+				var a =n.split("");
 				var dem=1;
-				var n=prompt("mời bạn nhập  số phần tử mảng :");
-				for(var i=0;i<n;i++)
-					{
-						a[i]=prompt("phan tu thu"+i);
-						// document.write(a[i]);					
-					}
-				for(var i=0;i<n;i++){
-					if(a[i]==a[(i+1)])
+				
+				for(var i=0;i<a.length-1;i++){
+					for(var  j=1;j<a.length;j++){
+						if(a[i]==a[j])
 						{
-							dem++;
-						
+							dem=dem+1;
+
 						}
-						else
-							{
-								dem=1;
-							}
 						
-				document.write('phần tử' +" "+ a[i] +" "+ 'xuất hiện'+dem+'lần'+'<br>');
-			
-			}
+						else
+						{
+							dem=1;
+						}}
+						document.write(a[j]+"xuan hien "+"  "+dem+"lần"+"<br>");
+				}
+				// 		for(i=0;i<a.length;i++)
+				// document.write(a[i]+"xuan hien "+"  "+dem+"lần"+"<br>");
+		}	
 	</script>
 				
 </body>
