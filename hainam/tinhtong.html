@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Điền: <input type="text" id="number" />
+		<button onclick="stn()"> In </button>
+	<script type="text/javascript">
+		function stn()  {
+			var n = document.getElementById("number").value;
+			var a=1;
+			var t=1;
+			for (var i = 1;i <n.length; i++) {
+				a = n[i];
+			    a = parseInt(a);
+			    t =t+a;
+			    if(i==n.length-1)   {alert(t);}            
+			}
+           
+        }
+		stn();
+	</script>
+</body> 
+
+</html>
