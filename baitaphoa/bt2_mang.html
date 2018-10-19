@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="type" id="sonhap" />
+	<input type="submit" value="loaibo" onclick="loaibo()"/>
+	<script type="text/javascript">
+		function loaibo() {
+			var mang = document.getElementById("sonhap").value;
+			var mang_str = mang.split("");
+			for (var i=0; i<mang.length-1; i++) {
+				for (var j=1;  j <= mang_str.length; j++) {
+					if(mang_str[i]==mang_str[j]) {
+						mang_str.splice(j,1);
+					}
+				}
+			}
+			for(var i=0; i<mang_str.length;i++) {
+				document.write("Mảng giá trị" + mang_str[i]+"<br>");
+			}
+			console.log(mang_str);
+		}
+     
+	</script>
+
+</body>
+</html>
