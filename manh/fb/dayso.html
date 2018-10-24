@@ -14,25 +14,25 @@
 		function tongso(){
 			var n= document.getElementById('number').value;
 
-				var a =n.split("");
+				var a =n.split("").sort();
 				var dem=1;
 				
-				for(var i=0;i<a.length-1;i++){
-					for(var  j=1;j<a.length;j++){
-						if(a[i]==a[j])
-						{
-							dem=dem+1;
+				for(var i=1;i<a.length;i++){
+					
+						if(a[i]==a[i-1])
+						
+							dem++;
 
-						}
+						
 						
 						else
-						{
+						{document.write(a[i-1]+"xuan hien "+"  "+dem+"lần"+"<br>");
 							dem=1;
-						}}
-						document.write(a[j]+"xuan hien "+"  "+dem+"lần"+"<br>");
+						}
+						
 				}
-				// 		for(i=0;i<a.length;i++)
-				// document.write(a[i]+"xuan hien "+"  "+dem+"lần"+"<br>");
+				
+				 document.write(a[a.length-1]+"xuan hien "+"  "+dem+"lần"+"<br>");
 		}	
 	</script>
 				
