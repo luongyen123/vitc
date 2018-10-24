@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đếm số lần xuất hiện của các phần tử trong mảng</title>
+</head>
+<body>
+<input type="text" name="mang" placeholder="Nhập vào kí tự" id="mang" id="mang">
+<input type="submit" name="loaibo" value="Đếm số lần" onclick="demsolan()">
+<script type="text/javascript">
+	
+
+	function demsolan(){
+		var mang = document.getElementById('mang').value;
+		var sapxep = (mang.split("")).sort();
+		var cnt = 1;
+		    for(var i = 1; i < sapxep.length;i++){
+		        if(sapxep[i] == sapxep[i-1]) ++cnt;
+		        else{
+		            document.write("Phan tu "+sapxep[i-1]+" xuat hien "+cnt+" lan!"+"<br/>");
+		            cnt = 1;
+		        }
+		    }
+		    document.write("Phan tu "+sapxep[sapxep.length-1]+" xuat hien "+cnt+" lan!");
+
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đếm số lần xuất hiện của các phần tử trong mảng</title>
+</head>
+<body>
+<input type="text" name="mang" placeholder="Nhập vào chiều cao" id="mang" id="mang">
+<input type="submit" name="loaibo" value="Đếm số lần" onclick="inmang()">
+<script type="text/javascript">
+	
+
+	function inmang(){
+		var mang = document.getElementById('mang').value;
+		
+		var h = parseInt(mang);
+		var kq;
+	    for( i = 1; i <= h; i++ ) 
+	    { 
+	        document.write("1 "); 
+	        kq = 1; 
+	        for( j = 2; j <= i; j++ ) 
+	        { 
+	            kq=kq*(i-j+1)/(j-1); 
+	            document.write(kq+"  "); 
+	        } 
+	        document.write("<br>"); 
+	    } 
+
+	}
+	
+</script>
+</body>
+</html>
