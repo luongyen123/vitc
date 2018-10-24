@@ -7,18 +7,19 @@
     <title>mảng</title>
 </head>
 <body>
-    <p id="demo"></p>
-    
-    <script type="text/javascript">
-        var cars=["2" , "3" ,"4"];
-        document.getElementById("demo").innerHTML=cars;
-        const number=[2,3,4];
-        const total = number.reduce();
-
-        // var sum = [2, 3, 4].reduce(add, 0);
-        //     function add(a, b) {
-        //     return 2 + 3 + 4;}
-    </script>
+    Nhập số: <input type="number" id="so"/>
+	<button onclick="tong()">click</button>
+<script type="text/javascript">
+	function tong(){
+		var a= document.getElementById("so").value;
+        var n=0;
+        while(a>0){
+            n=n+a%10;
+            a=parseInt(a/10);
+        }
+        document.write(n)
+    }
+        </script>
     
 </body>
 </html>

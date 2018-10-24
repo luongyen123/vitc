@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> số nguyên tố </title>
+	</head>
+	<body>
+		<!-- tạo ô nhập số -->
+		 Nhập số: <input type="text" name="nhapso" id="so">
+		 <button onclick="snt()"> CHECK SNT </button>
+		<script type="text/javascript">
+		
+		function snt(){
+			var n = document.getElementById("so").value;  
+			
+        var t=0;
+        for(var a=0;a<=n;a++)
+        {
+            t=0;
+            for(var b=1;b<=a;b++)
+            {
+                 if(a%b==0)
+                t++;
+            }
+            if(t==2)
+        alert(a);
+        }
+			}
+         snt();
+		</script>
+	</body>
+</html>

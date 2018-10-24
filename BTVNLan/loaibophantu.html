@@ -7,16 +7,24 @@
     <title>Loaibophantu</title>
 </head>
 <body>
+    <input type="text" id="sonhap"/>
+    <input type="submit" value=" loaibo"onclick="loaibo()" />
     <script type="text/javascript">
-        var arr =[1,2,3,4,1,2,4,6]
-        var newarr=[];
-        for(x in arr){
-            if(newarr.indexOf(arr[x])<0){
-                newarr.push(arr[x]);
+    function loaibo(){
+        var mang = document.getElementById("sonhap").value;
+            for (var i=0;i<mang.length;i++){
+                for (var j=1; j<=mang_str.length;j++){
+                    if (mang_str[i] == mang_str[j]) {
+                        mang_str.splice(j,1);
+                    }'ngv '
+                }
             }
-        }
-        document.write("Dãy số ban đầu" + arr + "<br/>");
-	    document.write("Dãy số thay đổi " + newarr +"<br/>");
+            for(var i=0;i<mang_str.length;i++){
+                document.write("Mảng giá trị là:"+mang_str[i] +"<br>");
+            }
+                
+            }
+      
 
     </script>
 </body>
