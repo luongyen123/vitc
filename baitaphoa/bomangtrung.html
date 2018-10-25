@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loại bỏ mảng trùng</title>
+</head>
+<body>
+<input type="text" name="mang" placeholder="Nhập vào kí tự" id="mang" id="mang">
+<input type="submit" name="loaibo" value="Loại bỏ" onclick="loaibo()">
+<script type="text/javascript">
+	function isExist(arr,x){
+		for(var i = 0; i < arr.length; i++) {
+	      if (arr[i] === x) return true;
+	    }
+	    return false;
+	}
+	function deduplicate(arr) {	 
+	  var ans = [];
+	  for(var i = 0; i < arr.length; i++) {
+	      if(!isExist(ans, arr[i])) ans.push(arr[i]);
+	    }
+	  
+	  console.log(ans);
+	}
+
+	function loaibo(){
+		var mang = document.getElementById('mang').value;
+		deduplicate(mang.split(""));
+
+	}
+	
+</script>
+</body>
+</html>
