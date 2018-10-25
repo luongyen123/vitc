@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> bài học về opjects </title>
+	</head>
+	<body>
+        <font color="green" align="center"><h3>Tra cứu sinh viên HVN</h3></font>
+		<p align="center"><input type="text" placeholder="Nhập thông tin" id="home">
+		<button onclick="donghuong()"> Tìm kiếm </button></p>
+		<script type="text/javascript" >
+			
+		var listsv = [
+		{ ten:"Kim Thị Cung", date:"20/02/2000", add:"ha noi"},
+		{ ten:"Đan Cung Đàn", date:"27/07/2000", add:"ha noi"},
+		{ ten:"Trường Văn Dài", date:"02/09/2000", add:"thanh hoa"},
+		{ ten:"Vương Thúy Quỳnh", date:"20/02/2000", add:"ha noi"},
+		{ ten:"Trung Kiot", date:"19/02/2000", add:"thanh hoa"},
+		{ ten:"Totti", date:"20/02/2000", add:"bac can"},
+		];
+			function donghuong(){
+				var A = document.getElementById("home").value;
+				var sinhngay = document.getElementById("home").value;
+				for (var i=0; i<listsv.length; i++ ) {
+						if (listsv[i].add === A ) {
+							document.write("Sinh viên có quê ở Hà Nội:" +"  "+ listsv[i].ten + "<br>");
+						}
+					}
+					for (var i=0; i<listsv.length; i++) {
+							if (listsv[i].date === sinhngay ) {
+								document.write( listsv[i].ten + ":" + "  " + listsv[i].date +" <br> " );
+								}
+						}
+						}
+							
+				</script>
+			</body>
+		</html>

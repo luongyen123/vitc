@@ -9,13 +9,22 @@
 
 		<script type="text/javascript">
 			function loaibo() 
-			{			
-				var a= document.getElementById('giatri').value;
-			    var mang=[];
-			    
+			{	
+			    // Lấy giá trị nhập vào từ ô 		
+				var mang= document.getElementById('giatri').value;
+				 mang= mang.split("");
+			    for (var i=0; i< mang.length-1; i++){
 
+			    	for (var j=1; j< mang.length ; j++) {
+			    		if (mang[i] == mang[j]) {
+			    			mang.splice(j,1);
+			    		}
+			    	}
+			    }
+                // console.log(mang);
+                document.write(mang);
 			}
-			loaibo();
+			
 		</script>
 	</body>
 </html>
