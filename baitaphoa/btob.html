@@ -6,7 +6,7 @@
 </head>
 <body>
 	Quê quán <input type="text" id="quequan">
-	   <br> <br>
+	   <br><br>
 	Ngày sinh <input type="text" id="ngaysinh">
 	<button onclick="test()">Click</button>
 	<script type="text/javascript">
@@ -22,8 +22,8 @@
 		var quequan= document.getElementById("quequan").value;
 		var ngaysinh = document.getElementById("ngaysinh").value;
 		for (var i=0; i<sinhvien.length; i++){
-			  if(sinhvien[i].quequan===quequan && sinhvien[i].ngaysinh===ngaysinh ){
-		document.write("Cùng quê:" + " " + sinhvien[i].quequan +" "+"  "+ "Họ tên"+":"+"  "+ sinhvien[i].hoten + "Cùng ngày sinh:"+ sinhvien[i].ngaysinh + "<br");
+			  if(sinhvien[i].quequan==quequan && sinhvien[i].ngaysinh==ngaysinh ){
+		document.write("Cùng quê:" + " " + sinhvien[i].quequan +" "+"  "+ "Họ tên"+":"+"  "+ sinhvien[i].hoten + "Cùng ngày sinh:"+ sinhvien[i].ngaysinh + "<br>");
 	}
 }
 }
