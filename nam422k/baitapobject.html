@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Nguyễn Văn Nam</title>
+	</head>
+	<body>
+		<input type="text"  placeholder ="Hội đồng hương"name="queqtoi" id="quetoi">
+		<button onclick="quetoi"> Tìm kiếm </button>
+		<script type="text/javascript">
+			var danhsachlop=[
+		{fullName:"Nguyễn Văn A",msv:"631123",ngaysinh:"04/12/2000",quequan:"Hungyen "},
+		{fullName:"Nguyễn Văn D",msv:"637455",ngaysinh:"08/04/2000",quequan:"Hanoi "},
+		{fullName:"Nguyễn Văn G",msv:"637678",ngaysinh:"22/08/2000",quequan:"thaibinh "},
+		{fullName:"Nguyễn Văn T",msv:"639968",ngaysinh:"22/12/2000",quequan:"thaibinh "},
+		{fullName:"Nguyễn Văn S",msv:"637968",ngaysinh:"08/03/2000",quequan:"Hanoi "},
+		{fullName:"Nguyễn Văn X",msv:"631234",ngaysinh:"04/02/2000",quequan:"Hungyen "},
+			];
+			function timkiem()
+			{
+				var dong_huong=document.getElementById('quequan').value;
+				var cung_date=document.getElementById('quequan').value;
+				for( var i=0;i=danhsachlop.length;i++)
+					{
+					if
+						(danhsachlop[i].quequan===dong_huong) and (danhsachlop[i].ngaysinh ===cung_date )
+					{
+						document.write(danhsachlop[i].fullName+ danhsachlop[i].quequan+danhsachlop[i].ngaysinh+"<br>");
+				
+				}
+				
+			
+				
+			
+		</script>
+	</body>
+</html>
