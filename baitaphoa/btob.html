@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tìm sv cùng quê cùng ngày sinh</title>
+</head>
+<body>
+	Quê quán <input type="text" id="quequan">
+	   <br> <br>
+	Ngày sinh <input type="text" id="ngaysinh">
+	<button onclick="test()">Click</button>
+	<script type="text/javascript">
+	var sinhvien = [
+{msv:637638, hoten:"Hòa 1", ngaysinh:"01/01/2000", quequan:"Bắc Ninh"} ,
+{msv:637637, hoten:"Hòa 2", ngaysinh:"10/11/2000", quequan:"Hà Nội"}   ,
+{msv:637636, hoten:"Hòa 3", ngaysinh:"01/01/2000", quequan:"Bắc Ninh"} ,
+{msv:637635, hoten:"Hòa 4", ngaysinh:"05/01/2000", quequan:"Bắc Ninh"} ,
+{msv:637634, hoten:"Hòa 5", ngaysinh:"05/12/2000", quequan:"Bắc Ninh"} ,
+		           ] ;	
+	function test()
+	    {
+		var quequan= document.getElementById("quequan").value;
+		var ngaysinh = document.getElementById("ngaysinh").value;
+		for (var i=0; i<sinhvien.length; i++){
+			  if(sinhvien[i].quequan===quequan && sinhvien[i].ngaysinh===ngaysinh ){
+		document.write("Cùng quê:" + " " + sinhvien[i].quequan +" "+"  "+ "Họ tên"+":"+"  "+ sinhvien[i].hoten + "Cùng ngày sinh:"+ sinhvien[i].ngaysinh + "<br");
+	}
+}
+}
+		
+							
+				</script>
+			</body>
+			</html>
