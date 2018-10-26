@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lọc</title>
+</head>
+<body>
+        
+    <input type="text" name="quequan" placeholder="Nhập quê quán"id="quequan"> <br> <br>
+    <input type="text" name="ngaysinh" placeholder="Nhập ngày sinh" id="ngaysinh"> <br> <br>
+	<input type="submit" name="timkiem" value="Click" onclick="timkiem()"> 
+    <script type="text/javascript">
+    var sinhvien=[
+    {masv:611294,hoten:"lan",quequan:"haiduong"},
+                {masv:611293,hoten:"hien",ngaysinh:"08/05/1998", quequan:"thanh hoa"},                
+                {masv:611245,hoten:"hoa",ngaysinh:"10/07/1997",quequan:"hai duong"},
+                {masv:611212,hoten:"hoan",ngaysinh:"10/07/1997",quequan:"hai duong"},
+                {masv:612346,hoten:"linh",ngaysinh:"11/11/1998",quequan:"hai duong"},
+                {masv:620958,hoten:"lanvuong",ngaysinh:"10/10/2001",quequan:"thanh hoa"},
+                ];
+                function timkiem(){
+                    var quequan = document.getElementById("quequan").value;
+                    var ngaysinh = document.getElementById("ngaysinh").value;
+                    for(var i=0;i<sinhvien.length;i++){
+                        if(sinhvien[i].quequan == quequan && sinhvien[i].ngaysinh == ngaysinh){
+                             document.write(sinhvien[i].hoten + sinhvien[i].ngaysinh + sinhvien[i].quequan + "<br>");
+                        }
+                    }
+                }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loc tinh thanh</title>
+</head>
+<body>   
+        <input type="text" name="tinh" placeholder="Nhập vào tinh" id="tinh">
+        <input type="submit" name="chon" value="Click" onclick="chon()">
+
+    <script type="text/javascript">
+    var sinhvien = [
+                {masv:611294,hoten:"lan",quequan:"haiduong"},
+                {masv:611293,hoten:"hien",quequan:"thanhhoa"},                
+                {masv:611245,hoten:"hoa",quequan:"haiduong"},
+                {masv:611212,hoten:"hoan",quequan:"haiphong"},
+                {masv:612346,hoten:"linh",quequan:"haiduong"},
+                {masv:620958,hoten:"lanvuong",quequan:"thanhhoa"},
+                ];
+                function test(){
+                    var quequan = document.getElementById("quequan").value;
+                    for(var i=0;i<sinhvien.length;i++)
+                        if(sinhvien[i].quequan===qiuequan){
+                    document.write(car[i].masv+sinhvien[i].hoten+sinhvien[i].quequan+ "<br>")
+                }
+            }
+  </script>
+</body>
+</html>
