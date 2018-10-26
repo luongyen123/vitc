@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>quê quán và ngày sinh</title>
+	</head>
+	<body>
+		
+		<input type="text" placeholder="Nhập thông tin" id="home">
+		<button onclick="donghuong()"> Tìm kiếm </button></p>
+		<script type="text/javascript" >
+			
+		var sinhvien = [
+		{ hoten:"Khá Bảnh", ngaysinh:"08/02/2000", que:"bac ninh"},
+		{ hoten:"NGuyễn Văn Quẩy", ngaysinh:"27/07/2000", que:"ha noi"},
+		{ hoten:"Trần Văn Ninh ", ngaysinh:"06/09/2000", que:"thanh hoa"},
+		{ hoten:"Nguyễn Tiến Dũng", ngaysinh:"21/12/2000", que:"ha giang"},
+		{ hoten:"Nguyễn Hải Nam", ngaysinh:"27/11/2000", que:"bac ninh"},
+		{ hoten:"Nguyễn Văn Đức", ngaysinh:"22/01/2000", que:"bac ninh"},
+		];
+			function donghuong(){
+				var A = document.getElementById("home").value;
+				var sinhngay = document.getElementById("home").value;
+				for (var i=0; i<sinhvien.length; i++ ) {
+						if (sinhvien[i].que === A ) {
+							document.write("Sinh viên ở Bắc Ninh:" +"  "+ sinhvien[i].hoten + "<br>");
+						}
+					}
+					for (var i=0; i<sinhvien.length; i++) {
+							if (sinhvien[i].ngaysinh === sinhngay ) {
+								document.write( sinhvien[i].hoten + ":" + "  " + sinhvien[i].ngaysinh +" <br> " );
+							}
+	}
+						}
+													
+				</script>
+			</body>
+	</body>
+</html>
