@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" placeholder="Nhập thông tin" id="home">
+		<button onclick="donghuong()"> Tìm kiếm </button></p>
+		<script type="text/javascript" >
+			
+		var sinhvien = [
+		{ ten:"Nguyễn Quôvs Tuấn", date:"09/02/2000", add:"bac ninh"},
+		{ ten:"NGuyễn Văn Đức", date:"69/07/2000", add:"ha noi"},
+		{ ten:"Vũ Thị Lan ", date:"03/09/2000", add:"thanh hoa"},
+		{ ten:"Nguyễn Tiến Mai", date:"21/12/2000", add:"ha giang"},
+		{ ten:"Nguyễn Hiếu", date:"03/11/2000", add:"bac ninh"},
+		{ ten:"Gấu kity", date:"03/01/2000", add:"bac ninh"},
+		];
+			function donghuong(){
+				var A = document.getElementById("home").value;
+				var sinhngay = document.getElementById("home").value;
+				for (var i=0; i<sinhvien.length; i++ ) {
+						if (sinhvien[i].add === A ) {
+							document.write("Sinh viên ở Bắc Ninh:" +"  "+ sinhvien[i].ten + "<br>");
+						}
+					}
+					for (var i=0; i<sinhvien.length; i++) {
+							if (sinhvien[i].date === sinhngay ) {
+								document.write( sinhvien[i].ten + ":" + "  " + sinhvien[i].date +" <br> " );
+							}
+	}
+						}
+													
+				</script>
+			</body>
+</body>
+</html>
