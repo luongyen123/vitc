@@ -5,9 +5,25 @@
 	<title>Demsophantuxuathientrongmang</title>
 </head>
 <body>
+	Nhập số: <input type="text" name="nhapso" id="link">
+	<input onclick="sophantu()" type="submit" value="Click">
 	<script type="text/javascript">
-		var sophantu = [0,1,2,3,4,5,6,7,8];
-		document.write("Số phần tử:" + sophantu.length);
+		function sophantu() {
+			
+		
+		var mang = document.getElementById('link').value;
+		var mang_str = mang.split("");
+		for (var i=0;i<mang_str.length-1; i++){
+			for (var j=1;j=mang_str.length; j++){
+				if(mang_str[i] == mang_str[j]){
+					mang.str.splice(j,1);
+				}
+			}
+		}
+	for (var i=0;i<mang_str.length;i++)
+		document.write("Số phần tử:" + mang_str);
+	
+}
 	</script>
 </body >
 </html>

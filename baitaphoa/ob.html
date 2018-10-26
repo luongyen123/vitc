@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tìm sv cùng quê cùng ngày sinh</title>
+</head>
+<body>
+	<input type="text" placeholder="Nhập vào kí tự" id="nhap" />
+    <input type="submit" name="click" value="click" onclick="test()"/>
+	<script type="text/javascript">
+	var sinhvien = [
+{msv:637638, hoten:"Hòa 1", ngaysinh:"01/01/2000", quequan:"Bắc Ninh"} ,
+{msv:637637, hoten:"Hòa 2", ngaysinh:"10/11/2000", quequan:"Hà Nội"}   ,
+{msv:637636, hoten:"Hòa 3", ngaysinh:"01/01/2000", quequan:"Bắc Ninh"} ,
+{msv:637635, hoten:"Hòa 4", ngaysinh:"01/01/2000", quequan:"Bắc Ninh"} ,
+{msv:637634, hoten:"Hòa 5", ngaysinh:"05/12/2000", quequan:"Bắc Ninh"} ,
+		           ] ;	
+	function test()
+	    {
+		var sv = document.getElementById("nhap").value;
+		var sinhngay = document.getElementById("nhap").value;
+		for (var i=0; i<sinhvien.length; i++){
+			  if(sinhvien[i].quequan === sv ){
+		document.write("Cùng quê:" + " " + sinhvien[i].quequan +" "+"  "+ "Họ tên"+":"+"  "+ sinhvien[i].hoten +"<br>");
+					}
+					}
+		for (var i=0; i<sinhvien.length; i++){
+			  if(sinhvien[i].ngaysinh === sv ){
+		document.write("Cùng ngày sinh:" + sinhvien[i].ngaysinh + " " + "  "+"Họ tên"+":" + " " + sinhvien[i].hoten +" <br> " );
+					}
+					}
+	    }
+							
+				</script>
+
+		
+
+
+
+</body>
+</html>

@@ -16,11 +16,18 @@
 				{
 					// In ra chiều cao tam giác
 					document.write('<tr>');
-				  for (var a=1; a<=i ; a++) 
+					for (var a=tall-1;a>i;a--) 
 				    {
 				    	// In ra chiều ngang của tam giác
 				    	document.write('<td>');
-				  		document.write('1');
+				  		document.write("");
+				  		document.write('</td>');
+				  	}
+				  for (var a=1; a<=i*2+1 ; a++) 
+				    {
+				    	// In ra chiều ngang của tam giác
+				    	document.write('<td>');
+				  		document.write((i-a+1)/(a-1);
 				  		document.write('</td>');
 				  	}
 				  	document.write('</tr>');	

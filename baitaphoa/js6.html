@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="text" placeholder="Nhập vào kí tự" id="nhap" />
+    <input type="submit" name="loaibo" value="Loại bỏ" onclick="test()"/>
+	<script type="text/javascript">
+	
+		var sinhvien = [
+		{msv:637634, hoten:"hoa", ngaysinh:101100, quequan:"bacninh"},
+		{msv:637635, hoten:"hoa1", ngaysinh:111200, quequan:"hanoi"},
+		{msv:637636, hoten:"hoa2", ngaysinh:12100, quequan:"bacninh"},
+
+		];
+		function test(){
+			var sv = document.getElementById('nhap').value;
+		for(var i=0; i<sinhvien.length;i++)
+			if(sinhvien[i].quequan===sv)
+			document.write(sinhvien[i].quequan + sinhvien[i].hoten + "<br>");
+		}
+		
+	
+
+	</script>
+
+
+</body>
+</html>

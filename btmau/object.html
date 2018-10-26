@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tìm quê quán</title>
+</head>
+<body>
+	<input type="text" name="quequan" id="quequan">
+	<input type="submit" name="timkiem" value="Tìm kiếm" onclick="timkiem()">
+	<script type="text/javascript">
+		var dssv=[
+				{masv:637821 , hoten:"Lo vi song" , ngaysinh:"12/02/2000" , quequan:"Ha noi"},
+				{masv:637822 , hoten:"Nguyen van a" , ngaysinh:"12/02/2000" , quequan:"Ca mau" },
+				{masv:637823 , hoten:"Nguyen van b" , ngaysinh:"12/02/2000" , quequan:"Thanh hoa" },
+				{masv:637824 , hoten:"Nguyen van c" , ngaysinh:"12/02/2000" , quequan:"Can tho"},
+				{masv:637825 , hoten:"Nguyen van d" , ngaysinh:"12/02/2000" , quequan:"Ha noi" },
+				{masv:637826 , hoten:"Nguyen van e" , ngaysinh:"12/02/2000" , quequan:"Thanh oai" },
+				{masv:637827 , hoten:"Nguyen van f" , ngaysinh:"12/02/2000" , quequan:"Bac can" }
+			];
+		function timkiem(){
+			var quequan = document.getElementById("quequan").value;
+           for(var i=0; i<dssv.length;i++){
+           	if (dssv[i].quequan == quequan ){
+				document.write("TÊN:"+dssv[i].hoten + "  QUÊ QUÁN:"+dssv[i].quequan + "<br>");
+			}
+		}
+	}
+	</script>
+</body>
+</html>

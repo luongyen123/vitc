@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Đếm số: <input type="text" name="" id="so"/>
+<button onclick="kiemtra()"> check KQ </button>
+<script type="text/javascript">
+	function kiemtra(){
+		var a= document.getElementById("so").value;
+		// chuyển đổi dãy số thành dạng chuỗi
+		var n = a.toString();
+		// gán biến dem 
+		var dem=0;
+		  for (var i=0; i<10 ; i++) {
+               dem=0;
+               for (var j=0; j<=n.length; i++ ) {
+                  if (n[j]==i) {dem=dem+1;}
+                  if (j==n.length-1) { alert( i + "xuất hiện" + dem);}
+               }
+           
+		  }		  
+	}
+	
+</script>
+</body>
+</html>

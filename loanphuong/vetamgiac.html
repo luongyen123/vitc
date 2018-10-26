@@ -2,26 +2,25 @@
 <html>
 <head>
 	<title></title>
-	<script type="text/javascript">
-	    n=parseInt();
-	    document.write('<table>');
-	    for (i=0;i<n;i++){
-	    	document.write('<tr>')
-	    	for (j=n-1;j>i;j--){
-	    		document.write('<td>');
-	    		document.write('</td>');
-	    	}
-	    	for (j=1,j<=i*2+1,j++){
-	    		document.write('<td>');s
-	    		document.write('2');
-	    		document.write('</td>');
-	    	}
-	    	document.write('</tr>');
-	    }
-	    document.write('</table>')
-	</script>
 </head>
 <body>
-	
+	<input type="text" placeholder="Nhập vào chiều cao" id="tg" id="tg">
+	<input type="submit" value="Đếm số lần" onclick="intg()">
+	<script type="text/javascript">
+		function intg(){
+			var tg = document.getElementById('tg').value;
+			var h = parseInt(tg);
+			var kq;
+			for(i = 1; i <= h; i++){
+				document.write("1 ");
+				kq = 1;
+				for(j = 2; j <= i; j++){
+					kq = kq*(i-j+1)/(j-1);
+					document.write(kq+" ");
+				}
+				document.write("<br>");
+			}
+		}
+	</script>
 </body>
 </html>

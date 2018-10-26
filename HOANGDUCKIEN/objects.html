@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>tìm quê quán</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<div id="input">
+	<table>
+		
+			<tr>
+				<th>TÌM KIẾM SINH VIÊN</th>
+				
+			</tr>
+		
+			<tr>
+				<td colspan="2" align="center">Nhập Sinh Viên</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"> <input type="text" name="tksv" placeholder="Nhập vào kí tự" id="tksv" id="tksv">
+				</td>	
+			</tr>
+		
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="loaibo" value="Tìm Kiếm" onclick="timkiem()"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center" id="show"></td>
+			</tr>
+	</table>
+   
+	
+</div>
+	<script >
+		// cho danh sach sinh vien. nhajp vao input in ra tat ca sinh vien co que quan bang que quan nhap vao
+		
+		var sinhvien=[
+		{masv:637837,hoten:"Hoàng Đức Kiên",ngaysinh:"18/02/2000",quequan:"Tuyên Quang"},
+		{masv:637821,hoten:"Nguyễn Thị Thúy Hiền",ngaysinh:"14/12/2000",quequan:"Tuyên Quang"},
+		{masv:637805,hoten:"Phạm Quý Bách",ngaysinh:"14/09/2000",quequan:"Tuyên Quang"},
+		{masv:637829,hoten:"Nguyễn Viết Lộc",ngaysinh:"12/12/2000",quequan:"Hà Nội"},
+		{masv:637806,hoten:"Nguyễn Văn Hùng",ngaysinh:"20/10/2000",quequan:"Phú Thọ"},
+		{masv:637820,hoten:"Phạm Văn Quý",ngaysinh:"02/01/2000",quequan:"Hà Nội"},
+		{masv:628302,hoten:"Lương Thị Yên",ngaysinh:"29/12/2000",quequan:"Tuyên Quang"},
+		{masv:637826,hoten:"Nguyễn Văn A",ngaysinh:"23/02/1999",quequan:"Tuyên Quang"},
+		{masv:637827,hoten:"Nguyễn Văn Bách",ngaysinh:"23/02/1999",quequan:"Hà Nội"},
+		{masv:637829,hoten:"Nguyễn Văn C",ngaysinh:"18/02/2000",quequan:"Phú Thọ"},
+		{masv:637820,hoten:"Nguyễn Văn D",ngaysinh:"12/12/2000",quequan:"Phú Thọ"},
+		{masv:637822,hoten:"Nguyễn Văn Em",ngaysinh:"02/01/2000",quequan:"Hà Nội"},
+		{masv:637823,hoten:"Nguyễn Văn Em",ngaysinh:"12/01/1999",quequan:"Vĩnh Phúc"},
+		{masv:637824,hoten:"Nguyễn Văn U",ngaysinh:"29/07/1999",quequan:"Hải Dương"},
+		{masv:637825,hoten:"Nguyễn Văn Bách",ngaysinh:"23/01/2000",quequan:"Hải Dương"},		
+		];
+function timkiem(){
+	var tksv= document.getElementById("tksv").value ;
+for (var i = 0; i < sinhvien.length; i++) {
+	if (sinhvien[i].quequan == tksv) {
+		
+	document.write(sinhvien[i].masv+"   "   +sinhvien[i].hoten+"   "   +sinhvien[i].ngaysinh+"  "   +sinhvien[i].quequan +"<br>");
+	}
+	else if (sinhvien[i].ngaysinh== tksv) {
+		document.write(sinhvien[i].masv+"   "   +sinhvien[i].hoten+"   "   +sinhvien[i].ngaysinh+"  "   +sinhvien[i].quequan +"<br>");
+	}
+	else if (sinhvien[i].hoten == tksv) {
+		document.write(sinhvien[i].masv+"   "   +sinhvien[i].hoten+"   "   +sinhvien[i].ngaysinh+"  "   +sinhvien[i].quequan +"<br>");		
+	}
+	else if (sinhvien[i].masv == tksv) {
+	document.getElementById("show").innerHTML= sinhvien[i].masv+"   "   +sinhvien[i].hoten+"   "   +sinhvien[i].ngaysinh+"  "   +sinhvien[i].quequan +"<br>";		
+	}
+}
+}
+	
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Nhập quê <input type="text" id="quequan">
+	<button onclick="que()">Kết Quả</button>
+	 <script type="text/javascript">
+	 	function que() {
+	 		var n =document.getElementById('quequan').value;
+	 		var sinhvien =[
+              {hoten:"Lê Thảo Mai ", msv:"6543",ngaysinh:"14/2/2009", quequan:"Thanh Hoa"},
+              {hoten:"Cù Trọng Tấn ", msv:"8765",ngaysinh:"16/5/1845", quequan:"Ha Noi"} ,         
+              {hoten:"Phùng Thanh Độ", msv:"2424",ngaysinh:"16/8/2007", quequan:"Ho Chi Minh"},
+              {hoten:"Nguyễn Tờ Lờ", msv:"6466",ngaysinh:"2/8/1008",     quequan:"Thanh Hoa"},
+              {hoten:"Văn Viết GIấy", msv:"4646",ngaysinh:"9/6/2016",   quequan:"Da Nang"},
+              {hoten:"Lò Văn Phèo", msv:"0976",ngaysinh:"6/6/1479",    quequan:"Da Nang"},
+              {hoten:"Lí Thị Nở", msv:"1584",ngaysinh:"9/6/2016",    quequan:"Ho Chi Minh"}
+	 		]
+	 		for (var i=0; i< sinhvien.length;i++){
+	 			if (n==sinhvien[i].quequan)  {
+
+	 			document.write(sinhvien[i].hoten +" --- "+ sinhvien[i].msv+" --- " +sinhvien[i].ngaysinh+" --- "+ sinhvien[i].quequan + "<br>" );   
+	 			
+	 		    }
+	 			if (n==sinhvien[i].ngaysinh)  {
+                document.write(sinhvien[i].hoten +" --- "+ sinhvien[i].msv+" --- " +sinhvien[i].ngaysinh+" --- "+ sinhvien[i].quequan + "<br>" )
+	 			}
+	 		}
+	 	}
+	 </script>
+
+</body>
+</html
