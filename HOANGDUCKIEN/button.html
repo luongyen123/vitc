@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>QUản Lý Sinh Viên</title>
+
+<link rel="stylesheet" href="qlsv.css">
+</head>
+<body>
+  <div>
+    <div>
+      <h2 style="text-align: center; color: red;">Chương trình quản lý sinh viên</h2>
+
+
+    </div>
+        <div> <h5 style="color: blue; text-align: left;"> Điền Thông Tin Sinh Viên</h5></div>
+    <form>
+<label for="fname">Mã sinh viên</label>
+<input type="text" id="new_msv">
+<label for="lname">Họ tên</label>
+<input type="text" id="new_name">
+<label for="ns">Ngày Sinh</label>
+<input type="text" id="new_date">
+<label for="country">Quê quán</label>
+<input type="text" id="new_country">
+<input type="button" class="add" onclick="add_sv();" value="Submit" style="padding: 12px 15px;"></td>
+
+    </form>
+  </div>
+<div id="qlsv">
+<table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1 >
+<tr>
+<th>Mã Sinh Viên</th>
+<th>Họ Tên</th>
+<th>Ngày Sinh</th>
+<th>Quê Quán</th>
+</tr>
+
+<tr id="sv1">
+<td id="msv_sv1">637837</td>
+<td id="name_row1">Hoàng Đức Kiên</td>
+<td id="date_sv1">18/02/2000</td>
+<td id="country_sv1">Tuyên Quang</td>
+<td>
+<input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_sv('1')">
+<input type="button" id="save_button1" value="Save" class="save" onclick="save_sv('1')">
+<input type="button" value="Delete" class="delete" onclick="delete_sv('1')">
+</td>
+</tr>
+
+<tr id="sv2">
+<td id="msv_sv2">637821</td>
+<td id="name_sv2">Nguyễn Thị Thúy Hiền</td>
+<td id="date_sv2">17/12/2000</td>
+<td id="country_sv2">Hà Nội</td>
+
+<td>
+<input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_sv('2')">
+<input type="button" id="save_button2" value="Save" class="save" onclick="save_sv('2')">
+<input type="button" value="Delete" class="delete" onclick="delete_sv('2')">
+</td>
+</tr>
+
+<tr id="sv3">
+<td id="msv_sv3">637827</td>
+<td id="name_sv3">Nguyễn Thị Thủy</td>
+<td id="date_sv3">12/12/2000</td>
+<td id="country_sv3">Cà Mau</td>
+<td>
+<input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_sv('3')">
+<input type="button" id="save_button3" value="Save" class="save" onclick="save_sv('3')">
+<input type="button" value="Delete" class="delete" onclick="delete_sv('3')">
+</td>
+</tr>
+
+</table>
+</div>
+<script>
+ 
+function delete_sv(no)
+{
+ document.getElementById("sv"+no+"").outerHTML="";
+}
+function add_sv()
+{
+  var new_msv=document.getElementById("new_msv").value;
+ var new_name=document.getElementById("new_name").value;
+ var new_country=document.getElementById("new_country").value;
+ var new_date=document.getElementById("new_date").value;
+  
+ var table=document.getElementById("data_table");
+ var table_len=(table.rows.length)-1;
+ var row = table.insertRow(table_len).outerHTML="<tr id='sv"+table_len+"'><td id='msv_sv"+table_len+"'>"+new_msv+"</td><td id='name_sv"+table_len+"'>"+new_name+"</td><td id='date_sv"+table_len+"'>"+new_date+"</td><td id='country_sv"+table_len+"'>"+new_country+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_sv("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_sv("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_sv("+table_len+")'></td></tr>";
+
+document.getElementById("new_msv").value="";
+ document.getElementById("new_name").value="";
+ document.getElementById("new_date").value="";
+ document.getElementById("new_country").value="";
+}
+</script>
+
+</body>
+</html
