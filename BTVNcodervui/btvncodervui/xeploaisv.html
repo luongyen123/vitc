@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="xeploaisv.css">
+	</head>
+	<body>
+		<h2 align="center"><font color="green">Chương trình quản lý sinh viên</font></h2>
+		<h3><font color="green">Điền thông tin sinh viên</font></h3>
+		<div id="sum">
+			<form>
+				<label for="pass">Mã sinh viên:</label><br>
+				<input type="text" placeholder="Mã sv..." id="pass"><br><br>
+				<label>Họ tên:</label><br>
+				<input type="text" placeholder="Họ tên..." id="name"><br><br>
+				<label>Quê quán:</label><br>
+				<input type="text" placeholder="Quê quán..." id="country"><br><br>
+				<input type="submit" value="Submit" onclick="them()" id="submit"><br>
+			</form>
+		</div>
+		<h3><font color="green">Danh sách sinh viên</font></h3>
+		<table id="solieu">
+			
+		</table>
+		<script type="text/javascript">
+			var listsv = [
+				{ msv:635501, ten:"Kim Thị Cung", add:"Hà Nội", delete: "<button>Xóa</button>", save: "<button>Thêm</button>"},
+				{ msv:635502, ten:"Đan Cung Đàn", add:"Hà Nội", delete: "<button>Xóa</button>", save: "<button>Thêm</button>"},
+				{ msv:635503, ten:"Trường Văn Dài", add:"Thanh Hóa",delete: "<button>Xóa</button>",save: "<button>Thêm</button>"},
+				{ msv:635504, ten:"Vương Thúy Quỳnh", add:"Hà Nội",delete: "<button>Xóa</button>",save: "<button>Thêm</button>"},
+				{ msv:635505, ten:"Trung Kiot", add:"Thanh Hóa",delete: "<button>Xóa</button>",save: "<button>Thêm</button>"},
+				{ msv:635506, ten:"Totti", add:"Bắc Ninh", delete: "<button>Xóa</button>",save: "<button>Thêm</button>"},
+				
+				]; 
+				// đối tượng {}, nằm trong mảng [].
+		var output="<tr> <td>Mã SV</td> <td>Họ Tên</td> <td>Quê Quán</td> <td>Loại bỏ</td> <td>Thêm SV</td> </tr>";
+						for( var i=0; i<listsv.length; i++){
+								output+="<tr><td>"+listsv[i].msv+"</td>"+"<td>"+listsv[i].ten+"</td>"+"<td>"+listsv[i].add+ "</td>"+"<td>"+ listsv[i].delete+ "</td>"+"<td>"+ listsv[i].save
+								"</td></tr>";
+								
+							}
+							// in ra cái table
+							document.getElementById("solieu").innerHTML=output;
+							// hàm thực thi của onclick
+							function them(){
+								var n=listsv.length;
+								listsv[n].msv = document.getElementById("pass").value;
+								listsv[n].ten = document.getElementById("name").value;
+								listsv[n].add = document.getElementById("country").value;
+                                
+							}
+                            
+			</script>
+		</body>
+	</html>
