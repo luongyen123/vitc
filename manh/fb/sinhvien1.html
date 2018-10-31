@@ -68,8 +68,8 @@
 			
 		</table>
 		<script type="text/javascript">
-			var sinhvien = [
-				{ masv:1, hoten:"a", quequan:"Hà Nội", delete: "<button onclick="delete">Xóa</button>", edit: "<button>Sửa</button>"},
+			var listsv = [
+				{ masv:1, hoten:"a", quequan:"Hà Nội", delete: "<button >Xóa</button>", edit: "<button>Sửa</button>"},
 				{ masv:2, hoten:"b", quequan:"Hà Nội", delete: "<button>Xóa</button>", edit: "<button>Sửa</button>"},
 				{ masv:3, hoten:"c", quequan:"Thanh Hóa",delete: "<button>Xóa</button>",edit: "<button>Sửa</button>"},
 				{ masv:4, hoten:"d", quequan:"Hà Nội",delete: "<button>Xóa</button>",edit: "<button>Sửa</button>"},
@@ -85,9 +85,10 @@
 							document.getElementById("customers").innerHTML=output;
 							function add(){
 					var n=sinhvien.length;
-					sinhvien[n].masv = document.getElementById("masv").value;
-					sinhvien[n].hoten = document.getElementById("hoten").value;
-					sinhvien[n].quequan = document.getElementById("quequan").value;
+					listsv[n].masv = document.getElementById("masv").value;
+					listsv[n].hoten = document.getElementById("hoten").value;
+					listsv[n].quequan = document.getElementById("quequan").value;
+					var output="<tr><td>"+listsv[i].masv+"</td>"+"<td>"+listsv[i].hoten+"</td>"+"<td>"+listsv[i].quequan+ "<td>"+ listsv[i].delete+ "<td>"+ listsv[i].edit;
 					document.getElementById("customers").innerHTML=output;
 								
 							}
