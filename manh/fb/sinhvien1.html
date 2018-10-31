@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			#customers {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			}
+			#customers td, #customers th {
+			border: 1px solid #ddd;
+			padding: 8px;
+			}
+			#customers tr:nth-child(even){background-color: #f2f2f2;}
+			#customers tr:hover {background-color: #ddd;}
+			#customers th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #4CAF50;
+			color: white;
+			}
+			input[type=text], select {
+				width: 100%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				display: inline-block;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				box-sizing: border-box;
+				}
+				input[type=submit] {
+				width: 100%;
+				background-color: #4CAF50;
+				color: white;
+				padding: 14px 20px;
+				margin: 8px 0;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				}
+				input[type=submit]:hover {
+				background-color: #45a049;
+				}
+				div {
+				border-radius: 5px;
+				background-color: #f2f2f2;
+				padding: 20px;
+				}
+		</style>
+	<body>
+		<h2 align="center"><font color="green">Chương trình quản lý sinh viên</font></h2>
+		<h3><font color="green">Điền thông tin sinh viên</font></h3>
+		<div>
+			<form>
+				<label for="pass">Mã sinh viên:</label><br>
+				<input type="text" placeholder="Mã sv..." id="masv"><br><br>
+				<label>Họ tên:</label><br>
+				<input type="text" placeholder="Họ tên..." id="hoten"><br><br>
+				<label>Quê quán:</label><br>
+				<input type="text" placeholder="Quê quán..." id="quequan"><br><br>
+				<input type="submit" value="Submit" onclick="add()" id="submit"><br>
+			</form>
+		</div>
+		<h3><font color="green">Danh sách sinh viên</font></h3>
+		<table id="customers">
+			
+		</table>
+		<script type="text/javascript">
+			var listsv = [
+				{ masv:1, hoten:"a", quequan:"Hà Nội", delete: "<button >Xóa</button>", edit: "<button>Sửa</button>"},
+				{ masv:2, hoten:"b", quequan:"Hà Nội", delete: "<button>Xóa</button>", edit: "<button>Sửa</button>"},
+				{ masv:3, hoten:"c", quequan:"Thanh Hóa",delete: "<button>Xóa</button>",edit: "<button>Sửa</button>"},
+				{ masv:4, hoten:"d", quequan:"Hà Nội",delete: "<button>Xóa</button>",edit: "<button>Sửa</button>"},
+				{ masv:5, hoten:"e", quequan:"Thanh Hóa",delete: "<button>Xóa</button>",edit: "<button>Sửa</button>"},
+				{ masv:6, hoten:"f", quequan:"Bắc Ninh", delete: "<button>Xóa</button>",edit: "<button>Sửa</button>"},
+				];
+		var output="<tr><td>Mã SV</td><td>Họ Tên</td><td>Quê Quán</td><td>Loại bỏ</td><td>Sửa</td></tr>";
+						for( var i=0; i<listsv.length;i++){
+								output+="<tr><td>"+listsv[i].masv+"</td>"+"<td>"+listsv[i].hoten+"</td>"+"<td>"+listsv[i].quequan+ "<td>"+ listsv[i].delete+ "<td>"+ listsv[i].edit
+								"</td></tr>";
+								
+							}
+							document.getElementById("customers").innerHTML=output;
+							function add(){
+					var n=sinhvien.length;
+					listsv[n].masv = document.getElementById("masv").value;
+					listsv[n].hoten = document.getElementById("hoten").value;
+					listsv[n].quequan = document.getElementById("quequan").value;
+					var output="<tr><td>"+listsv[i].masv+"</td>"+"<td>"+listsv[i].hoten+"</td>"+"<td>"+listsv[i].quequan+ "<td>"+ listsv[i].delete+ "<td>"+ listsv[i].edit;
+					document.getElementById("customers").innerHTML=output;
+								
+							}
+			</script>
+		</body>
+	</html>

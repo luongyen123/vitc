@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>vd</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*var person = {
+			firsName: 'Hoang',
+			LastName:'Pham' ,
+			showname: function(){
+				console.log(this.firsName + ''+ this.LastName);
+			}
+		};*/
+		/*var psn = new Object();
+		psn.firsName = 'Hoang' ;
+		psn.LastName = 'Pham' ;
+		psn.showName = function() {
+			console.log(this.firsName + '' + this.LastName);
+		};*/
+		/*function Person(firsName,lastName) {
+			this.firsName=firsName;
+			this.lastName=lastName;
+			this.showname=function() {
+				console.log(this.firsName + ''+ this.lastName)
+			};
+
+		}
+		var psn1 = new Person('Hoang', 'Pham');
+		var psn2 = new Person('Hoang', 'Nguyen');*/
+		/*var person = {
+			firsName: 'Hoang',
+			lastName: 'Pham' ,
+			50: 'Hi',
+			showName: function() {
+				console.log(this.firsName + '' +this.lastName);
+			}
+		};
+		console.log(person.firsName);
+		console.log(person['firsName']);*/
+		var person = {
+			firtName: 'Hoang' ,
+			lastName: 'Pham' ,
+			showName: function() {
+				console.log(this.firsName + '' +this.lastName);
+			}
+		};
+		delete person.lastName;
+		person.lName='Just adding';
+		console.log(person
+.lastName);
+		console.log(person.lName);
+
+	</script>
+
+</body>
+</html>

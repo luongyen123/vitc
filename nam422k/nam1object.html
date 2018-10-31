@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quản lý sinh viên</title>
+		<style type="text/css">
+			#customers {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			}
+			#customers td, #customers th {
+			border: 1px solid #ddd;
+			padding: 8px;
+			}
+			#customers tr:nth-child(even){background-color: #f2f2f2;}
+			#customers tr:hover {background-color: #ddd;}
+			#customers th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #4CAF50;
+			color: white;
+			}
+			input[type=text], select {
+				width: 100%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				display: inline-block;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				box-sizing: border-box;
+				}
+				input[type=submit] {
+				width: 100%;
+				background-color: #4CAF50;
+				color: white;
+				padding: 14px 20px;
+				margin: 8px 0;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				}
+				input[type=submit]:hover {
+				background-color: #45a049;
+				}
+				div {
+				border-radius: 5px;
+				background-color: #f2f2f2;
+				padding: 20px;
+				}
+		</style>
+	</head>
+	<body>
+		<h4 style="text-align: center">Chương trình quản lý sinh viên</h4>
+		<h3>Điền thông tin sinh viên</h3>
+		<div>
+			<form >
+				<label for="fname">Mã sinh viên</label>
+				<input type="text" id="msv"  placeholder="Mã sv..">
+				<label for="lname">Họ tên</label>
+				<input type="text" id="fullname"  placeholder="Ngày sinh..">
+				<label for="country">Quê quán</label>
+				<input type="text" id="quequan"  placeholder="Quê quán..">
+				<input type="submit" value="Submit" onclick="nam()">
+			</form>
+		</div>
+		<h3>Danh sách sinh viên</h3>
+		<table id="khochiu">
+			
+		</table>	
+			
+			<script type="text/javascript">
+				var dsl = [
+					{msv:635501,hoten:"Nguyễn Văn Nam",quequan:"Hưng Yên",nam:"<button> xóa </button>",xui:"<button> thêm </button>" },
+					{msv:635502,hoten:"Lê Anh Quân",quequan:"Hải Dương",nam:"<button> xóa </button>",xui:"<button> thêm </button>" },
+					{msv:635503,hoten:"nguyễn Công Chứ",ngaysinh:23/5/2000,quequan:"Bắc Ninh",nam:"<button> xóa </button>",xui:"<button> thêm </button>" },
+					{msv:635589,hoten:"Nguyễn Vân Nhi",quequan:"Thái Bình",nam:"<button> xóa </button>",xui:"<button> thêm </button>" },
+					{msv:637723,hoten:"Nguyễn Du",quequan:"Hà Tĩnh",nam:"<button> xóa </button>",xui:"<button> thêm </button>" },
+					{msv:637758,hoten:"Hoàng Văn Tuấn",quequan:"Hải Phòng",nam:"<button> xóa </button>",xui:"<button> thêm </button>" },
+				];
+				var output="<tr><td>Mã sv</td><td>Họ tên</td><td>Quê quán</td><td> Xóa SV </td> <td> thêm sv</td></tr>";
+				for( var i=0; i<dsl.length;i++){
+					output+="<tr><td>"+dsl[i].msv+"</td>"+"<td>"+dsl[i].hoten+"</td>"+"<td>"+dsl[i].quequan+"</td>"+"<td>"+dsl[i].nam +"</td>+<td>"+dsl[i].xui +"</td></tr>";
+					
+				}
+				document.getElementById("khochiu").innerHTML=output;
+				
+				function nam(){
+					var n=dsl.length;
+					dsl[n].masv = document.getElementById("msv").value;
+					dsl[n].hoten = document.getElementById("fullname").value;
+					dsl[n].quequan = document.getElementById("quequan").value;
+
+				}
+			</script>
+		
+	
+</body>
+</html>
