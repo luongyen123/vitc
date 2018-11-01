@@ -59,7 +59,7 @@
 		<h1 style="text-align: center">Chương trình quản lý sinh viên</h1>
 		<h2>Điền thông tin sinh viên</h2>
 		<div>
-			<form >
+			
 				<label for="masv">Mã sinh viên</label>
 				<input type="text" id="masv"  placeholder="Mã sv...">
 				<label for="hoten">Họ tên</label>
@@ -67,33 +67,50 @@
 				<label for="quequan">Quê quán</label>
 				<input type="text" id="quequan"  placeholder="Quê quán...">
 				<input type="submit" value="Submit" onclick="add()">
-			</form>
+			
 		</div>
 		<h2>Danh sách sinh viên</h2>
 		<table id="bang"></table>	
 			<script type="text/javascript">
 				var sinhvien = [
-		    {msv:637634,hoten:"Hoà",quequan:"Bắc Ninh",xoa:"<button>Xóa</button>",sua:"<button>Sửa</button>"},
-		    {msv:637635,hoten:"Loan",quequan:"Thanh Hóa",xoa:"<button>Xóa</button>",sua:"<button>Sửa</button>"},
-			{msv:637636,hoten:"Lan",quequan:"Hải Dương",xoa:"<button>Xóa</button>",sua:"<button>Sửa</button>"},
-			{msv:637637,hoten:"Thanh",quequan:"Nghệ An",xoa:"<button>Xóa</button>",sua:"<button>Sửa</button>"},
-			{msv:637638,hoten:"Thủy",quequan:"Bắc Ninh",xoa:"<button>Xóa</button>",sua:"<button>Sửa</button>"},];
-				var output="<tr><td>MSV</td><td>Họ tên</td><td>Quê quán</td><td>Xóa</td><td>Sửa</td></tr>";
+		    {msv:637634,hoten:"Hoà",quequan:"Bắc Ninh",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+		    {msv:637635,hoten:"Loan",quequan:"Thanh Hóa",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637636,hoten:"Lan",quequan:"Hải Dương",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637637,hoten:"Thanh",quequan:"Nghệ An",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637638,hoten:"Thủy",quequan:"Bắc Ninh",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},];
+				var output="<tr><td>MSV</td><td>Họ tên</td><td>Quê quán</td><td>Xóa<td>Sửa</td></tr>";
 				for( var i=0; i<sinhvien.length;i++){
-					output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td>"+"<td>"+sinhvien[i].xoa+"</td>"+"<td>"+sinhvien[i].sua+"</td>"+"</td></tr>"	
+	output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoa("+i+")'class='xoa'>Xóa</button>"+"</td><td><button onclick='Sửa("+i+")'class='Edit'>Sửa</button></td></tr>"
 				}
 				document.getElementById("bang").innerHTML=output;
 				function add(){
-					var sv=sinhvien.length;
-					sinhvien[sv].masv = document.getElementById("masv").value;
-					sinhvien[sv].hoten = document.getElementById("hoten").value;
-					sinhvien[sv].quequan = document.getElementById("quequan").value;
+					var n=sinhvien.length-1;
+					sinhvien[n].masv = document.getElementById("masv").value;
+					sinhvien[n].hoten = document.getElementById("hoten").value;
+					sinhvien[n].quequan = document.getElementById("quequan").value;
 
-					location.reload();
-
-				}
+					sinhvien.push({msv:document.getElementById("masv").value, hoten: document.getElementById("hoten").value,quequan: document.getElementById("quequan").value});
+	output+="<tr><td>"+sinhvien[sinhvien.length-1].msv+"</td>"+"<td>"+sinhvien[sinhvien.length-1].hoten+"</td>"+"<td>"+sinhvien[sinhvien.length-1].quequan+"</td><td><button onclick='xoa("+i+")'class='xoa'>Xóa</button></td><td><button onclick='Sửa("+i+")'class='Sửa'>Sửa</button></td></tr>"					
+				
+				document.getElementById("bang").innerHTML=output;
+				
+				}	
+				function xoa(i){
+					sinhvien.splice(i,1);
+					var output="<tr><td>MSV</td><td>Họ tên</td><td>Quê quán</td><td>Xóa</td><td>Sửa</td></tr>";
+				for( var i=0; i<sinhvien.length;i++){
+	output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoa("+i+")'class='xoa'>Xóa</button></td><td><button onclick='Sửa("+i+")'class='Sửa'>Sửa</button></td></tr>";
+	}	
+	            document.getElementById("bang").innerHTML=output;
+	            function Sửa(i){
+	            	
+	               document.getElementById("masv").value==sinhvien[i].masv;
+				   document.getElementById("hoten").value==sinhvien[i].hoten;
+				   document.getElementById("quequan").value==sinhvien[i].quequan;
+				   
+				  
+	            }
+	        }
 			</script>
-		
-	
 </body>
 </html>
