@@ -48,7 +48,6 @@
 				background-color: #f2f2f2;
 				padding: 20px;
 				}
-				
 		</style>
 	</head>
 	<body>
@@ -110,25 +109,26 @@
 					 document.getElementById("quequan").value="";
 					}
 
-				function edit_sv(no)
-					{
-					 document.getElementById("edit_button"+no).style.display="none";
-					 document.getElementById("save_button"+no).style.display="block";
-					  
-					 var msv=document.getElementById("msv_sv"+no);
-					 var name=document.getElementById("name_sv"+no);
-					 var date=document.getElementById("date_sv"+no);
-					 var country=document.getElementById("country_sv"+no);
-					  
-					 var msv_data=msv.innerHTML;
-					 var name_data=name.innerHTML;
-					 var date_data=date.innerHTML;
-					 var country_data=country.innerHTML;
-					 msv.innerHTML="<input type='text' id='msv_text"+no+"' value='"+msv_data+"'>"; 
-					 name.innerHTML="<input type='text' id='name_text"+no+"' value='"+name_data+"'>";
-					 date.innerHTML="<input type='text' id='date_text"+no+"' value='"+date_data+"'>";
-					 country.innerHTML="<input type='text' id='country_text"+no+"' value='"+country_data+"'>";
-					}
+					function edit_sv(no)
+						{
+						 document.getElementById("edit_button"+no).style.display="none";
+						 document.getElementById("save_button"+no).style.display="block";
+							
+						 var msv1=document.getElementById("msv_sv"+no);
+						  var hoten1=document.getElementById("name_sv"+no);
+						 var date1=document.getElementById("date_sv"+no);
+						 var quequan1=document.getElementById("country_sv"+no);
+							
+						 var msv_data=msv.innerHTML;
+						  var hoten_data=hoten.innerHTML;
+						 var date_data=date.innerHTML;
+						 var quequan_data=quequan.innerHTML;
+							
+						 msv.innerHTML="<input type='text' id='msv_text"+i+"' value='"+msv_data+"'>";
+						 hoten.innerHTML="<input type='text' id='hoten_text"+i+"' value='"+hoten_data+"'>";
+						 date.innerHTML="<input type='text' id='date_text"+i+"' value='"+date_data+"'>";
+						 quequan.innerHTML="<input type='text' id='quequan_text"+i+"' value='"+quequan_data+"'>";
+						}
 
 						function save_sv(i)
 						{
