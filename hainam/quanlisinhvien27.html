@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Quản lý sinh viên</title>
-		<style type="text/css">
-			#customers {
+<head>
+	<title></title>
+<style type="text/css">
+		#customers {
 			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 			border-collapse: collapse;
 			width: 100%;
@@ -35,7 +35,7 @@
 				background-color: #4CAF50;
 				color: white;
 				padding: 14px 20px;
-				margin: 30px 0;
+				margin: 8px 0;
 				border: none;
 				border-radius: 4px;
 				cursor: pointer;
@@ -46,7 +46,7 @@
 				div {
 				border-radius: 5px;
 				background-color: #f2f2f2;
-				padding: 30px;
+				padding: 20px;
 				}
 		</style>
 	</head>
@@ -61,7 +61,7 @@
 				<input type="text" id="hoten"  placeholder="Ngày sinh..">
 				<label for="country">Quê quán</label>
 				<input type="text" id="quequan"  placeholder="Quê quán..">
-				<input type="submit" value="Submit" onclick="add()">
+				<input type="submit" value="Submit" onclick="hainam()">
 			</form>
 		</div>
 		<h3>Danh sách sinh viên</h3>
@@ -70,32 +70,30 @@
 		</table>	
 			
 			<script type="text/javascript">
-				var sinhvien = [
-					{msv:635501,hoten:"Nguyễn Minh Anh",quequan:"Thanh Hóa"},
-					{msv:635502,hoten:"Trần Tuấn Anh",quequan:"Thanh Hóa"},
-					{msv:635503,hoten:"Lê Công Hoàng",ngaysinh:23/5/2000,quequan:"Bắc Ninh"},
-					{msv:635589,hoten:"Đặng Hoàng Mai",quequan:"Thanh Hóa"},
-					{msv:637723,hoten:"Lê Minh Tú",quequan:"Thanh Hóa"},
-					{msv:637758,hoten:"Lê Công Hoàng",quequan:"Thanh Hóa"},
+				var sv = [
+					{msv:635501,hoten:" A",quequan:"Thanh Hóa"},
+					{msv:635502,hoten:" B",quequan:"Thanh Hóa"},
+					{msv:635503,hoten:" C",quequan:"Bắc Ninh"},
+					{msv:635589,hoten:"D",quequan:"Thanh Hóa"},
+					{msv:637723,hoten:"E",quequan:"Thanh Hóa"},
+					{msv:637758,hoten:"F",quequan:"Thanh Hóa"},
 				];
-				var output="<tr><td>MaSV</td><td>Hoten</td><td>Quê quán</td></tr>";
-				for( var i=0; i<sinhvien.length;i++){
-					output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td></tr>";
+				var output="<tr><td>MaSV</td><td>Hoten</td><td>Quê quán</td><td><button>Xóa</button></td><td><button>thêm</button></td></tr>";
+				for( var i=0; i<sv.length;i++){
+					output+="<tr><td>"+sv[i].msv+"</td>"+"<td>"+sv[i].hoten+"</td>"+"<td>"+sv[i].quequan+"</td></tr>";
 					
 				}
 				document.getElementById("customers").innerHTML=output;
 				
-				function add(){
-					var n=sinhvien.length;
-					sinhvien[n].masv = document.getElementById("masv").value;
-					sinhvien[n].hoten = document.getElementById("hoten").value;
-					sinhvien[n].quequan = document.getElementById("quequan").value;
+				function hainam(){
+					var n=sv.length;
+					sv[n].msv = document.getElementById("masv").value;
+					sv[n].hoten = document.getElementById("hoten").value;
+					sv[n].quequan = document.getElementById("quequan").value;
 
-					location.reload();
+				
 
 				}
 			</script>
-		
-	
 </body>
 </html>

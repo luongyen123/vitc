@@ -12,25 +12,25 @@
 		function so()
 		{
 		var n = document.getElementById("chuoi").value;
-		//alert (typeof n);
-		  var mang = n.toString();
-		     mang=[mang];
-             mang.sort();
-		    for (var i = 0; i < mang.length; i++) {
+		var mang=n.split(""); //chuyển sang mảng
+		mang =parseInt(mang);
+		//mang.sort();
+		for (var i = 0; i < mang.length-1;i++) {
 
-		    for (var j = i+1; j < mang.length-1; j++) {
-                  
-		        if (mang[i] == mang[j]) {  delete mang[i];document.write(mang[j]);
-                else {document.write(mang[j]);}
-		        }
-		        //if (mang[i] == mang[j]) {  mang.splice(i,1);document.write(mang[j]);}
-		       // if (j==mang.length-2) { break;}
-		     }
-		 		   //  if (i<mang.length) { document.write(mang[i]);}
-		 		   //if (i==mang.length-1) {alert (mang);}
+		           for  (var j=1;j< mang.length; j++) {
+		                  if (mang[j] == mang[i]) { mang.splice(j,1); }
+
 		}
+		           /*for  (var k=1;k< mang.length; k++) {
+		                  if (mang[k] == mang[i]) { mang.splice(k,1); }
+		}*/
+					//document.write(mang[i] + '<br>'); 
+
 		}
-	so();
+			document.write(mang); 
+		}
+		
+		
 		</script>
 		
 	</body>

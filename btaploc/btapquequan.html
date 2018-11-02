@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Danh sách đối tượng</title>
+	</head>
+	<body>
+		<h1 align="center"><i>DANH SÁCH ĐỐI TƯỢNG BỊ TRUY NÃ THEO QUÊ QUÁN + NGÀY SINH</i></h1> 
+		Quê Quán: <input type="text" name="mang" id="danhsachsv">
+		<input type="submit" name="loaibo" value="Truy nã" onclick="indoituong()"><br>
+		Ngày Sinh: <input type="text" name="mang" id="danhsachsv">
+		<input type="submit" name="loaibo" value="Truy nã" onclick="indoituong()">
+		<script type="text/javascript">
+			
+				var danhsachsv =[
+						{masv:"637643", ten:"Manh", ngaysinh:"05/01", quequan:"Thái Bình"},
+						{masv:"637644", ten:"Thư", ngaysinh:"09/01", quequan:"Thanh Hóa"},
+						{masv:"637645", ten:"Kiên", ngaysinh:"04/01", quequan:"Tuyên Quang"},
+						{masv:"637646", ten:"Tùng", ngaysinh:"05/01", quequan:"Thái Bình"},
+						{masv:"637647", ten:"Lan", ngaysinh:"07/01", quequan:"Thanh Hóa"},
+						{masv:"637648", ten:"Loan", ngaysinh:"07/01", quequan:"Thanh Hóa"},
+						{masv:"637666", ten:"Đức", ngaysinh:"07/01", quequan:"Thanh Hóa"},
+						{masv:"637655", ten:"Bách", ngaysinh:"09/01", quequan:"Tuyên Quang"},
+						{masv:"637676", ten:"Nam", ngaysinh:"07/01", quequan:"Thanh Hóa"}
+				];
+			// for (var i = 0;i <danhsachsv.length;i++){
+				// document.write(danhsachsv[i].quequan);
+			function indoituong(){ 
+				var x = document.getElementById('danhsachsv').value;
+				var y = document.getElementById('danhsachsv').value;
+			for (var i = 0;i <danhsachsv.length;i++){
+				if(danhsachsv[i].quequan==x)
+				document.write("Tên:"+ danhsachsv[i].ten + "   Ngày Sinh"+ danhsachsv[i].ngaysinh + "   Quê:"+ danhsachsv[i].quequan + "<br>");
+				else if (danhsachsv[i].ngaysinh==y)
+				document.write("Tên:"+ danhsachsv[i].ten + "   Ngày Sinh"+ danhsachsv[i].ngaysinh + "   Quê:"+ danhsachsv[i].quequan + "<br>");
+
+		}}
+		</script>
+	</body>
+</html>
