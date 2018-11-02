@@ -11,19 +11,14 @@
 		<script type="text/javascript">
 		function so()
 		{
-		var n = document.getElementById("chuoi").value;
-				    n=parseInt(n);
-		var  mang = n.toString();
-		            //mang=parseInt(mang);
-
-       //  mang=[mang];
-      //   mang.sort();
+		var mang = document.getElementById("chuoi").value;
+		
         var dem=0;
 		   for (var i = 0; i < 10; i++) {
              dem=0;
 		    for (var j = 0; j < mang.length; j++) {           
-		        if (mang[j] == i) {dem=dem+1;}
-		       if (j==mang.length-1) {document.write("Số " + i + " xuất hiện  " + dem + "  lần <br>" )}
+		        if (mang[j] == i) {dem++}
+		       if (j==mang.length-1 && dem!=0) {document.write("Số " + i + " xuất hiện  " + dem + "  lần <br>" )}
 		 }		    
 
 		}
