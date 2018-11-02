@@ -3,69 +3,58 @@
 <head>
 	<title></title>
 	<style type="text/css">
-	
-	
-	.nav{
-		background-color: #4267b2;
-		height: 40px;
+	body {
+		background-color: #006742;
+		font-family: sans-serif;
 	}
-	.nav>li{
+	h1{
+		text-align: center;
+		background: #fff;
+	}
+	#menu {
+		background-color: #006742;
+		padding-left: auto;
+		list-style-type: none;
 		float: left;
 	}
-	.nav>li>a{
-        text-transform: uppercase;
-        color: #fff;
-    }
-    .nav li{
-        position: relative;
-        list-style-type: none;
-    }
-    .nav li a{
-        padding: 10px;
-        line-height: 20px;
-        display: inline-block;
-        text-decoration: none;
-    }
-    .nav .sub-menu{
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        width: 200px;
-        background-color: #eee;
-        padding: 5px 20px;
-    }
-    .nav li:hover>.sub-menu{
-        display: block;
-    }
-  .nav>li>.sub-menu{
-        top: 40px;
-        left: 0;
-    }
+	#menu ul{
+		background-color: #006742;
+		display: inline-block;
+	}
+	#menu ul li {
+		display: inline-block;
+		width: 200px;
+		height: 40px;
+		line-height:40px;
+		margin-left: 50px;
+		list-style-type: none;
+		float: left;
+
+	}
+	#menu ul a{
+		display: block;
+		text-decoration: none;
+		text-align: center;
+	}
+	#menu ul li a:hover{
+		background: #fff;
+		color: aqua;
+
+	}
+	
 	</style>
 </head>
 <body>
-<ul class="nav">
-    <li><a href="#">Menu item 1</a></li>
-    <li>
-        <a href="#">Menu item 2</a>
-        <ul class="sub-menu">
-            <li><a href="#">Menu item 2.1</a></li>
-            <li>
-                <a href="#">Menu item 2.2</a>
-                <ul class="sub-menu">
-                    <li><a href="#">Menu item 2.2.1</a></li>
-                    <li><a href="#">Menu item 2.2.2</a></li>
-                    <li><a href="#">Menu item 2.2.3</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Menu item 2.3</a></li>
-            <li><a href="#">Menu item 2.4</a></li>
-        </ul>
-    </li>
-    <li><a href="#">Menu item 3</a></li>
-    <li><a href="#">Menu item 4</a></li>
-    <li><a href="#">Menu item 5</a></li>
+	<h1>ĐẠI LÝ VÉ MÁY BAY GIÁ RẺ</h1>
+	<div id="menu">
+<ul >
+	<li><a href="#">Trang Chủ</a></li>
+	<li><a href="#">Thư Viện</a></li>
+	<li><a href="#">Hỏi Đấp</a></li>
+	<li><a href="#">Liên Hệ</a></li>
+	
+    
 </ul>
+</div>
 </body>
 </html>
