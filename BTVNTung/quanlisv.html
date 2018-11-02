@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Quản lí sinh viên</title>
+	<title>Đừng đi ăn hôm nay nhé mãi yêu các cậu <3  </title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="quanlisv.css">
 	
@@ -17,7 +17,8 @@
             <input type="text" id="hoten"> <br> 
             Quê quán  <br> 
             <input type="text" id="quequan"> <br> <br>
-            <input type="button" onclick="addsv()"  value="Nhập">
+            <input type="button" onclick="addsv()"  value="Thêm Sinh Viên">
+            <input type="button" onclick='suasv2()' value="Thay đổi">
      	</form>
      </div>
      <h3>Danh sách sinh viên</h3>
@@ -32,21 +33,50 @@
 					{msv:637723,hoten:"Lê Minh Tú",quequan:"Thanh Hóa"},
 					{msv:637758,hoten:"Lê Công Hoàng",quequan:"Thanh Hóa"},
 					];
-				var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Quê Quán</td></tr>";
+				var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Quê Quán</td><td>Xóa</td><td>Sửa</td></tr>";
 				for( var i=0; i<sinhvien.length;i++){
-					ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td></tr>";
+					ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
 					
 				}
 				document.getElementById("Danhsach").innerHTML=ds;
 				
 				function addsv(){
-					var n=sinhvien.length;
-					 sinhvien[n].msv = document.getElementById("msv").value;
-					 sinhvien[n].hoten = document.getElementById("hoten").value;
-					 sinhvien[n].quequan = document.getElementById("quequan").value;
-                  
-                   document.getElementById("Danhsach").innerHTML=ds;
+					
+				    sinhvien.push({msv:document.getElementById("msv").value,
+				    hoten: document.getElementById("hoten").value,
+				    quequan: document.getElementById("quequan").value});
+	                var n=sinhvien.length-1;
+					ds+="<tr><td>"+sinhvien[n].msv+"</td>"+"<td>"+sinhvien[n].hoten+"</td>"+"<td>"+sinhvien[n].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
+	                document.getElementById("Danhsach").innerHTML=ds;
 				}
+				function xoasv(i){
+                    sinhvien.splice(i,1);
+					var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Quê Quán</td><td>Xóa</td><td>Sửa</td></tr>";
+				    for( var i=0; i<sinhvien.length;i++){
+					ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";	
+
+				         }
+			
+                    document.getElementById("Danhsach").innerHTML=ds;
+				}
+				var m=0
+				function suasv(i){
+                    document.getElementById("msv").value=sinhvien[i].msv;
+                    document.getElementById("hoten").value=sinhvien[i].hoten;
+                    document.getElementById("quequan").value=sinhvien[i].quequan;
+                    m=i;}
+                function suasv2() {
+                    sinhvien.splice(m,1,{msv:document.getElementById("msv").value,
+					hoten: document.getElementById("hoten").value,
+					quequan: document.getElementById("quequan").value});
+                    var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Quê Quán</td><td>Xóa</td><td>Sửa</td></tr>";
+				    for( var i=0; i<sinhvien.length;i++){
+					ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";			
+				           }
+	                document.getElementById("Danhsach").innerHTML=ds;
+
+                       }
+                   
 
      		</script>
      	</table>

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="styleSheet" href="sv.css">
+	<title>Sinh viên</title>
+	
+</head>
+<body>
+	<h2 style="text-align: center; color: red">Chương trình quản lý sinh viên</h2>
+		<h3>Điền thông tin sinh viên</h3>
+		<div>
+				<label for="fname">Mã sinh viên</label>
+				<input type="text" id="masv"  placeholder="Mã sv..">
+				<label for="lname">Họ tên</label>
+				<input type="text" id="hoten"  placeholder="Họ tên..">
+				<label for="country">Quê quán</label>
+				<input type="text" id="quequan"  placeholder="Quê quán..">
+				<input type="submit" value="Submit" onclick="add()">
+			 
+		</div>
+		<h3>Danh sách sinh viên</h3>
+		<table id="customers">
+			
+		</table>	
+			
+			<script type="text/javascript">
+				var sinhvien = [
+					{msv:635501,hoten:"Nguyễn Minh Anh",quequan:"Thanh Hóa"},
+					{msv:635502,hoten:"Trần Tuấn Anh",quequan:"Thanh Hóa"},
+					{msv:635503,hoten:"Lê Công Hoàng",quequan:"Bắc Ninh"},
+					{msv:635589,hoten:"Đặng Hoàng Mai",quequan:"Thanh Hóa"},
+					{msv:637723,hoten:"Lê Minh Tú",quequan:"Thanh Hóa"},
+					{msv:637758,hoten:"Lê Công Hoàng",quequan:"Thanh Hóa"},
+				];
+				var output="<tr><td>MaSV</td><td>Họ tên</td><td>Quê quán</td><td>Delete</td><td>Sua</td></tr>";
+				for( var i=0; i<sinhvien.length;i++){
+					output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"
+				+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td>" +
+				 "<td><button onclick= 'xoa("+i+")'class='xoa'> Delete</button></td>" +
+				 "<td><button onclick= 'sua("+i+")'class='sua'> Sua</button></td> </tr>";
+				
+					
+				}
+				document.getElementById("customers").innerHTML=output;
+				
+				function add(){
+					sinhvien.push({msv:document.getElementById("masv").value,
+									hoten:document.getElementById("hoten").value,
+									quequan:document.getElementById("quequan").value});
+
+					var n=sinhvien.length-1;
+					output+="<tr><td>"+sinhvien[n].msv+"</td>"+ "<td>"+ sinhvien[n].hoten +"</td>"
+					+ "<td>"+ sinhvien[n].quequan + "</td>" +
+					"<td><button onclick ='xoa("+i+")'class='xoa'> Delete</button></td>"+
+					"<td><button onclick= 'sua("+i+")'class='sua'> Sua</button></td> </tr></tr>";
+
+					document.getElementById("customers").innerHTML=output;
+				}
+				function xoa(i){
+					sinhvien.splice(i,1);
+					var output="<tr><td>MaSV</td><td>Họ tên</td><td>Quê quán</td><td>Delete</td></tr>";
+						for( var i=0; i<sinhvien.length;i++){
+								output+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"
+								+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td>" +
+				 				"<td><button onclick ='xoa("+i+")'class='xoa'> Delete</button></td>"+
+								"<td><button onclick= 'sua("+i+")'class='sua'> Sua</button></td> </tr></tr>";
+				
+				}
+				document.getElementById("customers").innerHTML=output;
+				}
+				function sua(a){
+					document.getElementById("masv").value=sinhvien[a].msv;
+					document.getElementById("hoten").value=sinhvien[a].hoten;
+					document.getElementById("quequan").value=sinhvien[a].quequan;
+					
+
+				}
+			</script>
+		
+	
+</body>
+</html>
