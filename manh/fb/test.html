@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+// 	var person ={
+// 	firtName :"hoang",
+// 	lastName : "Pham",
+// 	showName : function (){
+// 		document.write(this.firtName+" "+this.lastName);
+// 	} 
+
+// }
+// delete person.lastName;
+// person.lName="just adding";
+// document.write(person.lName);
+// person.showName();
+// for (var x in person)
+//  document.write(x);
+function Person(firstName,lastName){
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.showName = function(){
+		document.write(this.firstName+ " "+this.lastName);
+
+	};
+}
+var ps1 = new Person("hoang","pham");
+ps1.showName();
+</script>
+</body>
+</html>
