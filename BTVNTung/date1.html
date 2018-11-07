@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		#nhap {
+	background-color: #697c87;
+    padding-top: 12px;
+	padding-bottom: 12px;
+	border-radius: 5px;
+
+}
+#nhap input {
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+	border: 1px solid ;
+	margin: 8px 0px;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+#nhap input[type=button]:hover {
+	background-color: white;}
+
+#Danhsach {
+	border-collapse: collapse;
+	width: 100%;
+}
+#Danhsach td {
+	border: 1px solid;
+	padding: 8px;
+	text-align: center;
+
+}
+#Danhsach tr {
+	border: 1px solid;
+	padding: 8px;
+	
+
+}
+	</style>
+
+</head>
+<body>
+	<h2 style="text-align: center; color: pink" > Quản lý sinh viên </h2>
+     <h3>Nhập thông tin sinh viên</h3>
+     <div id="nhap">
+     	<form action="">
+     		Mã sinh viên <br> 
+     		<input type="text" id="msv"> <br> 
+     		Họ tên  <br> 
+            <input type="text" id="hoten"> <br> 
+            Quê quán  <br> 
+            <input type="text" id="quequan"> <br> <br>
+            <input type="button" onclick="addsv()"  value="Thêm Sinh Viên">
+            <input type="button" onclick='suasv2()' value="Thay đổi">
+     	</form>
+     </div>
+     <h3>Danh sách sinh viên</h3>
+     <p id="demo"></p>
+  
+     	<table id="Danhsach">
+     		<script type="text/javascript">
+
+     			var sinhvien = [
+     			{msv:637634,hoten:"Hoà",quequan:"Bắc Ninh",ngaysinh: "10/11/2000",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+		    {msv:637635,hoten:"Loan",quequan:"Thanh Hóa",ngaysinh: "10/11/2000",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637636,hoten:"Lan",quequan:"Hải Dương",ngaysinh: "10/11/2000",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637637,hoten:"Thanh",quequan:"Nghệ An",ngaysinh: "10/11/2000",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},
+			{msv:637638,hoten:"Thủy",quequan:"Bắc Ninh",ngaysinh: "10/11/2000",xoa:"<button>Xóa</button>",Sửa:"<button>Sửa</button>"},];
+			var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Quê Quán</td><td>Xóa</td><td>Sửa</td></tr>";
+				for( var i=0; i<sinhvien.length;i++){
+					ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
+					
+				}
+				document.getElementById("Danhsach").innerHTML=ds;
+
+				function addsv(){
+					
+				    sinhvien.push({msv:document.getElementById("msv").value,
+				    hoten: document.getElementById("hoten").value,
+				    quequan: document.getElementById("quequan").value});
+	                var n=sinhvien.length-1;
+					ds+="<tr><td>"+sinhvien[n].msv+"</td>"+"<td>"+sinhvien[n].hoten+"</td>"+"<td>"+sinhvien[n].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
+	                document.getElementById("Danhsach").innerHTML=ds;
+
+	            function date() {
+
+	            	var d = new Date("10/11/2000");
+	            	if(d.getMonth()==(new Date()).getMonth()){
+	            		if(d.getDate()==(new Date()).getDate(){{
+	            			document.getElementById("demo").innerHTML ="hôm nay là sn"
+	            			document.write("Hôm nay là sv you");
+	            			
+	            		}
+	            	}
+		
+
+	            	
+	            }
+				}
+			</script>
+
+</body>
+</html>
