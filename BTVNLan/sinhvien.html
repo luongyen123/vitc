@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" href="sv.css">
+</head>
+
+<body>
+	<h2 align="center">
+		<font color="red">Chương trình quản lý sinh viên</font>
+	</h2>
+	<h3>
+		<font color="red">Điền thông tin sinh viên</font>
+	</h3>
+	<div id="sum">
+
+		<label for="pass">Mã sinh viên:</label><br>
+		<input type="text" placeholder="Mã sv..." id="pass"><br><br>
+		<label>Họ tên:</label><br>
+		<input type="text" placeholder="Họ tên..." id="name"><br><br>
+		<label>Quê quán:</label><br>
+		<input type="text" placeholder="Quê quán..." id="country"><br><br>
+		<label>Ngày sinh:</label><br>
+		<input type="text" placeholder="Ngày sinh..." id="date"><br><br>
+		<input type="submit" value="Cập nhật" onclick="them()" id="submit" title=""><br>
+
+
+	</div>
+	<h3>
+		<font color="red">Danh sách sinh viên</font>
+	</h3>
+	<table id="solieu">
+
+	</table>
+	<script type="text/javascript">
+		var sv = [
+			{ msv: 611294, ten: "Vương Thị Lan", ngaysinh: "11/07/2018", add: "Hải Dương" },
+			{ msv: 623845, ten: "Vương Thị Linh", ngaysinh: "03/10/2001", add: "Hà Nội" },
+			{ msv: 687332, ten: "Vương Trọng Hải", ngaysinh: "14/04/2000", add: "Thanh Hóa" },
+			{ msv: 635504, ten: "Vương Thị Hà", ngaysinh: "15/05/2000", add: "Hà Nội" },
+			{ msv: 628374, ten: "Vương Văn An", ngaysinh: "16/06/2000", add: "Thanh Hóa" },
+			{ msv: 60938, ten: "Vương Thị Thu", ngaysinh: "17/07/2000", add: "Bắc Ninh" },
+
+		];
+
+		var output = "<tr> <td>Mã SV</td> <td>Họ Tên</td> <td>Ngày Sinh</td> <td>Quê Quán</td> <td>Loại bỏ</td> <td>Sửa SV</td> </tr>";
+		for (var i = 0; i < sv.length; i++) {
+			output += "<tr><td>" + sv[i].msv + "</td>" + "<td>" + sv[i].ten + "</td>" + "<td>" + sv[i].ngaysinh + "</td>"
+				+ "<td>" + sv[i].add + "</td>" + "<td><button onclick='xoa(" + i + ")'>Xóa</button></td><td><button onclick='sua(" + i + ")'>Sửa</button></td></tr>"
+		}
+
+		document.getElementById("solieu").innerHTML = output;
+
+		function them() {
+			if (document.getElementById("submit").title = "") {
+				sv.push({
+					msv: document.getElementById("pass").value,
+					ten: document.getElementById("name").value,
+					add: document.getElementById("country").value,
+					ngaysinh: document.getElementById("date").value
+				});
+				var n = sv.length - 1;
+				output += "<tr><td>" + sv[n].msv + "</td>" + "<td>" + sv[n].ten + "</td>" + "<td>" + sv[i].ngaysinh + "</td>" + "<td>" + sv[n].add +
+					"<td><button onclick='xoa(" + i + ")'>Xóa</button></td><td><button onclick='sua(" + i + ")'>Sửa</button></td></tr>";
+				document.getElementById("solieu").innerHTML = output;
+			} else {
+				var m = parseInt(document.getElementById("submit").title);
+				sv.splice(m, 1, {
+					msv: document.getElementById("pass").value,
+					hoten: document.getElementById("name").value,
+					quequan: document.getElementById("country").value,
+					ngaysinh: document.getElementById("date").value
+
+				});
+				var output = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Ngày sinh</td><td>Quê Quán</td><td>Xóa</td><td>Sửa Sv</td></tr>";
+				for (var i = 0; i < sv.length; i++) {
+					output += "<tr><td>" + sv[i].msv + "</td>" + "<td>" + sv[i].hoten + "</td>" + "<td>" + sv[i].ngaysinh + "</td>" + "<td>" + sv[i].quequan +
+						"</td><td><button onclick='xoasv(" + i + ")' >Xóa</button></td><td><button onclick='suasv(" + i + ")' >Sửa</button></td></tr>";
+				}
+				document.getElementById("solieu").innerHTML = output;
+			}
+		}
+
+
+		function xoa() {
+			sv.splice(i, 1);
+			var output = "<tr><td>Mã SV</td><td>Họ Tên</td><td>Quê Quán</td><td>Loại bỏ</td></tr>";
+			for (var i = 0; i <sv.length; i++) {
+				output += "<tr><td>" +sv.length + "</td>" + "<td>" + sv[i].msv + "</td>" + "<td>" + sv[i].ten + "</td>" + "<td>" + sv[i].ngaysinh + "</td>" + "<td>" + sv[i].add + "</td>" + 
+				"<td><button onclick='xoa(" + (sv.length - 1) + ")'>Xóa</button></td><td><button onclick='sua(" + (sv.length - 1) + ")'>Sửa</button></td></tr>";
+
+			}
+			document.getElementById("solieu").innerHTML = output;
+		}
+
+		function sua(i) {
+			document.getElementById("pass").value = sv[i].msv;
+			document.getElementById("name").value = sv[i].ten;
+			document.getElementById("date").value = sv[i].ngaysinh;
+			document.getElementById("country").value = sv[i].add;
+			document.getElementById("submit").title = i;
+
+		}
+		for (var i = 0; i < sv.length; i++) {
+			var d = new Date(sv[i].ngaysinh);
+			if (d.getMonth() == (new Date()).getMonth()) {
+				if (d.getDate() == (new Date()).getDate()) {
+					document.write("Hôm nay là sinh nhật của"  + "  " + sv[i].ten +" "+ sv[i].add +" "+ sv[i].ngaysinh);
+
+				}
+			}
+		}
+
+
+	</script>
+</body>
+
+</html>
