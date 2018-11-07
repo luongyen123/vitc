@@ -26,13 +26,22 @@
      		<script type="text/javascript">
 
      			var sinhvien = [
-					{msv:635501,hoten:"Nguyễn Minh Anh",quequan:"Thanh Hóa"},
-					{msv:635502,hoten:"Trần Tuấn Anh",quequan:"Thanh Hóa"},
-					{msv:635503,hoten:"Lê Công Hoàng",quequan:"Bắc Ninh"},
-					{msv:635589,hoten:"Đặng Hoàng Mai",quequan:"Thanh Hóa"},
-					{msv:637723,hoten:"Lê Minh Tú",quequan:"Thanh Hóa"},
-					{msv:637758,hoten:"Lê Công Hoàng",quequan:"Thanh Hóa"},
+					{msv:635501,hoten:"Nguyễn Minh Anh", ngaysinh:"11/07/2000", quequan:"Thanh Hóa"},
+					{msv:635502,hoten:"Trần Tuấn Anh", ngaysinh:"12/07/2000", quequan:"Thanh Hóa"},
+					{msv:635503,hoten:"Lê Công Hoàng", ngaysinh:"09/07/2000", quequan:"Bắc Ninh"},
+					{msv:635589,hoten:"Đặng Hoàng Mai", ngaysinh:"11/08/2000", quequan:"Thanh Hóa"},
+					{msv:637723,hoten:"Lê Minh Tú", ngaysinh:"11/02/2000", quequan:"Thanh Hóa"},
+					{msv:637758,hoten:"Lê Công Hoàng", ngaysinh:"13/10/2000", quequan:"Thanh Hóa"},
 					];
+
+                for (var t = 0; t < sinhvien.length; t++) {
+	 	var n = new Date(listsv[t].ngaysinh);
+	 	if (n.getDate() == new Date().getDate() ) {
+	 		alert(" Happy birthday to " +sinhvien[t].hoten);
+	 	}
+	 }
+
+
 				var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Quê Quán</td><td>Xóa</td><td>Sửa</td></tr>";
 				for( var i=0; i<sinhvien.length;i++){
 					ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
