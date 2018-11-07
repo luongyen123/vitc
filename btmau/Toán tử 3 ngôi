@@ -1,0 +1,31 @@
+Toán tử 3 ngôi
+(month === 2) ? (28 + isLeap(year)) : 31 - (month - 1) % 7 % 2;
+
+if(month===2){
+	return 28 + isLeap(year);
+}else{
+	return 31 - (month - 1) % 7 % 2;
+}
+
+lấy được thứ bắt đầu của tháng
+lấy được số ngày của tháng
+d = new Date(ngaybatdaucuathang)
+while(d.getDay()<=songaeycuathang){
+	for(i=0;i<7;i++){
+		var ouput = "<tr>";
+		if(thu_bat_dau_cua_thang == i)
+			i =
+			d = new Date(d.getFullYear(),d.getMonth(),d.getDate() + i;
+		   	ouput ="<td colspan='i'></td><td>"+dinhdangngay(d);
+		}
+		if(i== 3 || i==5){
+		        document.getElementById(i).style.backgroundColor="red";
+		        document.getElementById(i).style.color="white";
+
+			    }
+			    d = new Date(chunhat_nay.getFullYear(),chunhat_nay.getMonth(),chunhat_nay.getDate() + i;
+
+			    document.getElementById(i).innerHTML = dinhdangngay(d);
+		}
+		ouput="<tr>";
+}

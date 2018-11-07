@@ -22,7 +22,8 @@
 						];
 		
 	
-		for (i=0;i < danhsachsv.length;i++){var d= (new Date(danhsachsv[i].ngaysinh));
+		for (i=0;i < danhsachsv.length;i++){
+			var d= (new Date(danhsachsv[i].ngaysinh));
 			if(d.getMonth()==(new Date()).getMonth()&&(d.getDate()==(new Date()).getDate()))
 				// if(d.getDate()==(new Date()).getDate())
 						{document.write("Hôm nay là ngày sinh nhật của "+ danhsachsv[i].ten + "<br>");}
