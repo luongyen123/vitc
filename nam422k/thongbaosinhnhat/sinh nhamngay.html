@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>In ra ngày sinh của sinh viên trong bảng</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sinhvien = [
+							{msv:635441,hoten:"Nguyễn Vân Nhi",quequan:"Hưng Yên",date:"11/07/2001"},
+							{msv:633502,hoten:"Nguyễn Đức Phúc",quequan:"Hải Dương",date:"02/04/2000"},
+							{msv:637603,hoten:"Nguyễn Tú Uyên",quequan:"Thái Bình",date:"07/15/2000"},
+							{msv:635659,hoten:"Nguyễn Ngọc Nguyên",quequan:"Cà Mau",date:"10/25/2000"},
+							{msv:637863,hoten:"Nguyễn Văn Hưng ",quequan:"Vũng Tàu",date:"11/07/2000"},
+							{msv:637709,hoten:"Nguyễn Văn Cường",quequan:"Hưng Yên",date:"09/24/2000"},
+							{msv:635785,hoten:"Nguyễn Văn Mạnh",quequan:"Nam Định",date:"11/06/2000"},
+							{msv:636658,hoten:"Phan Thanh Bình",quequan:"Hưng Yên",date:"12/01/2000"},
+							{msv:637908,hoten:"Lò Thị Sến",quequan:"Hà Giang",date:"07/22/2000"},
+							{msv:637848,hoten:"Quan Văn Tài",quequan:"Lai Châu",date:"02/01/2000"},
+							{msv:637542,hoten:"Mến Thị Thương ",quequan:"Hà Nội",date:"04/08/2000"},
+							];
+			
+			for(var i=0;i<sinhvien.length;i++){
+			        var d= new Date(sinhvien[i].date);//new là gán giá trị cho hàm
+		            if (d.getMonth()==(new Date()).getMonth()){       //getDate là lấy giá trị ngày trong tháng
+		            	if ( d.getDate()==(new Date()).getDate()){  
+		
+						document.write("Hôm nay là sinh nhật của" +" "+ sinhvien[i].hoten+"<br>");
+						}
+				}
+				}
+		</script>
+	</body>
+</html>

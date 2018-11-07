@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lịch học</title>
+</head>
+<body>
+	<div id="lichhoc">
+		<div>	
+     		<table id="lich">
+
+		</div>
+	</div>
+	 <script  type="text/javascript" charset="utf-8" async defer>
+	 	
+	 		var d = new Date();
+	 		for (var i = 1; i <=30; i++) {
+	 			d.setDate(i);
+	 			if (d.getDay()==3||d.getDay()==5) {
+	 				var lichhoc=document.write("Thứ "+"  "+(d.getDay()+1)+"  "+"ngày"+" "+d.getDate()+"<br>");
+	 				document.getElementById("lich").innerHTML=lichhoc;
+	 			}
+	 		}
+	 		
+	 	
+	 </script>
+</body>
+</html>
