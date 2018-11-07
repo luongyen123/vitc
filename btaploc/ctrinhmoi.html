@@ -12,8 +12,8 @@
 	Họ Tên: <br> <input type="text" name="hoten" placeholder="Họ Tên"style="border-radius: 4px" id="nhapten"><br>
 	Ngày Sinh: <br> <input type="date/time" name="ngaysinh" placeholder="Ngày Sinh"style="border-radius: 4px" id="nhapngaysinh"><br>
 	Quê Quán: <br> <input type="text" name="quequan" placeholder="Quê Quán"style="border-radius: 4px" id="nhapquequan"><br>
-	<input type="button" value="Truy quét" onclick="add()">
-	<input type="button" value="Chỉnh" onclick="suasv2()">
+	<input type="button" value="Cập Nhập" onclick="add()" id="action" title="">
+	
 </h5>
 <h4 id="vip">Danh sách đối tượng</h4>
 <table id="bang">
@@ -33,49 +33,70 @@
 						];
 						// danhsachsv.lname = "add()";
 							var output="<tr><td>masv</td><td>ten</td><td>ngaysinh</td><td>quequan</td><td>Xóa</td><td>Sửa</td></tr>";
-							for( var i=0; i<danhsachsv.length;i++){
-							output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
-					
-						}
+							for( var i=0; i<danhsachsv.length;i++)
+							{
+								output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+							}
 						document.getElementById("bang").innerHTML=output;
 						
 						function add(){
-							var i=danhsachsv.length-1;
-							danhsachsv.push({ masv: document.getElementById("nhapmasv").value,
-							ten: document.getElementById("nhapten").value,
-							ngaysinh: document.getElementById("nhapngaysinh").value,
-							quequan: document.getElementById("nhapquequan").value}),
-							output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoa("+i+")'id='xoa'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
-							document.getElementById("bang").innerHTML=output;}
-						function xoasv(i){
-							danhsachsv.splice(i,1);
-							var output="<tr><td>masv</td><td>ten</td><td>ngaysinh</td><td>quequan</td><td>Xóa</td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
-							for( var i=0; i<danhsachsv.length;i++){
-							output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+							if (document.getElementById("action").title="") {
+
+
+									var i=danhsachsv.length-1;
+									danhsachsv.push({ masv: document.getElementById("nhapmasv").value,
+									ten: document.getElementById("nhapten").value,
+									ngaysinh: document.getElementById("nhapngaysinh").value,
+									quequan: document.getElementById("nhapquequan").value});
+									output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoa("+i+")'id='xoa'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+									document.getElementById("bang").innerHTML=output;
+							}else {
+								var n= parseInt(document.getElementById("action").title);
+
+								danhsachsv.splice(n,1,{ masv: document.getElementById("nhapmasv").value,
+									ten: document.getElementById("nhapten").value,
+									ngaysinh: document.getElementById("nhapngaysinh").value,
+									quequan: document.getElementById("nhapquequan").value});
+		                    		var output="<tr><td>masv</td><td>ten</td><td>ngaysinh</td><td>quequan</td><td>Xóa</td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+						    		for( var i=0; i<danhsachsv.length;i++){
+									output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";	
+						           }
+	                			document.getElementById("bang").innerHTML=output;
+							}
 						}
-							document.getElementById('bang').innerHTML=output;}
+						function xoasv(i){
+								danhsachsv.splice(i,1);
+								var output="<tr><td>masv</td><td>ten</td><td>ngaysinh</td><td>quequan</td><td>Xóa</td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+								for( var i=0; i<danhsachsv.length;i++){
+								output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+								}
+								document.getElementById('bang').innerHTML=output;
+						}
+						
 						function suasv(i)
 						{
 							document.getElementById("nhapmasv").value=danhsachsv[i].masv;
 							document.getElementById("nhapten").value=danhsachsv[i].ten;
 							document.getElementById("nhapngaysinh").value=danhsachsv[i].ngaysinh;
 							document.getElementById("nhapquequan").value=danhsachsv[i].quequan;
-							n=i;
-						}
-						var n=0;
-						 function suasv2(i) {
-                    		danhsachsv.splice(n,1,{masv:document.getElementById("masv").value,
-													ten: document.getElementById("ten").value,
-													ngaysinh: document.getElementById("ngaysinh").value,
-													quequan: document.getElementById("quequan").value,
-													});
-                    		var output = "<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
-				    		for( var i=0; i<danhsachsv.length;i++){
-							output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";	
-				           }
-	                		document.getElementById("bang").innerHTML=output;
+							document.getElementById("action").title=i;
+							}
+						
+						
+						 // function suasv2() {
+       //              		danhsachsv.splice(n,1,{masv:document.getElementById("masv").value,
+							// 						ten: document.getElementById("ten").value,
+							// 						ngaysinh: document.getElementById("ngaysinh").value,
+							// 						quequan: document.getElementById("quequan").value,
 
-                       }
+							// 						});
+       //              		var output="<tr><td>masv</td><td>ten</td><td>ngaysinh</td><td>quequan</td><td>Xóa</td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+				   //  		for( var i=0; i<danhsachsv.length;i++){
+							// output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";	
+				   //         }
+	      //           		document.getElementById("bang").innerHTML=output;
+
+       //                 }
 				
 </script>
 	<!-- 	<script type="text/javascript">
