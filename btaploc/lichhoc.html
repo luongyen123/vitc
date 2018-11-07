@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lịch học</title>
+	<link rel="stylesheet" type="text/css" href="lichhoc.css">
+</head>
+<body>
+		<div class="lich">
+ 
+  <div class="tren">      
+    <ul>
+     
+      <li style="text-align:center">
+        Tháng 11<br>
+        <i>2018</i>
+      </li>
+    </ul>
+  </div>
+ 
+  <ul class="tuan">
+    <li>Thứ 2</li>
+    <li>Thứ 3</li>
+    <li>Thứ 4</li>
+    <li>Thứ 5</li>
+    <li>Thứ 6</li>
+    <li>Thứ 7</li>
+    <li>CN</li>
+  </ul>
+ 
+  <ul class="ngay">  
+    <li></li>
+    <li></li>
+    <li></li>
+    
+    <li>1</li>
+    <li><span class="hien">2</span></li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li><span class="hien">7</span></li>
+    <li>8</li>
+    <li><span class="hien">9</span></li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li><span class="hien">14</span></li>
+    <li>15</li>
+    <li><span class="hien">16</span></li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li><span class="hien">21</span></li>
+    <li>22</li>
+    <li><span class="hien">23</span></li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li><span class="hien">28</span></li>
+    <li>29</li>
+    <li><span class="hien">30</span></li>
+    
+  </ul>
+</div>
+<h1>Lịch học</h1>
+<i><script type="text/javascript">
+	var d=new Date(); //khai báo ngày hôm nay
+  		 for(i=1;i<31;i++) {
+					   	d.setDate(i); //ngày theo i
+					    if(d.getDay()==3|| d.getDay()==5)
+					      document.write("thứ "+(d.getDay()+1) +" ngày "+d.getDate()+"<br>")
+  						 }
+   
+
+
+</script></i>
+</body>
+</html>
