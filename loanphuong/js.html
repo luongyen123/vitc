@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Hệ số<input type="text" id="snt">
+	<input type="button" value="In kết quả" onclick="giatri()">
+	<script type="text/javascript">
+		function giatri(){
+			var n= document.getElementById("snt").value;
+			n=parseInt(n)
+			var h=0;
+			for (var i=0; i<=n; i++){
+				h=0;
+				for (var j=1;j<=i;j++){
+					if(i%j==0)
+						h++;
+				}
+				if(h==2)
+					document.write(i,'<br>');
+			}
+			
+		}
+	</script>
+
+</body>
+</html>
