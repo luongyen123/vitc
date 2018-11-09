@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<title>Giao diện web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	*{
+  		margin: 0;
+  		padding: 0;
+  	}
+  	.p1{
+  		width: 100%;
+  		height: 300px;
+  		background-image: url("bìa.png");
+  		background-size: 100%;
+  		font: italic bold 20px arial,verdana,sans-serif;
+  		color: red;
+  	}
+  	.p2{
+  		background-color: #FF6600;
+			width: 100%;
+			height: 10px;
+			float: left;
+  	}
+  	#p3{
+  		background-color: white ;
+			width: 900px;
+			height: 800px;
+			margin: auto;
+  	}
+  	#P4{
+  		background-color: white;
+			height: 300px;
+			width: 1350px;
+			float: left;
+  	}
+  	    #p4a{
+			background-color: #33CC66;
+			height: 300px;
+		    float: left;
+			width: 450px;
+		}
+		#p4b{
+			background-color: #FFFF66;
+			height: 300px;
+		    float: left;
+			width: 450px;
+		}
+		#p4c{
+			background-color: #CC99FF;
+			height: 300px;
+			float: right;
+			width: 430px;
+		}
+	.p5{
+		width: 100%;
+  		height: 300px;
+  		
+  		background-size: 100%;
+  		font: italic bold 20px arial,verdana,sans-serif;
+  		color: red;
+  		background-color: #FF9900;
+	}
+
+
+  </style>
+	</head>
+	<body>
+		<div class="container-fluid">
+		<div class="p1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item"><a class="nav-link" href="">Trang chủ</a></li>
+				<li class="nav-item"><a class="nav-link" href="">Giới thiệu</a></li>
+				<li class="nav-item"><a class="nav-link" href="">Dịch vụ</a></li>
+				<li class="nav-item"><a class="nav-link" href="">Loại bệnh</a></li>
+				<li class="nav-item"><a class="nav-link" href="">Tư vấn</a></li>
+            </ul>
+		</div>	
+		</div>
+		<div id="p2"></div>
+		<h2 class="">ẢNH</h2>
+		<div id="p3">
+<img class="mySlides w3-animate-fading" src="dv1.jpg" width="900px" height="800px">
+<img class="mySlides w3-animate-fading" src="dv2.jpg" width="900px" height="800px">
+<img class="mySlides w3-animate-fading" src="dv3.jpg" width="900px" height="800px">
+<img class="mySlides w3-animate-fading" src="dog.jpg" width="900px" height="800px">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+</script>
+<h2 class="">CÁC VIDEO</h2>
+<div id="p4">
+		<div id="p4a">
+			<iframe width="400" height="300" src="https://www.youtube.com/embed/H2NELyj10gs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div id="p4b">
+			<iframe width="400" height="300" src="https://www.youtube.com/embed/qUqfwI1v_sk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div id="p4c">
+			<iframe width="400" height="300" src="https://www.youtube.com/embed/FI0P3pEOGEc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="container-fluid">
+
+
+<h2 class="">XEM THÊM...</h2>	
+	<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="dog.jpg">
+        <img src="dog.jpg" alt="" style="width:100%">
+        <div class="caption">
+          <p>Chăm sóc chó...</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="dv2.jpg">
+        <img src="dv2.jpg" alt="" style="width:100%">
+        <div class="caption">
+          <p>Các loài khác...</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+		<div class="p5">
+			<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>BỆNH VIỆN THÚ Y VIVET</h3>
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <p>Đây là bệnh viện thú y ............................</p>
+    </div>
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <p></p>
+    </div>
+    
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+
+		</div>	
+		</div>
+
+
+
+	</body>
+</html>
