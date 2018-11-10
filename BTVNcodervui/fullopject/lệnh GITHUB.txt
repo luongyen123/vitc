@@ -1,0 +1,14 @@
+﻿
+CÁC LỆNH ĐỂ KÉO VÀ ĐẨY CODER LÊN CHO 1 PROJECT. 
+
+Bước 1. git pull                                       (lệnh kéo tất cả file về)
+Bước 2. git checkout + tên file định đẩy lên (kiểm tra xem có j thay đổi k)
+Bước 3. git add + tên file đẩy              (lệnh  khai báo tên file định đẩy lên) 
+Bước 4. git commit -m" Codervui "       (lệnh ghi chú)
+Bước 5. git push                               (lệnh tiến hành đẩy lên)
+Bước 6. Enter
+
+TK gitthub: vuminhthu1320@gmail.com
+MK: vuminhthu2002
+
+Cách tạo nhánh github riêng: dùng lệnh git checkout -b + tên nhánh
