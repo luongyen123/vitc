@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Học</title>
+	</head>
+	<body>
+		<h1 align="center"><i>Happy birthday</i></h1>
+		<p id="demo"></p>
+		<script>
+		
+		
+		var danhsachsv =[
+						{masv:"607643", ten:"Manh", ngaysinh:"11/07/2000", quequan:"Thái Bình"},
+						{masv:"637644", ten:"Thư", ngaysinh:"01/12/1998", quequan:"Thanh Hóa"},
+						{masv:"637645", ten:"Kiên", ngaysinh:"04/23/1999", quequan:"Tuyên Quang"},
+						{masv:"637646", ten:"Tùng", ngaysinh:"10/29/1980", quequan:"Thái Bình"},
+						{masv:"637647", ten:"Lan", ngaysinh:"12/22/2000", quequan:"Thanh Hóa"},
+						{masv:"637648", ten:"Loan", ngaysinh:"02/23/2000", quequan:"Thanh Hóa"},
+						{masv:"637666", ten:"Đức", ngaysinh:"05/25/2002", quequan:"Thanh Hóa"},
+						{masv:"637655", ten:"Bách", ngaysinh:"07/23/2001", quequan:"Tuyên Quang"},
+						{masv:"637676", ten:"Nam", ngaysinh:"11/06/2005", quequan:"Thanh Hóa"},
+						];
+		
+	
+		for (i=0;i < danhsachsv.length;i++){
+			var d= (new Date(danhsachsv[i].ngaysinh));
+			if(d.getMonth()==(new Date()).getMonth()&&(d.getDate()==(new Date()).getDate()))
+				// if(d.getDate()==(new Date()).getDate())
+						{document.write("Hôm nay là ngày sinh nhật của "+ danhsachsv[i].ten + "<br>");}
+					else 
+						{document.write("Hôm nay không phải ngày sinh nhật của " + danhsachsv[i].ten+"<br>");}
+			}			
+		</script>
+	</body>
+</html>

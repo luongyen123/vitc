@@ -1,154 +1,108 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Quản lý sinh viên</title>
-		<style type="text/css">
-			#data_table {
-			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-			border-collapse: collapse;
-			width: 100%;
-			}
-			#data_table td, #data_table th {
-			border: 1px solid #ddd;
-			padding: 8px;
-			}
-			#data_table tr:nth-child(even){background-color: #f2f2f2;}
-			#data_table tr:hover {background-color: #ddd;}
-			#data_table th {
-			padding-top: 12px;
-			padding-bottom: 12px;
-			text-align: left;
-			background-color: #4CAF50;
-			color: white;
-			}
-			input[type=text], select {
-				width: 100%;
-				padding: 12px 20px;
-				margin: 8px 0;
-				display: inline-block;
-				border: 1px solid #ccc;
-				border-radius: 4px;
-				box-sizing: border-box;
-				}
-				input[type=submit] {
-				width: 100%;
-				background-color: #4CAF50;
-				color: white;
-				padding: 14px 20px;
-				margin: 8px 0;
-				border: none;
-				border-radius: 4px;
-				cursor: pointer;
-				}
-				input[type=submit]:hover {
-				background-color: #45a049;
-				}
-				div {
-				border-radius: 5px;
-				background-color: #f2f2f2;
-				padding: 20px;
-				}
-				
-		</style>
-	</head>
-	<body>
-		<h4 style="text-align: center">Chương trình quản lý sinh viên</h4>
-		<h3>Điền thông tin sinh viên</h3>
-		<div>
-			<form >
-				<label for="fname">Mã sinh viên</label>
-				<input type="text" id="msv"  placeholder="Mã sv..">
-				<label for="lname">Họ tên</label>
-				<input type="text" id="hoten"  placeholder="Họ Tên..">
-				<label for="country">Ngày Sinh</label>
-				<input type="text" id="date"  placeholder="Ngày Sinh..">
-				<label for="country">Quê quán</label>
-				<input type="text" id="quequan"  placeholder="Quê quán..">
-				<input type="button" class="add" value="Submit" onclick="add_sv();">
-			</form>
-		</div>
-		<h3>Danh sách sinh viên</h3>
-		<table id="data_table">
-			
-		</table>	
-			
-			<script type="text/javascript">
-				var sinhvien = [
-					{msv:635501,hoten:"Nguyễn Minh Anh",date:"18/02/2000",quequan:"Thanh Hóa"},
-					{msv:635502,hoten:"Trần Tuấn Anh",date:"19/03/2000",quequan:"Thanh Hóa"},
-					{msv:635503,hoten:"Lê Công Hoàng",date:"23/5/2000",quequan:"Bắc Ninh"},
-					{msv:635589,hoten:"Đặng Hoàng Mai",date:"23/5/2000",quequan:"Thanh Hóa"},
-					{msv:637723,hoten:"Lê Minh Tú",date:"23/5/2000",quequan:"Thanh Hóa"},
-					
-				];
-				var output="<tr><td>Mã SV</td><td>Họ Tên</td><td>Ngày Sinh</td><td>Quê quán</td></tr>";
-				for( var i=0; i<sinhvien.length;i++){
-					output+="<tr id='sv"+i+"''><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].date+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><input type='button' id='edit_button"+i+"' value='Edit' class='edit' onclick='edit_sv("+i+")'> <input type='button' id='save_button"+i+"' value='Save' class='save' onclick='save_sv("+i+")'> <input type='button' value='Delete' class='delete' onclick='delete_sv("+i+")'></td></tr>";
-					i
-				}
-				document.getElementById("data_table").innerHTML=output;
-				
-									 
-					function delete_sv(i)
-					{
-					 document.getElementById("sv"+i+"").outerHTML="";
-					}
-				function add_sv(i)
-					{
-					  var msv=document.getElementById("msv").value;
-					 var hoten=document.getElementById("hoten").value;
-					 var date=document.getElementById("date").value;
-					 var quequan=document.getElementById("quequan").value;
-					  
-					 var table=document.getElementById("data_table");
-					 var table_len=(table.rows.length)-1;
-					 var row = table.insertRow(table_len).outerHTML="<tr id='sv"+table_len+"'><td id='msv_sv"+table_len+"'>"+msv+"</td><td id='name_sv"+table_len+"'>"+hoten+"</td><td id='date_sv"+table_len+"'>"+date+"</td><td id='country_sv"+table_len+"'>"+quequan+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_sv("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_sv("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_sv("+table_len+")'></td></tr>";
-
-					document.getElementById("msv").value="";
-					 document.getElementById("hoten").value="";
-					 document.getElementById("date").value="";
-					 document.getElementById("quequan").value="";
-					}
-
-				function edit_sv(no)
-					{
-					 document.getElementById("edit_button"+no).style.display="none";
-					 document.getElementById("save_button"+no).style.display="block";
-					  
-					 var msv=document.getElementById("msv_sv"+no);
-					 var name=document.getElementById("name_sv"+no);
-					 var date=document.getElementById("date_sv"+no);
-					 var country=document.getElementById("country_sv"+no);
-					  
-					 var msv_data=msv.innerHTML;
-					 var name_data=name.innerHTML;
-					 var date_data=date.innerHTML;
-					 var country_data=country.innerHTML;
-					 msv.innerHTML="<input type='text' id='msv_text"+no+"' value='"+msv_data+"'>"; 
-					 name.innerHTML="<input type='text' id='name_text"+no+"' value='"+name_data+"'>";
-					 date.innerHTML="<input type='text' id='date_text"+no+"' value='"+date_data+"'>";
-					 country.innerHTML="<input type='text' id='country_text"+no+"' value='"+country_data+"'>";
-					}
-
-						function save_sv(i)
-						{
-						 var msv_val=document.getElementById("msv_text"+i).value;
-						 var hoten_val=document.getElementById("hoten_text"+i).value;
-						 var date_val=document.getElementById("date_text"+i).value;
-						  var quequan_val=document.getElementById("quequan_text"+i).value;
-
-						 document.getElementById("msv"+i).innerHTML=msv_val;
-						  document.getElementById("hoten"+i).innerHTML=hoten_val;
-						 document.getElementById("date"+i).innerHTML=date_val;
-						 document.getElementById("quequan"+i).innerHTML=quequan_val;
-
-						 document.getElementById("edit_button"+i).style.display="block";
-						 document.getElementById("save_button"+i).style.display="none";
-						}
-
-						
-			</script>
-		
+<head>
 	
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="qlsv.css">
+	
+</head>
+<body>
+     <h2 style="text-align: center; color: blue;" > Quản lý sinh viên </h2>
+     <h3>Nhập thông tin sinh viên</h3>
+     <div id="nhap">
+     	<form action="">
+     		Mã sinh viên <br> 
+     		<input type="text" id="msv"> <br> 
+     		Họ tên  <br> 
+            <input type="text" id="hoten"> <br>
+            Ngày sinh  <br> 
+            <input type="text" id="ngaysinh"> <br> 
+            Quê quán  <br> 
+            <input type="text" id="quequan"> <br> <br>
+            <input type="button" onclick="addsv()" id="action" value="Cập nhật" title="">       
+     	</form>
+     </div>
+     <h3>Danh sách sinh viên</h3>
+  
+     	<table id="Danhsach">
+
+     		<div id="sinhnhatsv"></div>
+     		<script type="text/javascript">
+
+     			var sinhvien = [
+					{msv:635501,hoten:"Nguyễn Minh Anh",ngaysinh:"11/07/2000",quequan:"Thanh Hóa"},
+					{msv:635502,hoten:"Trần Tuấn Anh",ngaysinh:"08/11/2000",quequan:"Thanh Hóa"},
+					{msv:635503,hoten:"Lê Công Hoàng",ngaysinh:"09/11/2000",quequan:"Bắc Ninh"},
+					{msv:635589,hoten:"Đặng Hoàng Mai",ngaysinh:"06/11/2000",quequan:"Thanh Hóa"},
+					{msv:637723,hoten:"Lê Minh Tú",ngaysinh:"05/11/2000",quequan:"Thanh Hóa"},
+					{msv:637758,hoten:"Lê Công Hoàng",ngaysinh:"07/11/2000",quequan:"Thanh Hóa"},
+					];
+				var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Ngày sinh</td><td>Quê Quán</td><td>Xóa</td><td>Sửa</td></tr>";
+				for( var i=0; i<sinhvien.length;i++){
+					ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].ngaysinh+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
+					
+				}
+				document.getElementById("Danhsach").innerHTML=ds;
+			
+				
+    
+				function addsv(){
+					
+					if(document.getElementById("action").title=""){
+
+					    sinhvien.push({msv:document.getElementById("msv").value,
+					    hoten: document.getElementById("hoten").value,
+					    quequan: document.getElementById("quequan").value});
+		                var n=sinhvien.length-1;
+						ds+="<tr><td>"+sinhvien[n].msv+"</td>"+"<td>"+sinhvien[n].hoten+"</td>"+"<td>"+sinhvien[i].ngaysinh+"</td>"+"<td>"+sinhvien[n].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
+		                document.getElementById("Danhsach").innerHTML=ds;
+		            }else{
+		            	var m=parseInt(document.getElementById("action").title);
+		            	
+		            	sinhvien.splice(m,1,{msv:document.getElementById("msv").value,
+						hoten: document.getElementById("hoten").value,
+						quequan: document.getElementById("quequan").value});
+	                    var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Ngày sinh</td><td>Quê Quán</td><td>Xóa</td><td>Sửa</td></tr>";
+					    for( var i=0; i<sinhvien.length;i++){
+						ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].ngaysinh+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";			
+					           }
+		                document.getElementById("Danhsach").innerHTML=ds;
+		            }
+	            	
+				}
+				function xoasv(i){
+                    sinhvien.splice(i,1);
+					var ds = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Ngày sinh</td><td>Quê Quán</td><td>Xóa</td><td>Sửa</td></tr>";
+				    for( var i=0; i<sinhvien.length;i++){
+					ds+="<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].ngaysinh+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";	
+
+				         }
+			
+                    document.getElementById("Danhsach").innerHTML=ds;
+				}
+				
+				function suasv(i){
+                    document.getElementById("msv").value=sinhvien[i].msv;
+                    document.getElementById("hoten").value=sinhvien[i].hoten;
+                    document.getElementById("ngaysinh").value=sinhvien[i].ngaysinh;
+                    document.getElementById("quequan").value=sinhvien[i].quequan;
+                    document.getElementById("action").title= i;
+                    
+                }
+                for (var i = 0; i < sinhvien.length; i++) {
+			var d = new Date(sinhvien[i].ngaysinh);
+			if (d.getMonth() == (new Date()).getMonth()) {
+				if (d.getDate() == (new Date()).getDate()) {
+					document.write("Hôm nay là sinh nhật của"  + "  " + sinhvien[i].hoten );
+
+				}
+			}
+		}
+
+                
+     		</script>
+     	</table>
+    
+     
 </body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Bootstrap one</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="boostrap.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" id="me">
+						<!-- <i class="glyphicon glyphicon-home"/> -->Me</a>
+				</div>
+					<!-- 	
+                    3.class="collapse navbar-collapse ": dồn các tác vụ vào thanh 3 sọc ngang
+				    -->
+					<div class="collapse navbar-collapse ">
+						<!-- 1.nav navbar-nav: xóa dấu chấm  và dàn thành hàng ngang
+							2. navbar-right: chuyển sang phải  -->
+					<ul class="nav navbar-nav navbar-right" id="menu">
+						<li><a href="#"> WHO </a></li>
+						<li><a href="#"> WHAT </a></li>
+						<li><a href="#"> WHERE </a></li>
+					</ul>
+				    </div>
+			</div>
+			</nav>
+			<!-- giới thiệu và avatar -->
+			<div class="container-fluid chim ">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+				<h3 class="margin" >Who Am I?</h3>
+				<!-- class="img-responsive img-circle margin" bo tròn ảnh -->			
+				<img src="bird.jpg" class="img-responsive img-circle margin" alt="Bird" width="350" height="350">
+				<h3 class="margin">I'm an adventurer</h3>
+				</div>
+				<div class="col-sm-4"></div>
+			</div>
+	        <!-- container mô tả và ô tìm kiếm -->
+	        <div class="container-fluid search">
+	        	<div class="row">
+	        		<div class="col-sm-12">	
+	            <h2>What Am I?</h2>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+	                </div>
+	                <!-- <span class="glyphicon glyphicon-search"></span> là icon kính tìm kiếm -->
+	                <button><span class="glyphicon glyphicon-search"></span> Search </button>				
+	            </div>	
+	        </div>
+
+            <!-- Container to nhất -->
+	        <div class="container-fluid rice">
+	        	<!-- Tiêu đề  -->
+	        	<h3 class="tieude">Animal World?</h3>
+	        	<!-- Hàng Tổng chứa các cột 4/4/4 -->
+	        	<div class="row">
+	        		<!-- cột 1. Đv = 4 -->
+	        		<div class="col-sm-4">
+	        			<p>Chim là tập hợp các loài động vật có xương sống, máu nóng, đi đứng bằng hai chân, có mỏ, đẻ trứng, có cánh, có lông vũ và biết bay. Trong lớp Chim, có khoảng 10.000 loài còn tồn tại, giúp chúng trở thành lớp đa dạng nhất trong các loài động vật bốn chi.</p>
+	        			<img src="chaomao.jpg" class="img-responsive margin" class="img-thumbnail" style="width:100%" alt="Image">
+	        		</div>
+	        		<!-- cột 2. Đv = 4 -->
+	        		<div class="col-sm-4">
+	        			<p> Chó từ Hán Việt gọi là "cẩu" hoặc "khuyển", chó con còn được gọi là "cún", là một loài động vật thuộc chi chó, tạo nên một phần của những con chó giống sói, đồng thời là loài động vật ăn thịt trên cạn có số lượng lớn nhất. </p>
+	        			<img src="dangyeu.jpg" class="img-responsive margin" class="img-thumbnail" style="width:100%" alt="Image">
+	        		</div>
+                    <!-- cột 3. Đv = 4 -->
+	        		<div class="col-sm-4">
+	        			<p>Mèo, chính xác hơn là mèo nhà để phân biệt với các loài trong họ Mèo khác, là động vật có vú nhỏ và ăn thịt, sống chung với loài người, được nuôi để săn vật gây hại hoặc làm thú nuôi. Người ta tin rằng tổ tiên trung gian gần nhất trước khi được thuần hóa của chúng là mèo rừng châu Phi.</p>
+	        			<img src="conmeo.jpg" class="img-responsive margin" class="img-thumbnail" style="width:100%" alt="Image">
+	        		</div>
+	        	</div>
+	        </div>
+
+	           		<!-- Cuối trang -->
+	       	<div class="container-fluid end">
+	       			<p>
+	       				Bootstrap Theme Made By 
+                        <a href="https://www.w3schools.com" title=""> www.w3schools.com </a>
+	       			</p>
+	       	</div>	
+		</body>
+	</html>
+	

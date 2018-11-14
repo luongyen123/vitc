@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hôm nay sinh nhật ai thế ?</title>
+	</head>
+	<body>				
+		<script type="text/javascript" >
+					// 
+		var sinhvien = [	
+	                {msv:635501,hoten:"*Khá Bảnh*",quequan:"Thanh Hóa",date:"11/07/2000"},
+					{msv:635502,hoten:"*Trần Tuấn Anh*",quequan:"Thanh Hóa",date:"11/07/2000"},
+					{msv:635503,hoten:"*Lê Công Hoàng*",quequan:"Bắc Ninh",date:"06/07/2000"},
+					{msv:635589,hoten:"*Đặng Hoàng Mai*",quequan:"Thanh Hóa",date:"03/07/2000"},
+					{msv:637723,hoten:"*Lê Minh Tú*",quequan:"Thanh Hóa",date:"10/07/2000"},
+					{msv:637758,hoten:"*Lê Công Hoàng*",quequan:"Thanh Hóa",date:"12/07/2000"},
+					{msv:637758,hoten:"*Nguyễn Văn Nam*",quequan:"Thanh Hóa",date:"11/07/2000"}
+					];
+
+          	for (var i = 0; i < sinhvien.length; i++){
+				var d= new Date(sinhvien[i].date); 						
+				if(d.getMonth()==(new Date()).getMonth()){
+					if(d.getDate()==(new Date()).getDate()){
+						document.write("CHÚC MỪNG SINH NHẬT ❤"+"   "+sinhvien[i].hoten+"<br>")
+										
+					}	
+				}
+			}			
+				</script>
+			</body>
+	</body>
+</html>

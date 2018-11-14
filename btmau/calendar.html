@@ -1,0 +1,103 @@
+<html>
+<head> 
+<title>JavaScript calendar</title>
+<style type="text/css">
+    #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</style>
+</head> 
+ 
+<body> 
+<table id="customers">
+    <tr>
+        <th colspan="7" id="month"><th>
+    </tr>
+    <tr>
+        <td>Chủ nhât</td>
+        <td >Thứ 2</td>
+        <td >Thứ 3</td>
+        <td >Thứ 4</td>
+        <td >Thứ 5</td>
+        <td >Thứ 6</td>
+        <td >Thứ 7</td>
+    </tr>
+    <tr>
+        <td class="0"></td>
+        <td id="1"></td>
+        <td id="2"></td>
+        <td id="3"></td>
+        <td id="4"></td>
+        <td id="5"></td>
+        <td id="6"></td>
+    </tr>
+    
+</table>
+ 
+</body> 
+<script type="text/javascript">
+    function dinhdangngay(date){
+        var dd = date.getDate();
+
+        var mm = date.getMonth()+1; 
+      
+        if(dd<10) 
+        {
+            dd='0'+dd;
+        } 
+
+        if(mm<10) 
+        {
+            mm='0'+mm;
+        }
+
+        return dd+'-'+mm;
+    }
+
+        var d= new Date();
+        var month_day = d.getMonth();
+        var array_montth =["Tháng 1","Tháng 2", "Tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","Tháng 11","Tháng 12"];
+        document.getElementById('month').innerHTML = array_montth[month_day] +" " +d.getFullYear();
+
+        var ngay = d.getDate();
+        var thu = d.getDay();
+        var out = "tr";
+        var chunhat_nay = new Date(d.getFullYear(),month_day,ngay -parseInt(thu));
+
+       
+        for(i=0;i<7;i++){
+            if(i== 3 || i==5){
+                document.getElementById(i).style.backgroundColor="red";
+                document.getElementById(i).style.color="white";
+
+            }
+            document.getElementById(i).innerHTML = dinhdangngay(new Date(chunhat_nay.getFullYear(),chunhat_nay.getMonth(),chunhat_nay.getDate() + i));
+        }
+
+        // xác định năm nhuận
+        // tính xem ngày bắt đầu của tháng là ngày bn và thứ mấy
+        // tính xem số ngày của tháng là bn ngày
+
+
+    
+</script>

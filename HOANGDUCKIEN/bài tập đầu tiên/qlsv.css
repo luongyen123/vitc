@@ -1,0 +1,35 @@
+#nhap {
+	background-color: #697c87;
+    padding-top: 12px;
+	padding-bottom: 12px;
+	border-radius: 5px;
+
+}
+#nhap input {
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+	border: 1px solid ;
+	margin: 8px 0px;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+#nhap input[type=button]:hover {
+	background-color: white;}
+
+#Danhsach {
+	border-collapse: collapse;
+	width: 100%;
+}
+#Danhsach td {
+	border: 1px solid;
+	padding: 8px;
+	text-align: center;
+
+}
+#Danhsach tr {
+	border: 1px solid;
+	padding: 8px;
+	
+
+}

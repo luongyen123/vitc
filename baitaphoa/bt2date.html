@@ -3,12 +3,88 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<style type="text/css">
+		#p1{
+			background-color: red;
+		}
+		#p2{
+			background-color: red;
+		}
+		#p3{
+			background-color: red;
+		}
+		#p4{
+			background-color: red;
+		}
+		#p5{
+			background-color: red;
+		}
+		#p6{
+			background-color: red;
+		}
+		#p7{
+			background-color: red;
+		}
+		#p8{
+			background-color: red;
+		}
+	</style>
 </head>
 <body>
+	<table border="1" align="center">
+	<b><tr>LỊCH HỌC THÁNG 11-2018</tr></b>
+		<tr>
+<td>Chủ nhật</td>
+<td>Thứ 2</td>
+<td>Thứ 3</td>
+<td>Thứ 4</td>
+<td>Thứ 5</td>
+<td>Thứ 6</td>
+<td>Thứ 7</td>
+		</tr>
+		<tr>
+<td>04-11</td>
+<td>05-11</td>
+<td>06-11</td>
+<td id="p1">07-11</td>
+<td>08-11</td>
+<td id="p2">09-11</td>
+<td>10-11</td>
+		</tr>
+				<tr>
+<td>11-11</td>
+<td>12-11</td>
+<td>13-11</td>
+<td id="p3">14-11</td>
+<td>15-11</td>
+<td id="p4">16-11</td>
+<td>17-11</td>
+		</tr>
+		<tr>
+<td>18-11</td>
+<td>19-11</td>
+<td>29-11</td>
+<td id="p5">21-11</td>
+<td>22-11</td>
+<td id="p6">23-11</td>
+<td>24-11</td>
+		</tr>
+		<tr>
+<td>25-11</td>
+<td>26-11</td>
+<td>27-11</td>
+<td id="p7">28-11</td>
+<td>24-11</td>
+<td id="p8">29-11</td>
+<td>30-11</td>
+		</tr>
+
+
+	</table>
 	<p><b>LỊCH HỌC THÁNG 11</b></p>
 	<script type="text/javascript">
         var d=new Date();
-	    for(i=1;i<=30;i++){
+	    for(i=1;i<=31;i++){
         d.setDate(i);
         if(d.getDay()==3 || d.getDay()==5)
         document.write("Ngày"+" "+ " "+d.getDate()+" "+ "Thứ"+ " "+(d.getDay()+1)+"<br>")

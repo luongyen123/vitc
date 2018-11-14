@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form method="get" action="">
+			Nhập số: <input type="number" id="number" value=""/>
+			<input type="button" value="In kết quả" onclick="tongso()"/>
+		</form>
+		<div id="demo">
+		</div>
+		<script type="text/javascript">
+			function tongso() {
+			
+				var n= document.getElementById('number').value;
+				n=parseInt(n);
+				var m;
+				m=parseInt(m);
+				
+				var tong=0;
+				while(n>0)
+				{
+					m=n%10;
+					tong=tong+m;
+					n=parseInt(n/10);
+				}
+					
+				
+					alert(tong);
+				
+			}
+		</script>
+	</body>
+</html>

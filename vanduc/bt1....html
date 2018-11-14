@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript" >
+		var SINHNHAT = [
+		   {msv:635501,hoten:"Nguyễn Thị Lan",quequan:"Thanh Hóa",date:"11/07/2000"},
+		   {msv:635502,hoten:"Nguyễn Xuân Cảnh",quequan:"Thanh Hóa",date:"11/07/2000"},
+		   {msv:635503,hoten:"Cấn Văn Tình",quequan:"Bắc Ninh",date:"06/07/2000"},
+		   {msv:635589,hoten:"Vũ Thị Hồng",quequan:"Thanh Hóa",date:"03/07/2000"},
+		   {msv:637723,hoten:"Thuấn Văn Trẩn",quequan:"Thanh Hóa",date:"10/07/2000"},
+		   {msv:637758,hoten:"Nguyễn Damdang",quequan:"Thanh Hóa",date:"12/07/2000"},
+		   {msv:637758,hoten:"Trần Bảnh",quequan:"Thanh Hóa",date:"11/07/2000"},]
+		for (var i = 0; i < SINHNHAT.length; i++){
+								var DUC= new Date(SINHNHAT[i].date);
+		if(DUC.getMonth()==(new Date()).getMonth()){
+		if(DUC.getDate()==(new Date()).getDate()){
+		document.write("Chúc mừng sinh nhật"+"   "+SINHNHAT[i].hoten+"<br>")
+							
+							}
+						}
+									}
+		</script>
+	</body>
+</body>
+</html>

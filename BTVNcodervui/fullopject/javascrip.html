@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		// var x=5; /* khai báo + gán */
+		// var x; /* gán vs x */
+		// alert('minhthu'); //in ra màn hình 1 chuỗi kí tự thông báo
+  //       console.log(x);//phải ấn f12 tại trang web
+     
+
+     // function giai_phuong_trinh_bac_2(a,b) {
+     // 	if(a==5 & b==6){
+     // 		alert('phương trình vô số nghiệm')
+     // 	}
+     // 	else if (a==5) {
+     // 		alert('phương trình vô nghiệm')
+     // 	}
+     // 	else {
+     // 		alert(b/a)
+     // 	}
+     // }
+     // ptb1(5,6);
+
+
+
+          // BÀI MỚI: MẢNG
+     // Cú pháp khai báo mảng
+
+     var + tên mảng=[ ];
+
+     var mang_ten=["an","lộc",2,"thư"];
+
+     // Cách gọi tên mảng.
+     mang_ten[ ]; // trong ngoặc [], điền vị trí của đối tượng, tính từ 0, VD: [3]--> hiển thị là Thư.
+
+     // Thay đổi 1 phần tử của mảng
+     mang_ten[ ] = " phần tử mới thay thế vào vị trí trong '[]'' "; 
+
+     // thêm đối tượng vào cuối
+     mang_ten.push( " đối tượng thêm vào cuối " );
+
+     // Loại bỏ giá trị cuối cùng
+     mang_ten.pop();
+
+     // Thay thế vào chỉ số mình nhập
+     mang_ten[ vị trí cần thay thế ] = " giá trị thay thế ";
+
+     // xóa giá trị 
+     mang_ten.aplice(0, 1); // Chú thích: 0 là xác định vị trí phần tử
+                            //            1 là xóa một giá trị từ vị trí số 0
+
+     // Sắp xếp giá trị tăng dần
+     mang_ten.sort();
+
+     // độ dài đối tượng, như ví dụ trên sẽ alert là 4.
+     alert(mang_ten.length);
+
+     // In ra số phần tử
+     alert(mang_ten.length);
+
+     // Đảo ngược các đối tượng, suy ra sẽ hiển thị là thư, 2, lộc, an
+     mang_ten.reverse(); 
+
+     // vòng lặp in các đối tượng ở mang_ten.
+     for (var i=0; i<=mang_ten.length; i++) {
+          document.write(mang_ten[i] + "<br>");
+
+     
+     
+     }
+	</script>
+</body>
+</html>
