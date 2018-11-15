@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+
+	<ul class="breadcrumb">
+		<li class="active" id="home_menu">Home</li>
+		<li id="user_management_menu">User management</li>
+		<li id="add_user_menu">Add User</li>
+	</ul>
+	<div class="container-fluid" id="user_management_panel">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				User management
+			</div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<td>No</td>
+							<td>Full name</td>
+							<td>Address</td>
+							<td>Age</td>
+							<td>Email</td>
+							<td>Phone Number</td>
+						</tr>
+					</thead>
+					<tbody id="dataList">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+<div class="container-fluid " id="add_user_panel">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			add user
+		</div>
+		<div class="panel-body">
+			<form action="#add_user" class="form " method="get">
+				<input type="text" id="fullname" class="fullname" name="fullname" placeholder="enter fullname" size="50"><br><br>
+				<input type="text"  name="address" placeholder="enter address" size="50"><br><br>
+				<input type="number"  name="age" placeholder="enter age" size="50"><br><br>
+				<input type="text"  name="email" placeholder="enter email" size="50"><br><br>
+				<input type="text"  name="phone_number" placeholder="enter phone number" size="50"><br><br>
+				<button type="button" id="add_user">Add user</button>
+				<button type="reset">Reset</button>
+
+			</form>
+		</div>
+	</div>
+</div>
+		
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+				var no=0;
+				$("#home_menu").click(function(){
+					$("#user_management_panel").show();
+					$("#add_user_panel").show();
+				});
+				$("#user_management_menu").click(function(){
+					$("#user_management_panel").show();
+					$("#add__user_panel").hide();
+
+				});
+				$("add_user").click(function(){
+					var fullname= $("[name=fullname]").val();
+					var address= $("[name=address]").val();
+					var age= $("[name=age]").val();
+					var email= $("[name=email]").val();
+					var phone_number= $("[name=phone_number]").val();
+					$("dataList").append("<tr>"+
+							"<td>"+no+"</td>"+
+							"<td>"+fullname+"</td>"+
+							"<td>"+address+"</td>"+
+							"<td>"+age+"</td>"+
+							"<td>"+email+"</td>"+
+							"<td>"+phone_number+"</td>"+
+						"</tr>");
+
+				});
+			});
+		</script>
+	</body>
+</html>
