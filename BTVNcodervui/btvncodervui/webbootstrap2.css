@@ -1,0 +1,233 @@
+.container-fluid {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #F4511E;
+}
+
+.navbar-default {
+    background-color: #f4511e;
+}
+#color {
+	color: white;
+	padding-left: 60px;
+}
+#coocki {
+	padding-right: 100px;
+}
+#coocki li a:hover {
+    background-color: white;
+    color: #f4511e;
+}
+.theodoi {
+	background-color: #f4511e;
+	color: white;
+	font-size: 50px;
+	padding: 100px;
+}
+#size {
+	font-size: 20px;
+}
+button {
+	background-color: #ff0000bf;
+	border: 1px solid #ff0000bf;
+	font-size: 20px;
+	border-radius: 8px;
+}
+input {
+	font-size: 20px;
+	border: 1px solid #ff0000bf;
+    border-radius: 8px;
+    padding-left: 30px;
+}
+.phan3 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-size: 5px; */
+    line-height: 1.42857143;
+    color: #333;
+    background-color: white;
+    padding: 80px 60px;
+}
+#touch {
+	background-color: gray;
+	padding-right: 15px;
+	color: white;
+}
+.logo {
+    color: #f4511e;
+    font-size: 250px;
+    padding-left: 150px;
+}
+.phan4 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-size: 5px; */
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #ddd;
+}
+.logo2 {
+    color: #f4511e;
+    font-size: 250px;
+    padding: 50px 60px;
+}
+#thu {
+	padding-top: 40px;
+}
+#chu {
+	font-size: 18px;
+}
+#vision {
+	color: #999;
+	padding-top: 20px;
+}
+.phan5 {
+	 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-size: 5px; */
+    line-height: 1.42857143;
+    color: #333;
+    background-color: white;
+}
+/* phân cách phần trên của phần 5 với phần dưới của phần 4*/
+#pup {
+	padding-top: 50px;
+}
+.beer {
+	padding-top: 50px;
+}
+/*căn dưới của phần 5*/
+.beer2 {
+    padding-bottom: 50px;
+}
+.toplogo {
+	font-size: 50px;
+	color: #f4511e;
+}
+.phan6 {
+	 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-size: 5px; */
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f6f6f6;
+    padding-bottom: 50px;
+}
+.popo {
+	padding-top: 30px;
+}
+.anh {
+	padding-top: 20px;
+}
+#myCarousel {
+    padding-top: 80px;
+}
+/* hiển thị 3 nút màu */
+.carousel-indicators li {
+    background-color: #f4511e;
+    border: 1px solid #f4511e;
+}
+.carousel-indicators {
+   
+}
+.carousel-inner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.tab {
+    font-size: 25px;
+    color: #f4511e;
+}
+.phan7 {
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-size: 5px; */
+    line-height: 1.42857143;
+    color: #333;
+    background-color: white;
+}
+/* căn trên phần 7*/
+#pricing {
+    padding-top: 50px;
+}
+.box {
+    border: 1px solid #f4511e;
+    border-radius: 5px;
+
+}
+.heading {
+    background-color: #f4511e;
+    font-size: 30px;
+    color: white;
+}
+.body {
+    color: grey;
+    font-size: 15px;
+    padding-top: 20px;
+}
+.footer {
+    color: white;
+}
+/* căn dưới của phần 7*/
+.pipi {
+    padding-bottom: 100px;
+}
+.signup {
+    margin-bottom: 10px;
+}
+.contac {
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* font-size: 5px; */
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f6f6f6;
+}
+.col-sm-5 {
+    color: grey;
+}
+.rowgo {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 20px; /* kích thước các ô thông tin*/
+}
+#comments {
+   
+    border: 1px solid #ccc;
+    display: block;
+    padding-right: 20px;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.group {
+    margin-bottom: 15px; /* phân tach ô cmt với ô name và email*/
+}
+#contact {
+    padding-top: 50px;
+}
+.pull-right {
+    float: right;
+}
+.snut {
+    background-color: white;
+    color: black;
+    border-color: #ccc;
+    font-size: 15px;  
+}
+.send {
+    padding-top: 15px;
+    border-radius: 2px;
+    font-size: 50px;
+    padding-bottom: 50px;
+}
+.icon {
+    color: #f4511e;
+    padding-bottom: 25px;
+    font-size: 30px;
+}
+.footer {
+    background-color: white;
+    padding-top: 50px;
+    color: #ccc;
+    padding-bottom: 60px;
+}
