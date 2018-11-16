@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Nhập số:<input type="text" id="scp">
+	<input type="button" value="in" onclick="kq()">
+	<div id="demo"></div>
+	<script type="text/javascript">
+		function kq(){
+			var scp= document.getElementById("scp").value;
+			for (var i=1; i<=Math.sqrt(scp); i++)	
+			document.write(+""+i*i+""+'-số chính phương'+'<br>');
+		}
+	</script>
+
+</body>
+</html>

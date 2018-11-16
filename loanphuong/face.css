@@ -1,0 +1,45 @@
+#dau{
+	background-color: #415e9b;
+	width: auto;
+	height: 90px;
+	color: white;
+    font-size: 15px;
+}
+#dau1{
+	float: left;
+	height: 90px;
+	width: 50%;
+	text-align: center;
+}
+#dau2{
+	float: right;
+	height: 90px;
+	width: 50%;
+}
+#dau21{
+	height: 90px;
+	width: 25%;
+	float: left;
+}
+#dau22{
+	height: 90px;
+	width: 25%;
+	float: left;
+	margin-left: 15px;
+}
+#giua{
+	height: 500px;
+	width: 100%;
+}
+#giua1{
+	background-color: #DEF0FA;
+	color: blue;
+	height: 500px;
+	width: 50%;
+	float: left;
+}
+#giua2{
+	width: 50%;
+	height: 500px;
+    float: left;
+}

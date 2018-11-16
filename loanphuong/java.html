@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	He so<input type="text" name="heso" id="heso">
+	<!-- <input type="submit" name="enter" onclick="getgiatri()"> -->
+	<input type="submit" name="enter" onchange="getgiatri()">
+	<div id="demo"></div>
+	<script type="text/javascript">
+        function getgiatri(){
+        	var giatri = parseInt(document.getElementById("heso").value);
+        	document.getElementById("demo").innerHTML=giatri+1;
+        }
+		// var a=6;
+		// function tong(a,b){
+		// 	alert(a+b);
+		// }
+		// // function thuong(a,b){
+		// 	var a=7;
+		// 	if (a>=7){
+		// 		alert("a lon hon bang 7 that a")
+		// 	}else{
+  //               alert("sai roi")
+		// 	}
+		// 	alert(a/b);
+		viết chương trình có 1 ô input,1 button.khi click vào buton thì in ra các số nguyên tố từ 1 tới giá trị của ô input
+		function phuong_trinh_bac_nhat(a,b){
+			if(a==0){
+                alert("phuong trinh vo nghiem");
+			}else if(a==0 & b==0){
+			alert("phuong trinh vo so nghiem");
+		    }else{
+		    	alert(b/a);
+		    } 
+		}
+		phuong_trinh_bac_nhat(0,1);
+		phuong_trinh_bac_nhat(2,4); 
+ 		// thuong(3,6)
+		// tich(5,6);
+		// tong(7,7);
+		// alert(a);
+		function test_switch(n){
+			switch(n){
+				case '30':
+				// alert('30');
+				document.getElementById("demo").innerHTML="Gia tri la 30";
+				break;
+				case '25':
+				// alert('25');
+				document.getElementById("demo").innerHTML="Gia tri la 30";
+				break;
+				case '15':
+				// alert('15');
+				document.getElementById("demo").innerHTML="Gia tri la 30";
+				break;
+				default:
+				alert('TH còn lại');
+
+			}
+		}
+		test_switch(30);
+	</script>
+	
+</body>
+</html>
