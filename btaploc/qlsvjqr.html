@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Danh sách đối tượng</title>
+		<link rel="stylesheet" type="text/css" href="ctrinhmoi.css">
+	</head>
+	<body>
+<h1 align="center"><i>Danh sách đối tượng bị truy nã </i></h1>
+<h3>Điền thông tin đối tượng</h3>
+<h5 id="khoichinh">
+	Mã Sinh Viên:<br> <input type="number" name="msv" placeholder="Mã sinh viên" style="border-radius: 4px" id="nhapmasv"><br>
+	Họ Tên: <br> <input type="text" name="hoten" placeholder="Họ Tên"style="border-radius: 4px" id="nhapten"><br>
+	Ngày Sinh: <br> <input type="date/time" name="ngaysinh" placeholder="Ngày Sinh"style="border-radius: 4px" id="nhapngaysinh"><br>
+	Quê Quán: <br> <input type="text" name="quequan" placeholder="Quê Quán"style="border-radius: 4px" id="nhapquequan"><br>
+	<input type="button" value="Cập Nhập" onclick="add()" id="action" title="">
+	
+</h5>
+<h4 id="vip">Danh sách đối tượng</h4>
+<table id="bang">
+	
+</table>
+<script type="text/javascript">
+		var danhsachsv =[
+								{masv:"607643", ten:"Manh", ngaysinh:"05/01", quequan:"Thái Bình"},
+								{masv:"637644", ten:"Thư", ngaysinh:"09/01", quequan:"Thanh Hóa"},
+								{masv:"637645", ten:"Kiên", ngaysinh:"04/01", quequan:"Tuyên Quang"},
+								{masv:"637646", ten:"Tùng", ngaysinh:"05/01", quequan:"Thái Bình"},
+								{masv:"637647", ten:"Lan", ngaysinh:"07/01", quequan:"Thanh Hóa"},
+								{masv:"637648", ten:"Loan", ngaysinh:"07/01", quequan:"Thanh Hóa"},
+								{masv:"637666", ten:"Đức", ngaysinh:"07/01", quequan:"Thanh Hóa"},
+								{masv:"637655", ten:"Bách", ngaysinh:"09/01", quequan:"Tuyên Quang"},
+								{masv:"637676", ten:"Nam", ngaysinh:"07/01", quequan:"Thanh Hóa"},
+						];
+						// danhsachsv.lname = "add()";
+							var output="<tr><td>masv</td><td>ten</td><td>ngaysinh</td><td>quequan</td><td>Xóa</td><td>Sửa</td></tr>";
+							for( var i=0; i<danhsachsv.length;i++)
+							{
+								output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+							}
+						document.getElementById("bang").innerHTML=output;
+						
+						
+							<script>
+								$(document).ready(function(){
+								    $("#btn1").click(function(){
+								        $("p").append("nhapmasv");
+								    };
+
+								    
+								
+									output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoa("+i+")'id='xoa'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+									document.getElementById("bang").innerHTML=output;
+							else {
+								var n= parseInt(document.getElementById("action").title);
+
+								danhsachsv.splice(n,1,{ masv: document.getElementById("nhapmasv").value,
+									ten: document.getElementById("nhapten").value,
+									ngaysinh: document.getElementById("nhapngaysinh").value,
+									quequan: document.getElementById("nhapquequan").value});
+		                    		var output="<tr><td>masv</td><td>ten</td><td>ngaysinh</td><td>quequan</td><td>Xóa</td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+						    		for( var i=0; i<danhsachsv.length;i++){
+									output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";	
+						           }
+	                			document.getElementById("bang").innerHTML=output;
+							}
+						
+						function xoasv(i){
+								danhsachsv.splice(i,1);
+								var output="<tr><td>masv</td><td>ten</td><td>ngaysinh</td><td>quequan</td><td>Xóa</td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+								for( var i=0; i<danhsachsv.length;i++){
+								output+="<tr><td>"+danhsachsv[i].masv+"</td>"+"<td>"+danhsachsv[i].ten+"</td>"+"<td>"+danhsachsv[i].ngaysinh+"</td>"+"<td>"+danhsachsv[i].quequan+"</td><td><button onclick='xoasv("+i+")'>Xóa</button></td><td><button onclick='suasv("+i+")'>Sửa<button></td></tr>";
+								}
+								document.getElementById('bang').innerHTML=output;
+						}
+						
+						function suasv(i)
+						{
+							document.getElementById("nhapmasv").value=danhsachsv[i].masv;
+							document.getElementById("nhapten").value=danhsachsv[i].ten;
+							document.getElementById("nhapngaysinh").value=danhsachsv[i].ngaysinh;
+							document.getElementById("nhapquequan").value=danhsachsv[i].quequan;
+							document.getElementById("action").title=i;
+							}
+</script>
+
+	</body>
+</html>
