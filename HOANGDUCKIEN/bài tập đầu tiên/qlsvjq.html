@@ -97,18 +97,8 @@
     
 		
 			<script type="text/javascript">
-			$(document).ready(function() {
-				// var no=0;
-				// $("#home_menu").click(function(){
-				// 	$("#user_management_panel").show();
-				// 	$("#add_user_panel").show();
-				// });
-				// $("#user_management_menu").click(function(){
-				// 	$("#user_management_panel").show();
-				// 	$("#add__user_panel").hide();
-
-				// });
-				$("add_user").click(function(){
+			
+				$("addsv()").click(function(){
 					var msv= $("[name=msv]").val();
 					var hoten= $("[name=hoten]").val();
 					var ngaysinh= $("[name=ngaysinh]").val();
@@ -117,7 +107,16 @@
 					$("Danhsach").append("<tr><td>"+sinhvien[i].msv+"</td>"+"<td>"+sinhvien[i].hoten+"</td>"+"<td>"+sinhvien[i].ngaysinh+"</td>"+"<td>"+sinhvien[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
 
 				});
-			});
+
+					$("xoasv()").click(function(xoasv(i)){
+					var msv= $("[name=msv]").hide();
+					var hoten= $("[name=hoten]").hide();
+					var ngaysinh= $("[name=ngaysinh]").hide();
+					var quequan= $("[name=quequan]").hide();
+				
+					
+						}
+			
 		</script>	
      
 </body>
