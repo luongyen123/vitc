@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-		<link rel="stylesheet" href="qlsvjquery.css">
-		<!-- đoạn mã này là nhúng jquery vào HTML, để cho jquery chạy được -->
-		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-	</head>
-	<body>
-		<h2 align="center"><font color="green">Chương trình quản lý sinh viên</font></h2>
-		<h3><font color="green">Điền thông tin sinh viên</font></h3>
-		<div id="sum">
-			
-			<label for="pass">Mã sinh viên:</label><br>
-			<input type="text" placeholder="Mã sv..." id="pass"><br><br>
-			<label>Họ tên:</label><br>
-			<input type="text" placeholder="Họ tên..." id="name"><br><br>
-			<label>Quê quán:</label><br>
-			<input type="text" placeholder="Quê quán..." id="country"><br><br>
-			<label>Ngày sinh:</label><br>
-			<input type="text" placeholder="Ngày sinh..." id="date"><br><br>
-			<input type="submit" value="Cập nhật" onclick="them()" id="submit" title=""><br>
-			
-			
-		</div>
-		<h3><font color="green">Danh sách sinh viên</font></h3>
-		<table id="solieu">
-			
-		</table>
-        <script type="text/javascript">
-        
-			var listsv = [
-				{ msv:635501, ten:"Kim Thị Cung", ngaysinh:"12/02/2000", add:"Hà Nội"},
-				{ msv:635502, ten:"Đan Cung Đàn", ngaysinh:"13/03/2000", add:"Hà Nội"},
-				{ msv:635503, ten:"Trường Văn Dài", ngaysinh:"14/04/2000", add:"Thanh Hóa"},
-				{ msv:635504, ten:"Vương Thúy Quỳnh", ngaysinh:"15/05/2000", add:"Hà Nội"},
-				{ msv:635505, ten:"Trung Kiot", ngaysinh:"16/06/2000", add:"Thanh Hóa"},
-				{ msv:635506, ten:"Totti", ngaysinh:"17/07/2000", add:"Bắc Ninh"},
-				
-				];
-				// đối tượng {}, nằm trong mảng [].
-		  var output="<tr> <td>Mã SV</td> <td>Họ Tên</td> <td>Ngày Sinh</td> <td>Quê Quán</td> <td>Loại bỏ</td> <td>Sửa SV</td> </tr>";
+<head>
+	<title></title>
+	<link rel="stylesheet" href="qlsvjquery.css">
+	<!-- đoạn mã này là nhúng jquery vào HTML, để cho jquery chạy được -->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<h2 align="center"><font color="green">Chương trình quản lý sinh viên</font></h2>
+	<h3><font color="green">Điền thông tin sinh viên</font></h3>
+	<div id="sum">
+		
+		<label for="pass">Mã sinh viên:</label><br>
+		<input type="text" placeholder="Mã sv..." id="pass"><br><br>
+		<label>Họ tên:</label><br>
+		<input type="text" placeholder="Họ tên..." id="name"><br><br>
+		<label>Quê quán:</label><br>
+		<input type="text" placeholder="Quê quán..." id="country"><br><br>
+		<label>Ngày sinh:</label><br>
+		<input type="text" placeholder="Ngày sinh..." id="date"><br><br>
+		<input type="submit" value="Cập nhật" onclick="them()" id="submit" title=""><br>
+		
+		
+	</div>
+	<h3><font color="green">Danh sách sinh viên</font></h3>
+	<table id="solieu">
+		
+	</table>
+	<script type="text/javascript">
+		
+		var listsv = [
+		{ msv:635501, ten:"Kim Thị Cung", ngaysinh:"12/02/2000", add:"Hà Nội"},
+		{ msv:635502, ten:"Đan Cung Đàn", ngaysinh:"13/03/2000", add:"Hà Nội"},
+		{ msv:635503, ten:"Trường Văn Dài", ngaysinh:"14/04/2000", add:"Thanh Hóa"},
+		{ msv:635504, ten:"Vương Thúy Quỳnh", ngaysinh:"15/05/2000", add:"Hà Nội"},
+		{ msv:635505, ten:"Trung Kiot", ngaysinh:"16/06/2000", add:"Thanh Hóa"},
+		{ msv:635506, ten:"Totti", ngaysinh:"17/07/2000", add:"Bắc Ninh"},
+		
+		];
+			// đối tượng {}, nằm trong mảng [].
+			var output="<tr> <td>Mã SV</td> <td>Họ Tên</td> <td>Ngày Sinh</td> <td>Quê Quán</td> <td>Loại bỏ</td> <td>Sửa SV</td> </tr>";
 			for( var i=0; i<listsv.length; i++){
-					output+="<tr><td>"+listsv[i].msv+"</td>"+"<td>"+listsv[i].ten+"</td>"+"<td>"+listsv[i].ngaysinh+"</td>"+"<td>"+listsv[i].add+ "</td>"+"<td><button onclick='xoa("+i+")'>Xóa</button></td><td><button onclick='sua("+i+")'>Sửa</button></td></tr>"						}
-											// in ra cái table
-											document.getElementById("solieu").innerHTML=output;
-											// hàm thực thi của onclick
-											$(function them(){
-								if (document.getElementById("submit").title="") {
-						            listsv.push({msv:document.getElementById("pass").value,
-							        ten:document.getElementById("name").value,
-							        add:document.getElementById("country").value
-							        }));
-						var n = listsv.length-1;
-						output+="<tr><td>"+listsv[n].msv+"</td>"+"<td>"+listsv[n].ten+"</td>"+"<td>"+listsv[i].ngaysinh+"</td>"+"<td>"+listsv[n].add+"<td><button onclick='xoa("+i+")'>Xóa</button></td><td><button onclick='sua("+i+")'>Sửa</button></td></tr>";
-															document.getElementById("solieu").innerHTML=output;
-			                    }else{
-			var m=parseInt(document.getElementById("submit").title);
-			listsv.splice(m,1,{msv:document.getElementById("pass").value,
-								hoten: document.getElementById("name").value,
-								quequan: document.getElementById("country").value});
-			var output = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Ngày sinh</td><td>Quê Quán</td><td>Xóa</td><td>Sửa Sv</td></tr>";
-							for( var i=0; i<listsv.length;i++){
-											output+="<tr><td>"+listsv[i].msv+"</td>"+"<td>"+listsv[i].hoten+"</td>"+"<td>"+listsv[i].ngaysinh+"</td>"+"<td>"+listsv[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
-					}
-			document.getElementById("solieu").innerHTML=output;
-											}
-			}
-
-
-						$(function xoa(){
-							listsv.splice(i,1);
-							var output="<tr><td>Mã SV</td><td>Họ Tên</td><td>Quê Quán</td><td>Loại bỏ</td></tr>";
-										for( var i=0; i<listsv.length; i++){
-																	output+="<tr><td>"+listsv.length+"</td>"+ "<td>"+listsv[i].msv+"</td>"+"<td>"+listsv[i].ten+"</td>"+"<td>"+listsv[i].ngaysinh+"</td>"+"<td>"+listsv[i].add+ "</td>"+"<td><button onclick='xoa("+(listsv.length-1)+")'>Xóa</button></td><td><button onclick='sua("+(listsv.length-1)+")'>Sửa</button></td></tr>";
-																
-															}
+				output+="<tr><td>"+listsv[i].msv+"</td>"+"<td>"+listsv[i].ten+"</td>"+"<td>"+listsv[i].ngaysinh+"</td>"+"<td>"+listsv[i].add+ "</td>"+"<td><button onclick='xoa("+i+")'>Xóa</button></td><td><button onclick='sua("+i+")'>Sửa</button></td></tr>"						}
+										// in ra cái table
 										document.getElementById("solieu").innerHTML=output;
-										})
-										
-						$(function sua(i){
-										document.getElementById("pass").value=listsv[i].msv;
-										document.getElementById("name").value=listsv[i].ten;
-										document
-										document.getElementById("country").value=listsv[i].add;
-										document.getElementById("submit").title=i;
-										
-									});
+										// hàm thực thi của onclick
+										$(function them(){
+											if (document.getElementById("submit").title="") {
+												listsv.push({msv:document.getElementById("pass").value,
+													ten:document.getElementById("name").value,
+													add:document.getElementById("country").value
+												}));
+										var n = listsv.length-1;
+										output+="<tr><td>"+listsv[n].msv+"</td>"+"<td>"+listsv[n].ten+"</td>"+"<td>"+listsv[i].ngaysinh+"</td>"+"<td>"+listsv[n].add+"<td><button onclick='xoa("+i+")'>Xóa</button></td><td><button onclick='sua("+i+")'>Sửa</button></td></tr>";
+										document.getElementById("solieu").innerHTML=output;
+									}else{
+										var m=parseInt(document.getElementById("submit").title);
+										listsv.splice(m,1,{msv:document.getElementById("pass").value,
+											hoten: document.getElementById("name").value,
+											quequan: document.getElementById("country").value});
+										var output = "<tr><td>Mã Sinh Viên</td><td>Họ Tên</td><td>Ngày sinh</td><td>Quê Quán</td><td>Xóa</td><td>Sửa Sv</td></tr>";
+										for( var i=0; i<listsv.length;i++){
+											output+="<tr><td>"+listsv[i].msv+"</td>"+"<td>"+listsv[i].hoten+"</td>"+"<td>"+listsv[i].ngaysinh+"</td>"+"<td>"+listsv[i].quequan+"</td><td><button onclick='xoasv("+i+")' >Xóa</button></td><td><button onclick='suasv("+i+")' >Sửa</button></td></tr>";
+										}
+										document.getElementById("solieu").innerHTML=output;
+									}
+								}
 
+
+								$(function xoa(){
+									listsv.splice(i,1);
+									var output="<tr><td>Mã SV</td><td>Họ Tên</td><td>Quê Quán</td><td>Loại bỏ</td></tr>";
+									for( var i=0; i<listsv.length; i++){
+										output+="<tr><td>"+listsv.length+"</td>"+ "<td>"+listsv[i].msv+"</td>"+"<td>"+listsv[i].ten+"</td>"+"<td>"+listsv[i].ngaysinh+"</td>"+"<td>"+listsv[i].add+ "</td>"+"<td><button onclick='xoa("+(listsv.length-1)+")'>Xóa</button></td><td><button onclick='sua("+(listsv.length-1)+")'>Sửa</button></td></tr>";
 										
-				</script>
-			</body>
-		</html>
+									}
+									document.getElementById("solieu").innerHTML=output;
+								})
+								
+								$(function sua(i){
+									document.getElementById("pass").value=listsv[i].msv;
+									document.getElementById("name").value=listsv[i].ten;
+									document
+									document.getElementById("country").value=listsv[i].add;
+									document.getElementById("submit").title=i;
+									
+								});
+
+								
+							</script>
+						</body>
+						</html>

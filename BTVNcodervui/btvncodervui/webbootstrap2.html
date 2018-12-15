@@ -1,310 +1,323 @@
 <!DOCTYPE html>
 <html lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title> Bài tập bootstrap </title>
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Bài tập bootstrap </title>
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<link rel="stylesheet" href="webbootstrap2.css">
-	</head>
-	<body>
-<!--TODO:  navbar-fixed-top: là ap fix cố định thanh menu -->
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container-fluid">
-<!--TODO: Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+    <link rel="stylesheet" href="webbootstrap2.css">
+</head>
+
+<body>
+    <!--TODO:  navbar-fixed-top: là ap fix cố định thanh menu -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!--TODO: Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#" id="color">Logo</a>
-				</div>
-<!--TODO: GIAO DIEN PHẦN 1 -->
-<!--TODO: Thanh menu cua trang -->
-				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<ul class="nav navbar-nav navbar-right" id="coocki">
-						
-						<li><a href="#" id="color">ABOUT</a></li>
-						<li><a href="#" id="color">SERVICES</a></li>
-						<li><a href="#" id="color">PORTFOLIO</a></li>
-						<li><a href="#" id="color">PRICING</a></li>
-						<li><a href="#" id="color">CONTACT</a></li>
-					</ul>
-			    </div>
-			</div>		
-		</nav>
-<!--TODO: GIAO DIỆN PHẦN 2 -->
-<!--TODO: GIỚI THIỆU TRANG -->
-		<div class="container-fluid text-center theodoi"> 
-            <font class="theodoi"> Welcome to my website! </font>
-            <p id="size"> You are a wonderful person </p>
-             <form>
-             	<input type="text" placeholder="Email Address">
-             	<button>Subscribe</button>
-             </form>
-	    </div>
+                <a class="navbar-brand" href="#" id="color">Logo</a>
+            </div>
+            <!--TODO: GIAO DIEN PHẦN 1 -->
+            <!--TODO: Thanh menu cua trang -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right" id="coocki">
 
-<!--TODO: GIAO DIỆN PHẦN 3 -->
-		<div class="container-fluid phan3">
-<!--TODO: Row la hang dau tien -->
-			<div class="row">
-				<!--TODO: cot co dv = 8 
+                    <li><a href="#" id="color">ABOUT</a></li>
+                    <li><a href="#" id="color">SERVICES</a></li>
+                    <li><a href="#" id="color">PORTFOLIO</a></li>
+                    <li><a href="#" id="color">PRICING</a></li>
+                    <li><a href="#" id="color">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--TODO: GIAO DIỆN PHẦN 2 -->
+    <!--TODO: GIỚI THIỆU TRANG -->
+    <div class="container-fluid text-center theodoi">
+        <font class="theodoi"> Welcome to my website! </font>
+        <p id="size"> You are a wonderful person </p>
+        <form>
+            <input type="text" placeholder="Email Address">
+            <button>Subscribe</button>
+        </form>
+    </div>
+
+    <!--TODO: GIAO DIỆN PHẦN 3 -->
+    <div class="container-fluid phan3">
+        <!--TODO: Row la hang dau tien -->
+        <div class="row">
+            <!--TODO: cot co dv = 8 
                   va cot co dv = 4
 				-->
-				<div class="col-sm-8">
-					<h3><b> INTRODUCTION TO WEBSITE </b></h3>
-					<br>
-					<p>  My name’s Vu Minh Thư. I’m 18 years old and I’m single. I have just graduated from university in July with web developer. I got 3 months experience as an internship at X company. I like reading books and travelling. 
-					</p>
-					<br>
-					<p><font color="grey">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					   </font>
-					</p>
-					<br>
-					<button class="btn btn-default btn-lg" id="touch">Get in Touch</button>
-				</div>
-<!--TODO: TẠO LOGO -->
-				<div class="col-sm-4">
-					<span class="glyphicon glyphicon-apple logo"></span>
-				</div>
-			</div>
-		</div>
-<!--TODO: GIAO DIỆN PHẦN 4 -->
-        <div class="container-fluid phan4">
-       	    <div class="row">
-<!--TODO: TẠO LOGO2 -->
-       	    	<div class="col-sm-5"><span class="glyphicon glyphicon-globe logo2 slideanim slide"></span></div>
-       	    	<div class="col-sm-7">
-       	    		<h3 id="thu"><b>OUR VALUES</b></h3><br>
-       	    		<p id="chu"><b>MISSION</b>: Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       	    		<br>
-       	    		<p id="vision"><b>VISION</b>: Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       	    	</div>
-       	    </div>
-        </div>
-<!--TODO: GIAO DIỆN PHẦN 5 -->
-        <div class="container-fluid text-center phan5">
-        	<h3 id="pup"><b> SERVICES </b></h3>
-        	<p><h3>Những gì chúng tôi cung cấp</h3></p>
-        	<div class="row beer">
-                 <div class="col-sm-4">
-                 	<span class="glyphicon glyphicon-off toplogo"></span>
-                 	<h4>POWER</h4>
-                 	<p>Lorem ipsum dolor sit amet..</p>
-                 </div>
-                 <div class="col-sm-4">
-                 	<span class="glyphicon glyphicon-heart toplogo"></span>
-                 	<h4>LOVE</h4>
-                 	<p>Lorem ipsum dolor sit amet..</p>
-                 </div>       
-                 <div class="col-sm-4">
-                 	<span class="glyphicon glyphicon-lock toplogo"></span>
-                 	<h4>JOB DONE</h4>
-                 	<p>Lorem ipsum dolor sit amet..</p>
-                 </div>
-        	</div>
-            
-            <div class="row beer beer2">
-                 <div class="col-sm-4">
-                 	<span class="glyphicon glyphicon-leaf toplogo"></span>
-                 	<h4>GREEN</h4>
-                 	<p>Lorem ipsum dolor sit amet..</p>
-                 </div>
-                 <div class="col-sm-4">
-                 	<span class="glyphicon glyphicon-certificate toplogo"></span>
-                 	<h4>CERTIFIED</h4>
-                 	<p>Lorem ipsum dolor sit amet..</p>
-                 </div>       
-                 <div class="col-sm-4">
-                 	<span class="glyphicon glyphicon-wrench toplogo"></span>
-                 	<h4 style="color:#303030;">HARD WORK</h4>
-                 	<p>Lorem ipsum dolor sit amet..</p>
-                 </div>
-        	</div>
-        </div>
-<!--TODO: GIAO DIỆN PHẦN 6 -->
-        <div class="container-fluid text-center phan6">
-        	<h2 class="popo"><b>Introduction to sprite</b></h2>
-        	<br>
-        	<h4>See you see image</h4>
-        	<div class="row text-center anh">
-                 <div class="col-sm-4">
-                 	<img src="sieunhan.jpg" alt="Paris" width="400" height="450">
-                 	<p><strong class="izz"> SUPERMAN </strong></p>
-                 	<p>Đây là bọn dở hơi</p>
-                 </div>
-                 <div class="col-sm-4">
-                 	<img src="minhthu.jpg" alt="New York" width="400" height="450">
-                 	<p><strong class="izz"> CODERVUI </strong></p>
-                 	<p>Đây Là em, Vũ Minh Thư</p>
-                 </div>
-                 <div class="col-sm-4">
-                 	<img src="emzai.jpg" alt="San Francisco" width="400" height="450">
-                 	<p><strong class="izz"> EM TRAI KHIÊM </strong></p>
-                 	<p>Nghịch ngợm, siêu nhân lười học</p>
-                 </div>
-        	</div>
-        	<h3 class="popo"><b>WHAT OUR CUSTOMERS SAY</b></h3>
-        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-
-             <div class="col-sm-3">
-             <span class="glyphicon glyphicon-chevron-left tab"></span>
-             </div>
-                    
-<!--TODO: Bao bọc toàn bộ slide, carousel-inner: thu gọn nội dung cmt lại-->
-                 <div class="col-sm-6">
-        	         <div class="carousel-inner" >
-                <!-- item-active: là nhìn thấy nd này đầu tiên -->
-                          <div class="item">
-                     <i><h4>"Nhìn cũng được, cần cố gắng hơn"</h4></i>
-                     <h4>VMT, người bình luận</h4>
-                          </div>
-
-                          <div class="item">
-                     <i><h4>" Chúc mừng bạn với tác phẩm này"</h4></i>
-                     <h4> Bí danh, người bình luận</h4>
-                          </div>
-
-                           <div class="item-active">
-                     <i><h4>" Cố lên nào chiến binh "</h4></i>
-                     <h4> Em trai, người bình luận</h4>
-                          </div>
-
-			         </div>
-                 </div>          
-             <div class="col-sm-3">
-             <span class="glyphicon glyphicon-chevron-right tab"></span>
-             </div>
+            <div class="col-sm-8">
+                <h3><b> INTRODUCTION TO WEBSITE </b></h3>
+                <br>
+                <p> My name’s Vu Minh Thư. I’m 18 years old and I’m single. I have just graduated from university in July with web developer. I got 3 months experience as an internship at X company. I like reading books and travelling.
+                </p>
+                <br>
+                <p>
+                    <font color="grey">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </font>
+                </p>
+                <br>
+                <button class="btn btn-default btn-lg" id="touch">Get in Touch</button>
+            </div>
+            <!--TODO: TẠO LOGO -->
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-apple logo"></span>
+            </div>
         </div>
     </div>
-<!--TODO: GIAO DIỆN PHẦN 7 -->
-        <div class="container-fluid text-center phan7">
-            <h3 id="pricing"><b>PRICING</b></h3>
-            <p><h4>Choose a payment plan that works for you</h4></p>
-            <div class="row pipi">
-                 <div class="col-sm-4">
-                     <div class="text-center box">
-                         <div class="heading">Basic</div>
-                         <div class="body">
-                             <p>Hello</p>
-                             <p>Blabla</p>
-                             <p>Umbala</p>
-                             <p>Kasaki</p>
-                             <p>Kimono</p>
-                         </div>
-                         <hr>
-                         <div class="footer">
-                            <font color="grey">
-                             <h3>$19</h3>
-                             <h4>per month</h4>
-                            </font>
-                             <button class="signup">Sign up</button>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-sm-4">
-                     <div class="text-center box">
-                         <div class="heading">Pro</div>
-                         <div class="body">
-                             <p>50 củ cải</p>
-                             <p>30 hành</p>
-                             <p>20 trứng</p>
-                             <p>10 thịt bò</p>
-                             <p>5 tỏi</p>
-                         </div>
-                         <hr>
-                         <div class="footer">
-                            <font color="grey">
-                             <h3>$25</h3>
-                             <h4>per month</h4>
-                            </font>
-                             <button class="signup">Sign up</button>
-                         </div>
-                      </div>
-                 </div>
-                 <div class="col-sm-4">
-                     <div class="text-center box">
-                         <div class="heading">Premium</div>
-                         <div class="body">
-                             <p>100 củ cải</p>
-                             <p>60 hành</p>
-                             <p>40 trứng</p>
-                             <p>30 thịt bò</p>
-                             <p>10 tỏi</p>
-                         </div>
-                         <hr>
-                         <div class="footer">
-                            <font color="grey">
-                             <h3>$25</h3>
-                             <h4>per month</h4>
-                            </font>
-                             <button class="signup">Sign up</button>
-                         </div>
-                      </div>
-                 </div>
-             </div>
+    <!--TODO: GIAO DIỆN PHẦN 4 -->
+    <div class="container-fluid phan4">
+        <div class="row">
+            <!--TODO: TẠO LOGO2 -->
+            <div class="col-sm-5"><span class="glyphicon glyphicon-globe logo2 slideanim slide"></span></div>
+            <div class="col-sm-7">
+                <h3 id="thu"><b>OUR VALUES</b></h3><br>
+                <p id="chu"><b>MISSION</b>: Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat.</p>
+                <br>
+                <p id="vision"><b>VISION</b>: Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+    <!--TODO: GIAO DIỆN PHẦN 5 -->
+    <div class="container-fluid text-center phan5">
+        <h3 id="pup"><b> SERVICES </b></h3>
+        <p>
+            <h3>Những gì chúng tôi cung cấp</h3>
+        </p>
+        <div class="row beer">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-off toplogo"></span>
+                <h4>POWER</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-heart toplogo"></span>
+                <h4>LOVE</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-lock toplogo"></span>
+                <h4>JOB DONE</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
         </div>
 
-        <!--TODO: GIAO DIỆN PHẦN CONTAC -->
-        <div class="container-fluid contac">
-            <h2 class="text-center" id="contact">CONTACT</h2>
-                <div class="col-sm-5">
-                    <p>Contact us and we'll get back to you within 24 hours.</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> Chicago,US </p>
-                    <p><span class="glyphicon glyphicon-phone"></span>  +00 1515151515 </p>
-                    <p><span class="glyphicon glyphicon-envelope"></span> vuminhthu1320@gmail.com</p>
-                </div>
-                <div class="col-sm-7">
-                    <div class="row">
-                        <div class="col-sm-6 group">
-                            <input type="text" placeholder="Name" class="rowgo">
-                        </div>
-                        <div class="col-sm-6 group">
-                            <input type="email" placeholder="Email" class="rowgo">
-                        </div>
-                    </div>
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-                    <div class="row send">
-                        <div class="col-sm-12">
-                            <button type="submit" class="pull-right snut">Send</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="row beer beer2">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-leaf toplogo"></span>
+                <h4>GREEN</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-certificate toplogo"></span>
+                <h4>CERTIFIED</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-wrench toplogo"></span>
+                <h4 style="color:#303030;">HARD WORK</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
         </div>
-<!--TODO: img minh họa -->
-         <img src="map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-<!--TODO: GIAO DIỆN CUỐI TRANG -->
+    </div>
+    <!--TODO: GIAO DIỆN PHẦN 6 -->
+    <div class="container-fluid text-center phan6">
+        <h2 class="popo"><b>Introduction to sprite</b></h2>
+        <br>
+        <h4>See you see image</h4>
+        <div class="row text-center anh">
+            <div class="col-sm-4">
+                <img src="sieunhan.jpg" alt="Paris" width="400" height="450">
+                <p><strong class="izz"> SUPERMAN </strong></p>
+                <p>Đây là bọn dở hơi</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="minhthu.jpg" alt="New York" width="400" height="450">
+                <p><strong class="izz"> CODERVUI </strong></p>
+                <p>Đây Là em, Vũ Minh Thư</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="emzai.jpg" alt="San Francisco" width="400" height="450">
+                <p><strong class="izz"> EM TRAI KHIÊM </strong></p>
+                <p>Nghịch ngợm, siêu nhân lười học</p>
+            </div>
+        </div>
+        <h3 class="popo"><b>WHAT OUR CUSTOMERS SAY</b></h3>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="col-sm-3">
+                <span class="glyphicon glyphicon-chevron-left tab"></span>
+            </div>
+
+            <!--TODO: Bao bọc toàn bộ slide, carousel-inner: thu gọn nội dung cmt lại-->
+            <div class="col-sm-6">
+                <div class="carousel-inner">
+                    <!-- item-active: là nhìn thấy nd này đầu tiên -->
+                    <div class="item">
+                        <i><h4>"Nhìn cũng được, cần cố gắng hơn"</h4></i>
+                        <h4>VMT, người bình luận</h4>
+                    </div>
+
+                    <div class="item">
+                        <i><h4>" Chúc mừng bạn với tác phẩm này"</h4></i>
+                        <h4> Bí danh, người bình luận</h4>
+                    </div>
+
+                    <div class="item-active">
+                        <i><h4>" Cố lên nào chiến binh "</h4></i>
+                        <h4> Em trai, người bình luận</h4>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <span class="glyphicon glyphicon-chevron-right tab"></span>
+            </div>
+        </div>
+    </div>
+    <!--TODO: GIAO DIỆN PHẦN 7 -->
+    <div class="container-fluid text-center phan7">
+        <h3 id="pricing"><b>PRICING</b></h3>
+        <p>
+            <h4>Choose a payment plan that works for you</h4>
+        </p>
+        <div class="row pipi">
+            <div class="col-sm-4">
+                <div class="text-center box">
+                    <div class="heading">Basic</div>
+                    <div class="body">
+                        <p>Hello</p>
+                        <p>Blabla</p>
+                        <p>Umbala</p>
+                        <p>Kasaki</p>
+                        <p>Kimono</p>
+                    </div>
+                    <hr>
+                    <div class="footer">
+                        <font color="grey">
+                            <h3>$19</h3>
+                            <h4>per month</h4>
+                        </font>
+                        <button class="signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="text-center box">
+                    <div class="heading">Pro</div>
+                    <div class="body">
+                        <p>50 củ cải</p>
+                        <p>30 hành</p>
+                        <p>20 trứng</p>
+                        <p>10 thịt bò</p>
+                        <p>5 tỏi</p>
+                    </div>
+                    <hr>
+                    <div class="footer">
+                        <font color="grey">
+                            <h3>$25</h3>
+                            <h4>per month</h4>
+                        </font>
+                        <button class="signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="text-center box">
+                    <div class="heading">Premium</div>
+                    <div class="body">
+                        <p>100 củ cải</p>
+                        <p>60 hành</p>
+                        <p>40 trứng</p>
+                        <p>30 thịt bò</p>
+                        <p>10 tỏi</p>
+                    </div>
+                    <hr>
+                    <div class="footer">
+                        <font color="grey">
+                            <h3>$25</h3>
+                            <h4>per month</h4>
+                        </font>
+                        <button class="signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--TODO: GIAO DIỆN PHẦN CONTAC -->
+    <div class="container-fluid contac">
+        <h2 class="text-center" id="contact">CONTACT</h2>
+        <div class="col-sm-5">
+            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Chicago,US </p>
+            <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515 </p>
+            <p><span class="glyphicon glyphicon-envelope"></span> vuminhthu1320@gmail.com</p>
+        </div>
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-6 group">
+                    <input type="text" placeholder="Name" class="rowgo">
+                </div>
+                <div class="col-sm-6 group">
+                    <input type="email" placeholder="Email" class="rowgo">
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+            <div class="row send">
+                <div class="col-sm-12">
+                    <button type="submit" class="pull-right snut">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--TODO: img minh họa -->
+    <img src="map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+    <!--TODO: GIAO DIỆN CUỐI TRANG -->
     <footer class="container-fluid text-center footer">
         <span class="glyphicon glyphicon-chevron-up icon"></span>
         <p>
-            Bootstrap Theme Made By 
+            Bootstrap Theme Made By
             <a href="#">www.codervui.com</a>
         </p>
     </footer>
-        
-		<!-- jQuery -->
-		<script src="//code.jquery.com/jquery.js"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
- 		<script src="Hello World"></script>
-	</body>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="Hello World"></script>
+</body>
+
 </html>
